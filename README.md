@@ -8,4 +8,13 @@ The app is intended for **gym-goers/lifters** who want a more organized way to p
 **Summary of key features:**
 - Creating and editing weekly workout splits by day.  
 - Adding, removing, and customizing exercises.  
-- Generating suggested splits based on equipment access and training availability.  
+- Generating suggested splits based on equipment access and training availability.
+
+## User Stories
+- As a user, I want to be able to create a new workout split.
+- As a user, I want to be able to view the list of exercises in my workout split
+- As a user, I want to be able to add an exercise to a specific day within a workout plan and specify the exercise name, target muscle groups, number of sets, rep range and reps in reserve.
+- As a user, I want to be able to remove an exercise from a specific day within my workout plan.
+- As a user, I want to be able to edit the details of an existing exercise in my workout plan.
+- As a user, I want to be able to generate a suggested workout split by selecting parameters such as available equipment and the days of the week I want to train.
+- As a user, I want to be able to view calculated information for a workout plan, such as estimated workout duration and calories burned.
