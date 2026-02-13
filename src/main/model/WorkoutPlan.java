@@ -1,13 +1,18 @@
 package model;
 
 import java.time.DayOfWeek;
+import java.util.List;
+import java.util.ArrayList;
 
 public class WorkoutPlan {
 
+    private String name;
+    private List<WorkoutDay> workoutDays;
     // MODIFIES: this
     // EFFECTS: constructs new plan with empty days
     public WorkoutPlan(String name) {
-
+        this.name = name;
+        this.workoutDays = new ArrayList<WorkoutDay>();
     }
 
     // MODIFIES: this
@@ -34,5 +39,10 @@ public class WorkoutPlan {
 
     public String setName() {
         return null;
+    }
+
+    // EFFECTS: get total exercises in given WorkoutPlan
+    public int getTotalExercises(WorkoutPlan plan) {
+        return 0;
     }
 }
