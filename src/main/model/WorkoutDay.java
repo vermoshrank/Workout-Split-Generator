@@ -8,11 +8,15 @@ public class WorkoutDay {
 
     private DayOfWeek day;
     private List<Exercise> exercises;
+    private int sessionLength;
+    private int calorieExpenditure;
     // MODIFIES: this
     // EFFECTS: constructs WorkoutDay for given day
     public WorkoutDay(DayOfWeek day) {
         this.day = day;
         this.exercises = new ArrayList<Exercise>();
+        this.sessionLength = 0;
+        this.calorieExpenditure = 0;
     }
 
     // MODIFIES: this
@@ -34,6 +38,14 @@ public class WorkoutDay {
 
     // EFFECTS: returns total number of exercises in given day
     public int getTotalExercises(WorkoutDay day) {
+        return 0;
+    }
+    
+    public int calculateSessionLength(List<Exercise> exercises) {
+        return 0;
+    }
+
+    public int calculateCaloriesBurnt(List<Exercise> exercises) {
         return 0;
     }
 }
