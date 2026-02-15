@@ -34,58 +34,70 @@ public class Exercise {
         this.rir = rir;
     }
     public String getName() {
-        return null;
+        return this.name;
     }
 
     public ArrayList<MuscleGroup> getTargetMuscles() {
-        return null;
+        return this.targetMuscles;
     }
 
     public Equipment getEquipmentType() {
-        return null;
+        return this.equipmentType;
     }
 
     public ArrayList<SplitType> getSplitTypes() {
-        return null;
+        return this.splits;
     }
 
     public int getWeight() {
-        return 0;
+        return this.weight;
     }
 
     public int getSets() {
-        return 0;
+        return this.sets;
     }
 
     public int getMinReps() {
-        return 0;
+        return this.minReps;
     }
 
     public int getMaxReps() {
-        return 0;
+        return this.maxReps;
     }
 
-    public void setTargetMuscles(ArrayList<MuscleGroup> targetMuscles) {
-        // stub
-    }
-
-    public void setWeight(int sets) {
-        // stub
-    }
-
-    public void setSets(int sets) {
-        // stub
-    }
-
-    public void setMinReps(int minReps) {
-        // stub
-    }
-
-    public void setMaxReps(int maxReps) {
-        // stub
+    public int getMaxRir() {
+        return this.rir;
     }
 
     public void setName(String name) {
-        // stub
+        this.name = name;
+    }
+
+    public void setTargetMuscles(ArrayList<MuscleGroup> targetMuscles) {
+        this.targetMuscles = targetMuscles;
+    }
+    
+    public void setEquipmentType(Equipment equipmentType) {
+        this.equipmentType = equipmentType;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public void setSets(int sets) {
+        this.sets = sets;
+    }
+
+    public void setMinReps(int minReps) {
+        this.minReps = minReps;
+    }
+
+    public void setMaxReps(int maxReps) {
+        this.maxReps = maxReps;
+    }
+
+    public void setRir(int rir) {
+        this.rir = rir;
     }
 }
