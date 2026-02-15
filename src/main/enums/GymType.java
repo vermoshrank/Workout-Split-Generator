@@ -6,10 +6,10 @@ import java.util.Arrays;
 import enums.Equipment;
 
 public enum GymType {
-    EVERYTHING_GYM(Equipment.values()),
-    COMMERCIAL_GYM,
-    LOCAL_GYM,
-    HOME_GYM;
+    EVERYTHING(Equipment.values()),
+    COMMERCIAL,
+    LOCAL,
+    HOME;
 
     private final ArrayList<Equipment> availableEquipment;
 
