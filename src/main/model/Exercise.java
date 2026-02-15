@@ -18,11 +18,12 @@ public class Exercise {
     private int minReps;
     private int maxReps;
     private int rir;
+    private int priority;
 
     // REQUIRES: sets > 0; 0 < minReps <= maxReps; rir >= 0
     // MODIFIES: this
     // EFFECTS: constructs an Exercise with the provided parameters
-    public Exercise(String name, ArrayList<MuscleGroup> targetMuscles, Equipment equipmentType, ArrayList<SplitType> splits, int weight, int sets, int minReps, int maxReps, int rir) {
+    public Exercise(String name, ArrayList<MuscleGroup> targetMuscles, Equipment equipmentType, ArrayList<SplitType> splits, int weight, int sets, int minReps, int maxReps, int rir, int priority) {
         this.name = name;
         this.targetMuscles = targetMuscles;
         this.equipmentType = equipmentType;
@@ -32,6 +33,7 @@ public class Exercise {
         this.minReps = minReps;
         this.maxReps = maxReps;
         this.rir = rir;
+        this.priority = priority;
     }
     public String getName() {
         return this.name;
@@ -69,6 +71,10 @@ public class Exercise {
         return this.rir;
     }
 
+    public int getPriority() {
+        return this.priority;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -99,5 +105,9 @@ public class Exercise {
 
     public void setRir(int rir) {
         this.rir = rir;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
     }
 }
