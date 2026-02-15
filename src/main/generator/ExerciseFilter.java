@@ -6,9 +6,10 @@ import java.util.Set;
 
 import enums.Equipment;
 import model.Exercise;
+import model.ExerciseDatabase;
 
 public class ExerciseFilter {
-    private List<Exercise> exercises;
+    private ArrayList<Exercise> exercises;
 
     public ExerciseFilter() {
         exercises = new ArrayList<>();
@@ -17,28 +18,48 @@ public class ExerciseFilter {
     // MODIFIES: this
     // EFFECTS: adds exercise to exercises
     public void addExercise(Exercise e) {
-        
+        this.getExercises().add(e);
     }
 
     // MODIFIES: this
     // EFFECTS: removes first exercise with matching name
     // returns true if removed, false otherwise
     public boolean removeExercise(String name) {
-        return true;
+        for (int i = 0; i < this.getExercises().size(); i++) {
+            if (this.getExercises().get(i).getName().equals(name)) {
+                this.getExercises().remove(i);
+                return true;
+            }
+        }
+        return false;
     }
 
     // EFFECTS: returns current list of exercises
-    public List<Exercise> getExercises() {
-        return null;
+    public ArrayList<Exercise> getExercises() {
+        return this.exercises;
     }
 
     // EFFECTS: returns exercises that require exactly the one, given equipment
-    public List<Exercise> findByEquipment (Equipment equipment) {
-        return null;
+    public ArrayList<Exercise> findByEquipment(Equipment equipment) {
+        ArrayList<Exercise> availableExercises = new ArrayList<Exercise>();
+        for (Exercise i : ExerciseDatabase.ALL) {
+            if (i.getEquipmentType().equals(equipment)) {
+                availableExercises.add(i);
+            }
+        }
+        return availableExercises;
     }
 
     // EFFECTS: returns all exercises available with given pieces of equipment
-    public List<Exercise> getAllAvailableExercises (Set<Equipment> available) {
-        return null;
+    public ArrayList<Exercise> getAllAvailableExercises(Set<Equipment> available) {
+        ArrayList<Exercise> availableExercises = new ArrayList<Exercise>();
+        for (Equipment i : available) {
+            for (Exercise j : ExerciseDatabase.ALL) {
+                if (j.getEquipmentType().equals(i)) {
+                    availableExercises.add(j);
+                }
+            }
+        }
+        return availableExercises;
     }
 }

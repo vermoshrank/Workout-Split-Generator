@@ -3,13 +3,11 @@ package enums;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import enums.Equipment;
-
 public enum GymType {
     EVERYTHING(Equipment.values()),
-    COMMERCIAL,
-    LOCAL,
-    HOME;
+    COMMERCIAL(Equipment.values()),
+    LOCAL(Equipment.values()),
+    HOME(Equipment.values());
 
     private final ArrayList<Equipment> availableEquipment;
 
