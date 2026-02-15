@@ -26,19 +26,19 @@ public class TestWorkoutDay {
             new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.ARMS)),
             Equipment.BARBELL,
             new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PUSH, SplitType.FULL_BODY)),
-            135, 2, 6, 10, 1);
+            135, 2, 6, 10, 1, 1);
 
         exercise2 = new Exercise("Lat Pulldown",
             new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.BACK, MuscleGroup.ARMS)),
             Equipment.MACHINE,
             new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PULL, SplitType.FULL_BODY)),
-            120, 2, 6, 10, 1);
+            120, 2, 6, 10, 1, 1);
 
         exercise3 = new Exercise("Cable Tricep Pushdown",
             new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.TRICEPS)),
             Equipment.CABLE,
             new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PUSH, SplitType.FULL_BODY)),
-            100, 2, 6, 10, 1);
+            100, 2, 6, 10, 1, 1);
     }
 
     @Test
@@ -99,7 +99,7 @@ public class TestWorkoutDay {
             new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.ARMS)),
             Equipment.BARBELL,
             new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PUSH, SplitType.FULL_BODY)),
-            155, 2, 6, 10, 1);
+            155, 2, 6, 10, 1, 1);
 
         workoutDay.addExercise(duplicateExercise);
         workoutDay.addExercise(exercise2);

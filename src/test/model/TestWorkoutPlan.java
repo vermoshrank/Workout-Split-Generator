@@ -31,7 +31,7 @@ public class TestWorkoutPlan {
                 new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.ARMS)),
                 Equipment.BARBELL,
                 new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PUSH, SplitType.FULL_BODY)),
-                0, 2, 6, 10, 1);
+                0, 2, 6, 10, 1, 1);
     }
 
     @Test
@@ -76,7 +76,7 @@ public class TestWorkoutPlan {
                 new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.FRONT_DELTS)),
                 Equipment.DUMBBELL,
                 new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PUSH, SplitType.FULL_BODY)),
-                0, 2, 6, 10, 1);
+                0, 2, 6, 10, 1, 1);
 
         workoutPlan.addExerciseToDay("Push", benchPress);
         workoutPlan.addExerciseToDay("Push", shoulderPress);
