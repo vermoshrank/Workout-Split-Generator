@@ -1,13 +1,13 @@
 package model;
 
-import java.time.DayOfWeek;
 import java.util.List;
 import java.util.ArrayList;
 
 public class WorkoutPlan {
 
     private String name;
-    private List<WorkoutDay> workoutDays;
+    private ArrayList<WorkoutDay> workoutDays;
+
     // MODIFIES: this
     // EFFECTS: constructs new plan with empty days
     public WorkoutPlan(String name) {
@@ -17,32 +17,51 @@ public class WorkoutPlan {
 
     // MODIFIES: this
     // EFFECTS: adds a WorkoutDay for day if not already present
-    public void addDay(DayOfWeek day) {
-        
+    public void addDay(WorkoutDay day) {
+        this.workoutDays.add(day);
     }
 
     // MODIFIES: this
-    // EFFECTS: appends Exercise e to that day
-    public void addExerciseToDay(DayOfWeek day, Exercise e) {
-
+    // EFFECTS: appends Exercise e to the WorkoutDay of given name
+    public void addExerciseToDay(String name, Exercise e) {
+        for (WorkoutDay i : this.getWorkoutDays()) {
+            if (i.getName().equals(name)) {
+                i.addExercise(e);
+            }
+        }
     }
 
     // MODIFIES: this
-    // EFFECTS: removes Exercise e to that day
-    public boolean removeExerciseFromDay(DayOfWeek day, String exerciseName) {
-        return true;
-    }   
+    // EFFECTS: removes Exercise e from the WorkoutDay of given name.
+    // return true if successful, false otherwise
+    public boolean removeExerciseFromDay(String name, String exerciseName) {
+        for (WorkoutDay i : this.getWorkoutDays()) {
+            if (i.getName().equals(name)) {
+                i.removeExercise(exerciseName);
+                return true;
+            }
+        }
+        return false;
+    }
 
     public String getName() {
-        return null;
+        return this.name;
     }
 
-    public String setName() {
-        return null;
+    public ArrayList<WorkoutDay> getWorkoutDays() {
+        return this.workoutDays;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     // EFFECTS: get total exercises in given WorkoutPlan
     public int getTotalExercises(WorkoutPlan plan) {
-        return 0;
+        int count = 0;
+        for (WorkoutDay i : this.getWorkoutDays()) {
+            count += i.getTotalExercises();
+        }
+        return count;
     }
 }
