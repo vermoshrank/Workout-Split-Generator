@@ -1,26 +1,25 @@
 package model;
 
-import java.time.DayOfWeek;
 import java.util.Set;
 
 import enums.Equipment;
 import enums.GymType;
 
 public class GeneratorArguments {
-    private Set<DayOfWeek> trainingDays;
+    private int trainingDays;
     private GymType gymType;
 
     // EFFECTS: constructs an GeneratorArguments with the provided parameters
-    public GeneratorArguments(Set<DayOfWeek> trainingDays, GymType gymType) {
+    public GeneratorArguments(int trainingDays, GymType gymType) {
         this.trainingDays = trainingDays;
         this.gymType = gymType;
     }
 
-    public Set<DayOfWeek> getTrainingDays() {
-        return trainingDays;
+    public int getTrainingDays() {
+        return this.trainingDays;
     }
 
-    public void setTrainingDays(Set<DayOfWeek> trainingDays) {
+    public void setTrainingDays(int trainingDays) {
         this.trainingDays = trainingDays;
     }
 
@@ -31,5 +30,4 @@ public class GeneratorArguments {
     public void setGymType(GymType gymType) {
         this.gymType = gymType;
     }
-
 }

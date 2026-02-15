@@ -1,6 +1,5 @@
 package generator;
 
-import java.time.DayOfWeek;
 import java.util.Set;
 
 import model.GeneratorArguments;
@@ -19,7 +18,7 @@ public class SplitGenerator {
     }
 
     // EFFECTS: picks a split type based on availability
-    public String pickFocusForDay(DayOfWeek day, Set<DayOfWeek> chosenDays) {
+    public String pickFocusForDay(int numberOfDays) {
         return null;
     }
 }
