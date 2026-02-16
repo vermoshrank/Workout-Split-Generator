@@ -63,7 +63,7 @@ public class ExerciseFilter {
 
         this.getExercises().clear();
 
-        for (Exercise i: availableExercises) {
+        for (Exercise i : availableExercises) {
             this.getExercises().add(i);
         }
         return availableExercises;

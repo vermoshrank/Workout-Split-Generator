@@ -23,22 +23,22 @@ public class TestWorkoutDay {
         workoutDay = new WorkoutDay("Workout1");
 
         exercise1 = new Exercise("Barbell Bench Press",
-            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.ARMS)),
-            Equipment.BARBELL,
-            new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PUSH, SplitType.FULL_BODY)),
-            135, 2, 6, 10, 1, 1);
+                new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.ARMS)),
+                Equipment.BARBELL,
+                new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PUSH, SplitType.FULL_BODY)),
+                135, 2, 6, 10, 1, 1);
 
         exercise2 = new Exercise("Lat Pulldown",
-            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.BACK, MuscleGroup.ARMS)),
-            Equipment.MACHINE,
-            new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PULL, SplitType.FULL_BODY)),
-            120, 2, 6, 10, 1, 1);
+                new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.BACK, MuscleGroup.ARMS)),
+                Equipment.MACHINE,
+                new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PULL, SplitType.FULL_BODY)),
+                120, 2, 6, 10, 1, 1);
 
         exercise3 = new Exercise("Cable Tricep Pushdown",
-            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.TRICEPS)),
-            Equipment.CABLE,
-            new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PUSH, SplitType.FULL_BODY)),
-            100, 2, 6, 10, 1, 1);
+                new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.TRICEPS)),
+                Equipment.CABLE,
+                new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PUSH, SplitType.FULL_BODY)),
+                100, 2, 6, 10, 1, 1);
     }
 
     @Test
@@ -61,7 +61,7 @@ public class TestWorkoutDay {
         workoutDay.addExercise(exercise1);
         workoutDay.addExercise(exercise2);
         workoutDay.addExercise(exercise3);
-        
+
         assertEquals(3, workoutDay.getExercises().size());
         assertEquals(exercise1, workoutDay.getExercises().get(0));
         assertEquals(exercise2, workoutDay.getExercises().get(1));
@@ -72,16 +72,16 @@ public class TestWorkoutDay {
     void testRemoveExercise() {
         workoutDay.addExercise(exercise1);
         workoutDay.addExercise(exercise2);
-        
+
         assertTrue(workoutDay.removeExercise("Barbell Bench Press"));
         assertEquals(1, workoutDay.getExercises().size());
         assertEquals(exercise2, workoutDay.getExercises().get(0));
     }
-    
+
     @Test
     void testRemoveExerciseNotFound() {
         workoutDay.addExercise(exercise1);
-        
+
         assertFalse(workoutDay.removeExercise("zzz"));
         assertEquals(1, workoutDay.getExercises().size());
     }
@@ -96,14 +96,14 @@ public class TestWorkoutDay {
     void testRemoveExerciseFirstMatch() {
         workoutDay.addExercise(exercise1);
         Exercise duplicateExercise = new Exercise("Barbell Bench Press",
-            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.ARMS)),
-            Equipment.BARBELL,
-            new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PUSH, SplitType.FULL_BODY)),
-            155, 2, 6, 10, 1, 1);
+                new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.ARMS)),
+                Equipment.BARBELL,
+                new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PUSH, SplitType.FULL_BODY)),
+                155, 2, 6, 10, 1, 1);
 
         workoutDay.addExercise(duplicateExercise);
         workoutDay.addExercise(exercise2);
-        
+
         assertTrue(workoutDay.removeExercise("Barbell Bench Press"));
         assertEquals(2, workoutDay.getExercises().size());
         assertEquals("Barbell Bench Press", workoutDay.getExercises().get(0).getName());
@@ -113,10 +113,10 @@ public class TestWorkoutDay {
     @Test
     void testGetTotalExercises() {
         assertEquals(0, workoutDay.getTotalExercises());
-        
+
         workoutDay.addExercise(exercise1);
         assertEquals(1, workoutDay.getTotalExercises());
-        
+
         workoutDay.addExercise(exercise2);
         workoutDay.addExercise(exercise3);
         assertEquals(3, workoutDay.getTotalExercises());
@@ -126,7 +126,7 @@ public class TestWorkoutDay {
     void testCalculateSessionLengthSingleExercise() {
         workoutDay.addExercise(exercise1);
         workoutDay.calculateSessionLength();
-        
+
         assertEquals(3, workoutDay.getSessionLength());
     }
 
@@ -136,7 +136,7 @@ public class TestWorkoutDay {
         workoutDay.addExercise(exercise2);
         workoutDay.addExercise(exercise3);
         workoutDay.calculateSessionLength();
-        
+
         assertEquals(15, workoutDay.getSessionLength());
     }
 
@@ -148,11 +148,11 @@ public class TestWorkoutDay {
 
     @Test
     void testCalculateCaloriesBurnt() {
-        workoutDay.addExercise(exercise1); 
+        workoutDay.addExercise(exercise1);
         workoutDay.addExercise(exercise2);
         workoutDay.calculateSessionLength();
         workoutDay.calculateCaloriesBurnt();
-        
+
         assertEquals(45, workoutDay.getCalorieExpenditure());
     }
 }

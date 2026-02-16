@@ -45,7 +45,7 @@ public class WorkoutGeneratorApp {
         }
         System.out.println("Quit Successful");
     }
-    
+
     // based off of tellerapp
     // MODIFIES: this
     // EFFECTS: processes user command
@@ -153,8 +153,8 @@ public class WorkoutGeneratorApp {
                 // Display exercises
                 for (Exercise exercise : day.getExercises()) {
                     System.out.println("  " + exerciseNum + ". " + exercise.getName());
-                    System.out.println("Sets: " + exercise.getSets() + " Reps: " 
-                            + exercise.getMinReps() + "-" + exercise.getMaxReps() 
+                    System.out.println("Sets: " + exercise.getSets() + " Reps: "
+                            + exercise.getMinReps() + "-" + exercise.getMaxReps()
                             + " RIR: " + exercise.getRir());
                     System.out.println("     Equipment: " + exercise.getEquipmentType());
                     exerciseNum++;

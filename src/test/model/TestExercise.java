@@ -35,7 +35,7 @@ public class TestExercise {
                 6,
                 10,
                 1,
-            1);
+                1);
     }
 
     @Test
