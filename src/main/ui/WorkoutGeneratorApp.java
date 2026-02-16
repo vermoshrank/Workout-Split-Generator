@@ -152,11 +152,11 @@ public class WorkoutGeneratorApp {
                 int exerciseNum = 1;
                 // Display exercises
                 for (Exercise exercise : day.getExercises()) {
-                    System.out.printf("\n", exerciseNum, exercise.getName());
-                    System.out.printf("sets: ", exercise.getSets(), "%n",
-                            "reps: ", exercise.getMinReps(), "- ", exercise.getMaxReps(), "%n",
-                            "rir: ", exercise.getRir(), "%n");
-                    System.out.printf("Equipment:", exercise.getEquipmentType());
+                    System.out.println("  " + exerciseNum + ". " + exercise.getName());
+                    System.out.println("Sets: " + exercise.getSets() + " Reps: " 
+                            + exercise.getMinReps() + "-" + exercise.getMaxReps() 
+                            + " RIR: " + exercise.getRir());
+                    System.out.println("     Equipment: " + exercise.getEquipmentType());
                     exerciseNum++;
                 }
             }
@@ -171,10 +171,7 @@ public class WorkoutGeneratorApp {
 
         int count = 1;
         for (Exercise exercise : filter.getExercises()) {
-            System.out.printf("\n",
-                    count,
-                    exercise.getName(),
-                    exercise.getEquipmentType());
+            System.out.println(count + ". " + exercise.getName() + " - " + exercise.getEquipmentType());
             count++;
         }
 
@@ -189,9 +186,7 @@ public class WorkoutGeneratorApp {
         // Display days
         System.out.println("Select day:");
         for (int i = 0; i < currentPlan.getWorkoutDays().size(); i++) {
-            System.out.printf("\n",
-                    i + 1,
-                    currentPlan.getWorkoutDays().get(i).getName());
+            System.out.println("\n" + (i + 1) + " for " + currentPlan.getWorkoutDays().get(i).getName());
         }
         System.out.print("Enter choice: ");
         int dayChoice = input.nextInt();
@@ -201,9 +196,7 @@ public class WorkoutGeneratorApp {
         // Display available exercises
         System.out.println("\nAvailable exercises:");
         for (int i = 0; i < filter.getExercises().size(); i++) {
-            System.out.printf("\n",
-                    i + 1,
-                    filter.getExercises().get(i).getName());
+            System.out.println("\n" + (i + 1) + " for " + filter.getExercises().get(i).getName());
         }
         System.out.println("Enter exercise number: ");
         int exerciseChoice = input.nextInt();
@@ -222,9 +215,7 @@ public class WorkoutGeneratorApp {
         // Display days
         System.out.println("Select day:");
         for (int i = 0; i < currentPlan.getWorkoutDays().size(); i++) {
-            System.out.printf("\n",
-                    i + 1,
-                    currentPlan.getWorkoutDays().get(i).getName());
+            System.out.println("\n" + (i + 1) + " for " + currentPlan.getWorkoutDays().get(i).getName());
         }
         System.out.println("Enter choice: ");
         int dayChoice = input.nextInt();
@@ -234,9 +225,7 @@ public class WorkoutGeneratorApp {
         // Display available exercises
         System.out.println("\nExercises in " + selectedDay.getName() + ":");
         for (int i = 0; i < selectedDay.getExercises().size(); i++) {
-            System.out.printf("\n",
-                    i + 1,
-                    selectedDay.getExercises().get(i).getName());
+            System.out.println("\n" + (i + 1) + " for " + selectedDay.getExercises().get(i).getName());
         }
         System.out.println("Enter exercise number to remove: ");
         int exerciseChoice = input.nextInt();
