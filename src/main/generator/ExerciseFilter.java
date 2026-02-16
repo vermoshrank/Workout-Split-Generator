@@ -51,7 +51,7 @@ public class ExerciseFilter {
     }
 
     // EFFECTS: returns all exercises available with given pieces of equipment
-    public ArrayList<Exercise> getAllAvailableExercises(Set<Equipment> available) {
+    public ArrayList<Exercise> getAllAvailableExercises(ArrayList<Equipment> available) {
         ArrayList<Exercise> availableExercises = new ArrayList<Exercise>();
         for (Equipment i : available) {
             for (Exercise j : ExerciseDatabase.ALL) {
@@ -59,6 +59,12 @@ public class ExerciseFilter {
                     availableExercises.add(j);
                 }
             }
+        }
+
+        this.getExercises().clear();
+
+        for (Exercise i: availableExercises) {
+            this.getExercises().add(i);
         }
         return availableExercises;
     }
