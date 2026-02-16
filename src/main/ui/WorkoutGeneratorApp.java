@@ -60,8 +60,10 @@ public class WorkoutGeneratorApp {
             doAddExerciseToDay();
         } else if (command.equals("r")) {
             doRemoveExerciseFromDay();
+        } else if (command.equals("c")) {
+            doCreateCustomExercise();
         } else {
-            System.out.println("Selection not valid...");
+            System.out.println("Selection Does Not Exist.");
         }
     }
 
@@ -84,6 +86,7 @@ public class WorkoutGeneratorApp {
         System.out.println("e -> view all exercises");
         System.out.println("a -> add exercise to day");
         System.out.println("r -> remove exercise from day");
+        System.out.println("c -> create custom exercise");
         System.out.println("q -> quit");
         System.out.print("Enter choice: ");
     }
@@ -97,7 +100,7 @@ public class WorkoutGeneratorApp {
         int trainingDays = input.nextInt();
 
         if (trainingDays < 1 || trainingDays > 7) {
-            System.out.println("Invalid number of days. Using 4 days...");
+            System.out.println("Invalid number of days: Using 4 days.");
             trainingDays = 4;
         }
 
@@ -132,7 +135,7 @@ public class WorkoutGeneratorApp {
         } else if (choice == 4) {
             return GymType.HOME;
         } else {
-            System.out.println("Invalid choice: Using EVERYTHING");
+            System.out.println("Invalid choice: Using EVERYTHING.");
             return GymType.EVERYTHING;
         }
     }
@@ -233,5 +236,62 @@ public class WorkoutGeneratorApp {
         String exerciseName = selectedDay.getExercises().get(exerciseChoice - 1).getName();
         currentPlan.removeExerciseFromDay(selectedDay.getName(), exerciseName);
         System.out.println("Removed " + exerciseName + " from " + selectedDay.getName());
+    }
+
+    // MODIFIES: this
+    // EFFECTS: prompts user to create a custom exercise and adds it to the filter
+    private void doCreateCustomExercise() {
+        System.out.println("\n--- Create Custom Exercise ---");
+
+        input.nextLine();
+        System.out.print("Enter exercise name: ");
+        String name = input.nextLine();
+
+        ArrayList<enums.MuscleGroup> targetMuscles = new ArrayList<>();
+
+        System.out.println("\nSelect primary muscle group:");
+
+        for (int i = 0; i < enums.MuscleGroup.values().length; i++) {
+            System.out.println((i + 1) + ". " + enums.MuscleGroup.values()[i]);
+        }
+
+        System.out.println("Enter choice: ");
+        int muscles = input.nextInt();
+        targetMuscles.add(enums.MuscleGroup.values()[muscles - 1]);
+
+        System.out.println("\nSelect equipment type:");
+
+        for (int i = 0; i < enums.Equipment.values().length; i++) {
+            System.out.println((i + 1) + ". " + enums.Equipment.values()[i]);
+        }
+
+        System.out.println("Enter choice: ");
+        int equip = input.nextInt();
+        enums.Equipment equipment = enums.Equipment.values()[equip - 1];
+
+        System.out.println("Enter weight: ");
+        int weight = input.nextInt();
+
+        System.out.print("Enter target sets: ");
+        int sets = input.nextInt();
+
+        System.out.print("Enter minimum reps: ");
+        int minReps = input.nextInt();
+
+        System.out.print("Enter maximum reps: ");
+        int maxReps = input.nextInt();
+
+        System.out.print("Enter RIR (Reps in Reserve): ");
+        int rir = input.nextInt();
+
+        System.out.print("Enter priority (1 = High, 2 = Medium, 3 = Low): ");
+        int priority = input.nextInt();
+
+        Exercise custom = new Exercise(
+                name, targetMuscles, equipment, new ArrayList<>(),
+                weight, sets, minReps, maxReps, rir, priority);
+
+        filter.addExercise(custom);
+        System.out.println("Added " + name + " to available exercises.");
     }
 }
