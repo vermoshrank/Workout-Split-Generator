@@ -14,13 +14,13 @@ public final class ExerciseDatabase {
 
     // CHEST
     public static final Exercise BARBELL_BENCH_PRESS = new Exercise("Barbell Bench Press",
-            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.ARMS)),
+            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.FRONT_DELTS)),
             Equipment.BARBELL,
             new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PUSH, SplitType.FULL_BODY)),
             0, 2, 6, 10, 1, 2);
 
     public static final Exercise INCLINE_DUMBBELL_PRESS = new Exercise("Incline Dumbbell Press",
-            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.SHOULDERS)),
+            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.UPPER_CHEST, MuscleGroup.FRONT_DELTS)),
             Equipment.DUMBBELL,
             new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PUSH, SplitType.FULL_BODY)),
             0, 2, 6, 10, 1, 1);
@@ -34,13 +34,13 @@ public final class ExerciseDatabase {
     // BACK
 
     public static final Exercise UPPER_BACK_ROW = new Exercise("Upper Back Row",
-            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.BACK, MuscleGroup.ARMS)),
+            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.TRAPS, MuscleGroup.REAR_DELTS)),
             Equipment.MACHINE,
             new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PULL, SplitType.FULL_BODY)),
             0, 2, 6, 10, 1, 1);
 
     public static final Exercise LAT_PULLDOWN = new Exercise("Lat Pulldown",
-            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.BACK, MuscleGroup.ARMS)),
+            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.LATS)),
             Equipment.MACHINE,
             new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PULL, SplitType.FULL_BODY)),
             0, 2, 6, 10, 1, 1);
@@ -48,25 +48,25 @@ public final class ExerciseDatabase {
     // LEGS
 
     public static final Exercise DEADLIFT = new Exercise("Deadlift",
-            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.BACK, MuscleGroup.LEGS)),
+            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.HAMSTRINGS, MuscleGroup.GLUTES, MuscleGroup.ERECTORS)),
             Equipment.BARBELL,
             new ArrayList<SplitType>(Arrays.asList(SplitType.LOWER, SplitType.PULL, SplitType.FULL_BODY)),
             0, 2, 6, 10, 1, 2);
 
     public static final Exercise CALF_RAISE = new Exercise("Calf Raise",
-            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.LEGS)),
+            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.CALVES)),
             Equipment.MACHINE,
             new ArrayList<SplitType>(Arrays.asList(SplitType.LOWER, SplitType.PUSH, SplitType.FULL_BODY)),
             0, 2, 6, 10, 1, 1);
 
     public static final Exercise LEG_PRESS = new Exercise("Leg Press",
-            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.LEGS)),
+            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.QUADS, MuscleGroup.GLUTES)),
             Equipment.MACHINE,
             new ArrayList<SplitType>(Arrays.asList(SplitType.LOWER, SplitType.PUSH, SplitType.FULL_BODY)),
             0, 2, 6, 10, 1, 1);
 
     public static final Exercise LEG_CURL = new Exercise("Leg Curl",
-            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.LEGS)),
+            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.HAMSTRINGS)),
             Equipment.MACHINE,
             new ArrayList<SplitType>(Arrays.asList(SplitType.LOWER, SplitType.PULL, SplitType.FULL_BODY)),
             0, 2, 6, 10, 1, 1);
@@ -84,6 +84,12 @@ public final class ExerciseDatabase {
             Equipment.DUMBBELL,
             new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PUSH, SplitType.FULL_BODY)),
             0, 2, 6, 10, 1, 1);
+
+    public static final Exercise REAR_DELT_FLY = new Exercise("Rear Delt Fly",
+            new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.REAR_DELTS)),
+            Equipment.CABLE,
+            new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PULL, SplitType.FULL_BODY)),
+            0, 2, 6, 10, 1, 2);
 
     // ARMS
 
@@ -114,6 +120,7 @@ public final class ExerciseDatabase {
 
             DUMBBELL_SHOULDER_PRESS,
             LATERAL_RAISE,
+            REAR_DELT_FLY,
 
             DUMBBELL_CURL,
             TRICEP_PUSHDOWN));

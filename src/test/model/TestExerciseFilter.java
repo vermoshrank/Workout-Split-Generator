@@ -95,14 +95,14 @@ public class TestExerciseFilter {
 
     @Test
     void testGetAvailableWithOneEquipment() {
-            Set<Equipment> available = new HashSet<>(Arrays.asList(Equipment.BARBELL));
+            ArrayList<Equipment> available = new ArrayList<>(Arrays.asList(Equipment.BARBELL));
             List<Exercise> result = filter.getAllAvailableExercises(available);
             assertEquals(2, result.size());
     }
 
     @Test
     void testGetAvailableWithMultipleEquipment() {
-            Set<Equipment> available = new HashSet<>(Arrays.asList(
+            ArrayList<Equipment> available = new ArrayList<>(Arrays.asList(
                 Equipment.BARBELL, 
                 Equipment.DUMBBELL));
                 ArrayList<Exercise> result = filter.getAllAvailableExercises(available);

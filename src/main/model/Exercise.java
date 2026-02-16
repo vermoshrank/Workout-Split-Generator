@@ -67,7 +67,7 @@ public class Exercise {
         return this.maxReps;
     }
 
-    public int getMaxRir() {
+    public int getRir() {
         return this.rir;
     }
 

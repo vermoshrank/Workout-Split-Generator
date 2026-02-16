@@ -48,6 +48,6 @@ public class TestExercise {
         assertEquals(2, exercise.getSets());
         assertEquals(6, exercise.getMinReps());
         assertEquals(10, exercise.getMaxReps());
-        assertEquals(1, exercise.getMaxRir());
+        assertEquals(1, exercise.getRir());
     }
 }
