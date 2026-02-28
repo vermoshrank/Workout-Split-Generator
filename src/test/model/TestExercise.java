@@ -22,14 +22,10 @@ public class TestExercise {
         targetMuscles.add(MuscleGroup.CHEST);
         targetMuscles.add(MuscleGroup.TRICEPS);
 
-        splits = new ArrayList<>();
-        splits.add(SplitType.PUSH);
-
         exercise = new Exercise(
                 "Bench Press",
                 targetMuscles,
                 Equipment.BARBELL,
-                splits,
                 135,
                 2,
                 6,
@@ -43,7 +39,6 @@ public class TestExercise {
         assertEquals("Bench Press", exercise.getName());
         assertEquals(targetMuscles, exercise.getTargetMuscles());
         assertEquals(Equipment.BARBELL, exercise.getEquipmentType());
-        assertEquals(splits, exercise.getSplitTypes());
         assertEquals(135, exercise.getWeight());
         assertEquals(2, exercise.getSets());
         assertEquals(6, exercise.getMinReps());

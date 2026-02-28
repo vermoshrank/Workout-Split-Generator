@@ -290,7 +290,7 @@ public class WorkoutGeneratorApp {
         int priority = input.nextInt();
 
         Exercise custom = new Exercise(
-                name, targetMuscles, equipment, new ArrayList<>(),
+                name, targetMuscles, equipment,
                 weight, sets, minReps, maxReps, rir, priority);
 
         filter.addExercise(custom);

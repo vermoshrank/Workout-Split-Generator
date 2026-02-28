@@ -30,25 +30,21 @@ public class TestExerciseFilter {
         benchPress = new Exercise("Barbell Bench Press",
                 new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.ARMS)),
                 Equipment.BARBELL,
-                new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PUSH, SplitType.FULL_BODY)),
                 0, 2, 6, 10, 1, 2);
 
         dumbbellCurl = new Exercise("Dumbell Curl",
                 new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.BICEPS)),
                 Equipment.DUMBBELL,
-                new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PULL, SplitType.FULL_BODY)),
                 0, 2, 6, 10, 1, 1);
 
         latPulldown = new Exercise("Lat Pulldown",
                 new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.BACK, MuscleGroup.ARMS)),
                 Equipment.MACHINE,
-                new ArrayList<SplitType>(Arrays.asList(SplitType.UPPER, SplitType.PULL, SplitType.FULL_BODY)),
                 0, 2, 6, 10, 1, 1);
 
         legPress = new Exercise("Leg Press",
                 new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.LEGS)),
                 Equipment.MACHINE,
-                new ArrayList<SplitType>(Arrays.asList(SplitType.LOWER, SplitType.PUSH, SplitType.FULL_BODY)),
                 0, 2, 6, 10, 1, 1);
     }
 
