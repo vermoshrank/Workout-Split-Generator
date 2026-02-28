@@ -7,16 +7,12 @@ public class WorkoutDay {
 
     private String name;
     private List<Exercise> exercises;
-    private int sessionLength;
-    private double calorieExpenditure;
 
     // MODIFIES: this
     // EFFECTS: constructs WorkoutDay for given day
     public WorkoutDay(String name) {
         this.name = name;
         this.exercises = new ArrayList<Exercise>();
-        this.sessionLength = 0;
-        this.calorieExpenditure = 0;
     }
 
     // MODIFIES: this
@@ -45,14 +41,6 @@ public class WorkoutDay {
         return this.exercises;
     }
 
-    public int getSessionLength() {
-        return this.sessionLength;
-    }
-
-    public double getCalorieExpenditure() {
-        return this.calorieExpenditure;
-    }
-
     // EFFECTS: returns total number of exercises in given day
     public int getTotalExercises() {
         return this.getExercises().size();
@@ -60,20 +48,21 @@ public class WorkoutDay {
 
     // EFFECTS: returns estimated session duration based on number of sets of every
     // exercise
-    public void calculateSessionLength() {
+    public int calculateSessionLength() {
         int length = 0;
         if (this.getTotalExercises() == 0) {
-            this.sessionLength = length;
+            return 0;
         } else {
             for (Exercise i : this.getExercises()) {
                 length += i.getSets() * 3;
             }
             length -= 3;
-            this.sessionLength = length;
+            return length;
         }
     }
 
-    public void calculateCaloriesBurnt() {
-        this.calorieExpenditure = 300 * (this.getSessionLength() / 60.0);
+    // EFFECTS: returns estimated WorkoutDay calorie expenditure
+    public double calculateCaloriesBurnt() {
+        return 300 * (this.calculateSessionLength() / 60.0);
     }
 }

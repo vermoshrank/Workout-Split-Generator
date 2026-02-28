@@ -163,9 +163,13 @@ public class WorkoutGeneratorApp {
                     System.out.println("     Equipment: " + exercise.getEquipmentType());
                     exerciseNum++;
                 }
+                System.out.println("\nEstimated Workout Duration: " +
+                        day.calculateSessionLength() +
+                        " mins");
+                System.out.println("Estimated Calorie Expenditure: " +
+                        day.calculateCaloriesBurnt());
             }
         }
-
         System.out.println("\nTotal exercises: " + currentPlan.getTotalExercises(currentPlan));
     }
 

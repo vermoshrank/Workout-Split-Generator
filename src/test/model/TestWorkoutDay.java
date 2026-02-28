@@ -42,8 +42,6 @@ public class TestWorkoutDay {
     void testConstructor() {
         assertEquals("Workout1", workoutDay.getName());
         assertEquals(0, workoutDay.getExercises().size());
-        assertEquals(0, workoutDay.getSessionLength());
-        assertEquals(0, workoutDay.getCalorieExpenditure());
     }
 
     @Test
@@ -121,9 +119,8 @@ public class TestWorkoutDay {
     @Test
     void testCalculateSessionLengthSingleExercise() {
         workoutDay.addExercise(exercise1);
-        workoutDay.calculateSessionLength();
 
-        assertEquals(3, workoutDay.getSessionLength());
+        assertEquals(3, workoutDay.calculateSessionLength());
     }
 
     @Test
@@ -131,24 +128,20 @@ public class TestWorkoutDay {
         workoutDay.addExercise(exercise1);
         workoutDay.addExercise(exercise2);
         workoutDay.addExercise(exercise3);
-        workoutDay.calculateSessionLength();
 
-        assertEquals(15, workoutDay.getSessionLength());
+        assertEquals(15, workoutDay.calculateSessionLength());
     }
 
     @Test
     void testCalculateSessionLengthEmptyDay() {
-        workoutDay.calculateSessionLength();
-        assertEquals(0, workoutDay.getSessionLength());
+        assertEquals(0, workoutDay.calculateSessionLength());
     }
 
     @Test
     void testCalculateCaloriesBurnt() {
         workoutDay.addExercise(exercise1);
         workoutDay.addExercise(exercise2);
-        workoutDay.calculateSessionLength();
-        workoutDay.calculateCaloriesBurnt();
 
-        assertEquals(45, workoutDay.getCalorieExpenditure());
+        assertEquals(45, workoutDay.calculateCaloriesBurnt());
     }
 }
