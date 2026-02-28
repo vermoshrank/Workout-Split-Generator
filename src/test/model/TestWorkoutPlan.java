@@ -8,9 +8,9 @@ import java.util.Arrays;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import enums.Equipment;
-import enums.MuscleGroup;
-import enums.SplitType;
+import model.enums.Equipment;
+import model.enums.MuscleGroup;
+import model.enums.SplitType;
 
 public class TestWorkoutPlan {
     private WorkoutPlan workoutPlan;

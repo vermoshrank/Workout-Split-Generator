@@ -1,4 +1,4 @@
-package generator;
+package model.generator;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,12 +7,12 @@ import java.util.List;
 import java.util.Set;
 import java.util.Random;
 
-import enums.MuscleGroup;
-import enums.SplitType;
 import model.Exercise;
 import model.GeneratorArguments;
 import model.WorkoutDay;
 import model.WorkoutPlan;
+import model.enums.MuscleGroup;
+import model.enums.SplitType;
 
 public class SplitGenerator {
     private ExerciseFilter filteredExercises;
@@ -26,6 +26,7 @@ public class SplitGenerator {
     }
 
     // EFFECTS: returns a generated WorkoutPlan according to generator arguments
+    @SuppressWarnings("methodlength")
     public WorkoutPlan suggestSplit(GeneratorArguments args) {
         WorkoutPlan plan = new WorkoutPlan("");
         SplitType type = pickSplitType(args.getTrainingDays());

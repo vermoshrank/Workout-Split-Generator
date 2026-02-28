@@ -1,12 +1,12 @@
 package model;
 
-import enums.Equipment;
-import enums.MuscleGroup;
-import enums.SplitType;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import model.enums.Equipment;
+import model.enums.MuscleGroup;
+import model.enums.SplitType;
 
 public final class ExerciseDatabase {
     private ExerciseDatabase() {

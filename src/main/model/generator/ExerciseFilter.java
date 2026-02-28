@@ -1,12 +1,12 @@
-package generator;
+package model.generator;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import enums.Equipment;
 import model.Exercise;
 import model.ExerciseDatabase;
+import model.enums.Equipment;
 
 public class ExerciseFilter {
     private ArrayList<Exercise> exercises;

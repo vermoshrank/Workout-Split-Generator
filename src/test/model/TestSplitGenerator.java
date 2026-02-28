@@ -7,11 +7,11 @@ import java.util.ArrayList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import enums.GymType;
-import enums.MuscleGroup;
-import enums.SplitType;
-import generator.ExerciseFilter;
-import generator.SplitGenerator;
+import model.enums.GymType;
+import model.enums.MuscleGroup;
+import model.enums.SplitType;
+import model.generator.ExerciseFilter;
+import model.generator.SplitGenerator;
 
 public class TestSplitGenerator {
     private SplitGenerator generator;

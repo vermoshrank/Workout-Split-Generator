@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import enums.GymType;
+import model.enums.GymType;
 
 public class TestGeneratorArguments {
     private GeneratorArguments generatorArguments;

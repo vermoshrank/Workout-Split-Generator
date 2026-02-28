@@ -3,14 +3,14 @@ package ui;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import enums.GymType;
-import generator.ExerciseFilter;
-import generator.SplitGenerator;
 import model.Exercise;
 import model.ExerciseDatabase;
 import model.GeneratorArguments;
 import model.WorkoutDay;
 import model.WorkoutPlan;
+import model.enums.GymType;
+import model.generator.ExerciseFilter;
+import model.generator.SplitGenerator;
 
 public class WorkoutGeneratorApp {
     private ExerciseFilter filter;
@@ -93,6 +93,7 @@ public class WorkoutGeneratorApp {
 
     // MODIFIES: this
     // EFFECTS: generates a new workout split based on user input
+    @SuppressWarnings("methodlength")
     private void doGenerateSplit() {
         System.out.println("\n--- Generate Workout Split ---");
 
@@ -240,6 +241,7 @@ public class WorkoutGeneratorApp {
 
     // MODIFIES: this
     // EFFECTS: prompts user to create a custom exercise and adds it to the filter
+    @SuppressWarnings("methodlength")
     private void doCreateCustomExercise() {
         System.out.println("\n--- Create Custom Exercise ---");
 
@@ -247,27 +249,27 @@ public class WorkoutGeneratorApp {
         System.out.print("Enter exercise name: ");
         String name = input.nextLine();
 
-        ArrayList<enums.MuscleGroup> targetMuscles = new ArrayList<>();
+        ArrayList<model.enums.MuscleGroup> targetMuscles = new ArrayList<>();
 
         System.out.println("\nSelect primary muscle group:");
 
-        for (int i = 0; i < enums.MuscleGroup.values().length; i++) {
-            System.out.println((i + 1) + ". " + enums.MuscleGroup.values()[i]);
+        for (int i = 0; i < model.enums.MuscleGroup.values().length; i++) {
+            System.out.println((i + 1) + ". " + model.enums.MuscleGroup.values()[i]);
         }
 
         System.out.println("Enter choice: ");
         int muscles = input.nextInt();
-        targetMuscles.add(enums.MuscleGroup.values()[muscles - 1]);
+        targetMuscles.add(model.enums.MuscleGroup.values()[muscles - 1]);
 
         System.out.println("\nSelect equipment type:");
 
-        for (int i = 0; i < enums.Equipment.values().length; i++) {
-            System.out.println((i + 1) + ". " + enums.Equipment.values()[i]);
+        for (int i = 0; i < model.enums.Equipment.values().length; i++) {
+            System.out.println((i + 1) + ". " + model.enums.Equipment.values()[i]);
         }
 
         System.out.println("Enter choice: ");
         int equip = input.nextInt();
-        enums.Equipment equipment = enums.Equipment.values()[equip - 1];
+        model.enums.Equipment equipment = model.enums.Equipment.values()[equip - 1];
 
         System.out.println("Enter weight: ");
         int weight = input.nextInt();

@@ -2,8 +2,8 @@ package model;
 
 import java.util.Set;
 
-import enums.Equipment;
-import enums.GymType;
+import model.enums.Equipment;
+import model.enums.GymType;
 
 public class GeneratorArguments {
     private int trainingDays;

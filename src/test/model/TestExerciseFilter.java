@@ -11,10 +11,10 @@ import java.util.Set;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import enums.Equipment;
-import enums.MuscleGroup;
-import enums.SplitType;
-import generator.ExerciseFilter;
+import model.enums.Equipment;
+import model.enums.MuscleGroup;
+import model.enums.SplitType;
+import model.generator.ExerciseFilter;
 
 public class TestExerciseFilter {
     private ExerciseFilter filter;
