@@ -43,7 +43,7 @@ public class testJsonWriter {
             assertEquals("My workout plan", plan.getName());
             assertEquals(0, plan.getWorkoutDays().size());
         } catch (IOException e) {
-            fail("Exception should not have been thrown");
+            fail("Couldn't read from file");
         }
     }
 
@@ -93,7 +93,7 @@ public class testJsonWriter {
             assertEquals(1, pullExercises.size());
 
         } catch (IOException e) {
-            fail("Exception should not have been thrown");
+            fail("Couldn't read from file");
         }
     }
 }
