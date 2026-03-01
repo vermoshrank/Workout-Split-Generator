@@ -1,0 +1,172 @@
+{
+    "name": "Upper Lower 4x a week",
+    "days": [
+        {
+            "exercises": [
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": [
+                        "TRICEPS",
+                        "FRONT_DELTS",
+                        "CHEST"
+                    ],
+                    "name": "Tricep Dip",
+                    "weight": 0,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "DIP_STATION"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": [
+                        "UPPER_CHEST",
+                        "FRONT_DELTS",
+                        "TRICEPS"
+                    ],
+                    "name": "Smith Machine Incline Press",
+                    "weight": 65,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "SMITH_MACHINE"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": ["SIDE_DELTS"],
+                    "name": "Cable Lateral Raise",
+                    "weight": 10,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "CABLE"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": [
+                        "LATS",
+                        "RHOMBOIDS",
+                        "TRAPS",
+                        "BICEPS"
+                    ],
+                    "name": "Seated Cable Row",
+                    "weight": 60,
+                    "rir": 1,
+                    "priority": 1,
+                    "equipmentType": "SEATED_ROW_MACHINE"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": [
+                        "REAR_DELTS",
+                        "RHOMBOIDS"
+                    ],
+                    "name": "Machine Rear Delt Fly",
+                    "weight": 20,
+                    "rir": 1,
+                    "priority": 1,
+                    "equipmentType": "REAR_DELT_FLY_MACHINE"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": ["FOREARMS"],
+                    "name": "Barbell Wrist Curl",
+                    "weight": 25,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "BARBELL"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": [
+                        "BRACHIALIS",
+                        "BRACHIORADIALIS"
+                    ],
+                    "name": "Cable Hammer Curl",
+                    "weight": 25,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "CABLE"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": [
+                        "ABS",
+                        "HIP_FLEXORS"
+                    ],
+                    "name": "Hanging Leg Raise",
+                    "weight": 0,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "BODYWEIGHT"
+                }
+            ],
+            "name": "Upper"
+        },
+        {
+            "exercises": [
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": [
+                        "QUADS",
+                        "GLUTES"
+                    ],
+                    "name": "Smith Machine Bulgarian Split Squat",
+                    "weight": 65,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "SMITH_MACHINE"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": ["HAMSTRINGS"],
+                    "name": "Seated Leg Curl",
+                    "weight": 50,
+                    "rir": 1,
+                    "priority": 1,
+                    "equipmentType": "SEATED_LEG_CURL_MACHINE"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": ["CALVES"],
+                    "name": "Standing Calf Raise",
+                    "weight": 60,
+                    "rir": 1,
+                    "priority": 1,
+                    "equipmentType": "CALF_RAISE_MACHINE"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": ["ABS"],
+                    "name": "Ab Crunch Machine",
+                    "weight": 40,
+                    "rir": 1,
+                    "priority": 1,
+                    "equipmentType": "AB_CRUNCH_MACHINE"
+                }
+            ],
+            "name": "Lower"
+        }
+    ]
+}

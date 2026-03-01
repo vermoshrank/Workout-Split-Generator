@@ -1,5 +1,7 @@
 package ui;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -105,6 +107,8 @@ public class WorkoutGeneratorApp {
         System.out.println("a -> add exercise to day");
         System.out.println("r -> remove exercise from day");
         System.out.println("c -> create custom exercise");
+        System.out.println("s -> save plan to file");
+        System.out.println("l -> load plan from file");
         System.out.println("q -> quit");
         System.out.print("Enter choice: ");
     }
@@ -319,12 +323,28 @@ public class WorkoutGeneratorApp {
         System.out.println("Added " + name + " to available exercises.");
     }
 
+    // based off WorkRoom app
     // EFFECTS: saves the current workout plan to file
     private void doSavePlan() {
+        try {
+            jsonWriter.open();
+            jsonWriter.write(currentPlan);
+            jsonWriter.close();
+            System.out.println("Saved " + currentPlan.getName() + " to " + JSON_STORE);
+        } catch (FileNotFoundException e) {
+            System.out.println("Unable to write to file: " + JSON_STORE);
+        }
     }
 
+    // based off WorkRoom app
     // MODIFIES: this
     // EFFECTS: loads a workout plan from file and sets it as the current plan
     private void doLoadPlan() {
+        try {
+            currentPlan = jsonReader.read();
+            System.out.println("Loaded " + currentPlan.getName() + " from " + JSON_STORE);
+        } catch (IOException e) {
+            System.out.println("Unable to read from file: " + JSON_STORE);
+        }
     }
 }
