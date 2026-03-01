@@ -11,6 +11,8 @@ import model.WorkoutPlan;
 import model.enums.GymType;
 import model.generator.ExerciseFilter;
 import model.generator.SplitGenerator;
+import persistence.JsonReader;
+import persistence.JsonWriter;
 
 /**
  * Console-based user interface for the Workout Split Generator application.
@@ -22,10 +24,13 @@ import model.generator.SplitGenerator;
  * and output is written to output.
  */
 public class WorkoutGeneratorApp {
+    private static final String JSON_STORE = "./data/workoutplan.json";
     private ExerciseFilter filter;
     private SplitGenerator generator;
     private WorkoutPlan currentPlan;
     private Scanner input;
+    private JsonWriter jsonWriter;
+    private JsonReader jsonReader;
 
     // based off of tellerapp
     public WorkoutGeneratorApp() {
@@ -71,6 +76,10 @@ public class WorkoutGeneratorApp {
             doRemoveExerciseFromDay();
         } else if (command.equals("c")) {
             doCreateCustomExercise();
+        } else if (command.equals("s")) {
+            doSavePlan();
+        } else if (command.equals("l")) {
+            doLoadPlan();
         } else {
             System.out.println("Selection Does Not Exist.");
         }
@@ -80,10 +89,10 @@ public class WorkoutGeneratorApp {
     // EFFECTS: initializes filter
     private void init() {
         filter = new ExerciseFilter();
-
         currentPlan = null;
         input = new Scanner(System.in);
-
+        jsonWriter = new JsonWriter(JSON_STORE);
+        jsonReader = new JsonReader(JSON_STORE);
     }
 
     // based off of tellerapp
@@ -308,5 +317,14 @@ public class WorkoutGeneratorApp {
 
         filter.addExercise(custom);
         System.out.println("Added " + name + " to available exercises.");
+    }
+
+    // EFFECTS: saves the current workout plan to file
+    private void doSavePlan() {
+    }
+
+    // MODIFIES: this
+    // EFFECTS: loads a workout plan from file and sets it as the current plan
+    private void doLoadPlan() {
     }
 }

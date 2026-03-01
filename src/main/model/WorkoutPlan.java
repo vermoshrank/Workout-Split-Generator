@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class WorkoutPlan implements Writable {
     private String name;
     private ArrayList<WorkoutDay> workoutDays;
-
+    
     // MODIFIES: this
     // EFFECTS: constructs new plan with empty days
     public WorkoutPlan(String name) {

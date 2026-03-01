@@ -1,0 +1,40 @@
+{
+    "name": "Push Pull Legs",
+    "days": [
+        {
+            "exercises": [{
+                "minReps": 6,
+                "sets": 2,
+                "maxReps": 10,
+                "targetMuscles": [
+                    "CHEST",
+                    "FRONT_DELTS",
+                    "TRICEPS"
+                ],
+                "name": "Barbell Bench Press",
+                "weight": 95,
+                "rir": 1,
+                "priority": 2,
+                "equipmentType": "BARBELL"
+            }],
+            "name": "Push"
+        },
+        {
+            "exercises": [{
+                "minReps": 6,
+                "sets": 2,
+                "maxReps": 10,
+                "targetMuscles": [
+                    "LATS",
+                    "BICEPS"
+                ],
+                "name": "Lat Pulldown",
+                "weight": 60,
+                "rir": 1,
+                "priority": 1,
+                "equipmentType": "LAT_PULLDOWN_MACHINE"
+            }],
+            "name": "Pull"
+        }
+    ]
+}
