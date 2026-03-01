@@ -18,3 +18,5 @@ The app is intended for **gym-goers/lifters** who want a more organized way to p
 - As a user, I want to be able to edit the details of an existing exercise in my workout plan.
 - As a user, I want to be able to generate a suggested workout split by selecting parameters such as available equipment and the days of the week I want to train.
 - As a user, I want to be able to view calculated information for a workout plan, such as estimated workout duration and calories burned.
+- As a user, I want to be able to save my workout plan to file (if I so choose)
+- As a user, I want to be able to be able to load my workout plan list from file (if I so choose)
