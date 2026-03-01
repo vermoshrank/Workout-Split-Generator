@@ -81,7 +81,16 @@ public class WorkoutPlan implements Writable {
     // EFFECTS: returns this plan as a JSON object
     @Override
     public JSONObject toJson() {
-        return null;
+        JSONObject json = new JSONObject();
+        json.put("name", name);
+
+        JSONArray daysArray = new JSONArray();
+        for (WorkoutDay i : workoutDays) {
+            daysArray.put(i.toJson());
+        }
+        json.put("days", daysArray);
+
+        return json;
     }
 }
 

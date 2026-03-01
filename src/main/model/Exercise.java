@@ -3,6 +3,7 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import model.enums.Equipment;
@@ -118,6 +119,22 @@ public class Exercise implements Writable {
     // EFFECTS: returns this exercise as a JSON object
     @Override
     public JSONObject toJson() {
-        return null;
+        JSONObject json = new JSONObject();
+        json.put("name", name);
+        json.put("equipmentType", equipmentType.name());
+        json.put("weight", weight);
+        json.put("sets", sets);
+        json.put("minReps", minReps);
+        json.put("maxReps", maxReps);
+        json.put("rir", rir);
+        json.put("priority", priority);
+
+        JSONArray muscles = new JSONArray();
+        for (MuscleGroup i : targetMuscles) {
+            muscles.put(i.name());
+        }
+        json.put("targetMuscles", muscles);
+
+        return json;
     }
 }
