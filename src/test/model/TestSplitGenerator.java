@@ -76,7 +76,7 @@ public class TestSplitGenerator {
     void testGetTargetMusclesPull() {
         ArrayList<MuscleGroup> targets = generator.getTargetMusclesForDay("pull");
 
-        assertEquals(4, targets.size());
+        assertEquals(6, targets.size());
         assertTrue(targets.contains(MuscleGroup.LATS));
         assertTrue(targets.contains(MuscleGroup.TRAPS));
         assertTrue(targets.contains(MuscleGroup.REAR_DELTS));
@@ -87,7 +87,7 @@ public class TestSplitGenerator {
     void testGetTargetMusclesLegs() {
         ArrayList<MuscleGroup> targets = generator.getTargetMusclesForDay("legs");
 
-        assertEquals(4, targets.size());
+        assertEquals(5, targets.size());
         assertTrue(targets.contains(MuscleGroup.QUADS));
         assertTrue(targets.contains(MuscleGroup.HAMSTRINGS));
         assertTrue(targets.contains(MuscleGroup.GLUTES));
@@ -98,7 +98,7 @@ public class TestSplitGenerator {
     void testGetTargetMusclesUpper() {
         ArrayList<MuscleGroup> targets = generator.getTargetMusclesForDay("upper");
 
-        assertEquals(9, targets.size());
+        assertEquals(12, targets.size());
         assertTrue(targets.contains(MuscleGroup.CHEST));
         assertTrue(targets.contains(MuscleGroup.LATS));
         assertTrue(targets.contains(MuscleGroup.TRICEPS));
@@ -109,7 +109,7 @@ public class TestSplitGenerator {
     void testGetTargetMusclesLower() {
         ArrayList<MuscleGroup> targets = generator.getTargetMusclesForDay("lower");
 
-        assertEquals(4, targets.size());
+        assertEquals(5, targets.size());
         assertTrue(targets.contains(MuscleGroup.QUADS));
         assertTrue(targets.contains(MuscleGroup.HAMSTRINGS));
         assertTrue(targets.contains(MuscleGroup.GLUTES));
@@ -120,7 +120,7 @@ public class TestSplitGenerator {
     void testGetTargetMusclesForFullBody() {
         ArrayList<MuscleGroup> targets = generator.getTargetMusclesForDay("full body");
 
-        assertEquals(13, targets.size());
+        assertEquals(16, targets.size());
         assertTrue(targets.contains(MuscleGroup.CHEST));
         assertTrue(targets.contains(MuscleGroup.LATS));
         assertTrue(targets.contains(MuscleGroup.QUADS));

@@ -103,19 +103,23 @@ public class SplitGenerator {
 
         } else if (dayName.equalsIgnoreCase("pull")) {
             targets = new ArrayList<MuscleGroup>(
-                    Arrays.asList(MuscleGroup.LATS, MuscleGroup.TRAPS, MuscleGroup.REAR_DELTS, MuscleGroup.BICEPS));
+                    Arrays.asList(MuscleGroup.LATS, MuscleGroup.TRAPS, MuscleGroup.REAR_DELTS, MuscleGroup.BICEPS,
+                            MuscleGroup.FOREARMS, MuscleGroup.BRACHIORADIALIS));
         } else if (dayName.equalsIgnoreCase("legs") || dayName.equalsIgnoreCase("lower")) {
             targets = new ArrayList<MuscleGroup>(
-                    Arrays.asList(MuscleGroup.QUADS, MuscleGroup.HAMSTRINGS, MuscleGroup.GLUTES, MuscleGroup.CALVES));
+                    Arrays.asList(MuscleGroup.QUADS, MuscleGroup.HAMSTRINGS, MuscleGroup.GLUTES, MuscleGroup.CALVES,
+                            MuscleGroup.ABS));
         } else if (dayName.equalsIgnoreCase("upper")) {
             targets = new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.UPPER_CHEST,
                     MuscleGroup.FRONT_DELTS, MuscleGroup.SIDE_DELTS, MuscleGroup.TRICEPS,
-                    MuscleGroup.LATS, MuscleGroup.TRAPS, MuscleGroup.REAR_DELTS, MuscleGroup.BICEPS));
+                    MuscleGroup.LATS, MuscleGroup.TRAPS, MuscleGroup.REAR_DELTS, MuscleGroup.BICEPS,
+                    MuscleGroup.FOREARMS, MuscleGroup.BRACHIORADIALIS, MuscleGroup.ABS));
         } else if (dayName.equalsIgnoreCase("full_body") || dayName.equalsIgnoreCase("full body")) {
             targets = new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.UPPER_CHEST,
                     MuscleGroup.FRONT_DELTS, MuscleGroup.SIDE_DELTS, MuscleGroup.TRICEPS,
                     MuscleGroup.LATS, MuscleGroup.TRAPS, MuscleGroup.REAR_DELTS, MuscleGroup.BICEPS,
-                    MuscleGroup.QUADS, MuscleGroup.HAMSTRINGS, MuscleGroup.GLUTES, MuscleGroup.CALVES));
+                    MuscleGroup.QUADS, MuscleGroup.HAMSTRINGS, MuscleGroup.GLUTES, MuscleGroup.CALVES,
+                    MuscleGroup.FOREARMS, MuscleGroup.BRACHIORADIALIS, MuscleGroup.ABS));
         }
         return targets;
     }

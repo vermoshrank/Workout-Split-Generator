@@ -5,7 +5,6 @@ import java.util.List;
 
 import model.enums.Equipment;
 import model.enums.MuscleGroup;
-import model.enums.SplitType;
 
 public class Exercise {
 

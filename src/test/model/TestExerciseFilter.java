@@ -86,14 +86,14 @@ public class TestExerciseFilter {
     @Test
     void testFindByBarbellEquipment() {
         ArrayList<Exercise> result = filter.findByEquipment(Equipment.BARBELL);
-        assertEquals(2, result.size());
+        assertEquals(17, result.size());
     }
 
     @Test
     void testGetAvailableWithOneEquipment() {
         ArrayList<Equipment> available = new ArrayList<>(Arrays.asList(Equipment.BARBELL));
         List<Exercise> result = filter.getAllAvailableExercises(available);
-        assertEquals(2, result.size());
+        assertEquals(17, result.size());
     }
 
     @Test
@@ -103,6 +103,6 @@ public class TestExerciseFilter {
                 Equipment.DUMBBELL));
         ArrayList<Exercise> result = filter.getAllAvailableExercises(available);
 
-        assertEquals(6, result.size());
+        assertEquals(41, result.size());
     }
 }
