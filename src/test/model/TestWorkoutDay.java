@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -143,5 +145,39 @@ public class TestWorkoutDay {
         workoutDay.addExercise(exercise2);
 
         assertEquals(45, workoutDay.calculateCaloriesBurnt());
+    }
+
+    @Test
+    void testToJsonName() {
+        JSONObject json = workoutDay.toJson();
+        assertEquals("Workout1", json.getString("name"));
+    }
+
+    @Test
+    void testToJsonEmptyDay() {
+        JSONObject json = workoutDay.toJson();
+        assertTrue(json.has("exercises"));
+    }
+
+    @Test
+    void testToJsonEmpty() {
+        JSONObject json = workoutDay.toJson();
+        assertEquals(0, json.getJSONArray("exercises").length());
+    }
+
+    @Test
+    void testToJsonExerciseCount() {
+        workoutDay.addExercise(exercise1);
+        workoutDay.addExercise(exercise2);
+        JSONArray exercises = workoutDay.toJson().getJSONArray("exercises");
+        assertEquals(2, exercises.length());
+    }
+
+    @Test
+    void testToJsonExercise() {
+        workoutDay.addExercise(exercise1);
+        workoutDay.addExercise(exercise2);
+        JSONArray exercises = workoutDay.toJson().getJSONArray("exercises");
+        assertEquals(2, exercises.length());
     }
 }

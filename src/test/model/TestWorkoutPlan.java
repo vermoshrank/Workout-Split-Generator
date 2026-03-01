@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import org.json.JSONObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -100,5 +101,31 @@ public class TestWorkoutPlan {
         pushDay.addExercise(benchPress);
 
         assertEquals(1, workoutPlan.getTotalExercises(workoutPlan));
+    }
+
+    @Test
+    void testToJsonName() {
+        JSONObject json = workoutPlan.toJson();
+        assertEquals("PPL Split", json.getString("name"));
+    }
+
+    @Test
+    void testToJsonEmptyPlan() {
+        JSONObject json = workoutPlan.toJson();
+        assertTrue(json.has("days"));
+    }
+
+    @Test
+    void testToJsonEmpty() {
+        JSONObject json = workoutPlan.toJson();
+        assertEquals(0, json.getJSONArray("days").length());
+    }
+
+    @Test
+    void testToJsonDay() {
+        workoutPlan.addDay(pushDay);
+        workoutPlan.addDay(pullDay);
+        workoutPlan.addDay(legDay);
+        assertEquals(3, workoutPlan.toJson().getJSONArray("days").length());
     }
 }
