@@ -5,6 +5,13 @@ import java.util.Set;
 import model.enums.Equipment;
 import model.enums.GymType;
 
+/**
+ * Represents the user inputs required to generate a workout split.
+ * It is passed to the SplitGenerator with
+ * the number of training days per week and the type of gym available, which
+ * together determine both the split structure and the pool of eligible
+ * exercises.
+ */
 public class GeneratorArguments {
     private int trainingDays;
     private GymType gymType;

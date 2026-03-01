@@ -7,13 +7,19 @@ import java.util.List;
 import model.enums.Equipment;
 import model.enums.MuscleGroup;
 
+/**
+ * A static database of every predefined Exercise available in the application.
+ * Each exercise is declared as a public static field with its name, target
+ * muscle groups, required equipment, default weight, set and rep range, reps
+ * in reserve, and priority pre-configured. The ALL list holds
+ * every entry and is the primary data source used by ExerciseFilter when
+ * building the pool of exercises eligible for a generated plan.
+ */
 public class ExerciseDatabase {
     private ExerciseDatabase() {
     }
 
-    
     // CHEST
-    
 
     // Barbell
     public static Exercise BARBELL_BENCH_PRESS = new Exercise("Barbell Bench Press",
@@ -96,23 +102,24 @@ public class ExerciseDatabase {
             Equipment.SMITH_MACHINE,
             65, 2, 6, 10, 1, 2);
 
-    
     // BACK
-    
 
     // Barbell
     public static Exercise BARBELL_ROW = new Exercise("Barbell Row",
-            new ArrayList<>(Arrays.asList(MuscleGroup.LATS, MuscleGroup.RHOMBOIDS, MuscleGroup.TRAPS, MuscleGroup.BICEPS)),
+            new ArrayList<>(
+                    Arrays.asList(MuscleGroup.LATS, MuscleGroup.RHOMBOIDS, MuscleGroup.TRAPS, MuscleGroup.BICEPS)),
             Equipment.BARBELL,
             95, 2, 6, 10, 1, 2);
 
     public static Exercise DEADLIFT = new Exercise("Deadlift",
-            new ArrayList<>(Arrays.asList(MuscleGroup.HAMSTRINGS, MuscleGroup.GLUTES, MuscleGroup.ERECTORS, MuscleGroup.TRAPS)),
+            new ArrayList<>(
+                    Arrays.asList(MuscleGroup.HAMSTRINGS, MuscleGroup.GLUTES, MuscleGroup.ERECTORS, MuscleGroup.TRAPS)),
             Equipment.BARBELL,
             135, 2, 6, 10, 1, 2);
 
     public static Exercise RACK_PULL = new Exercise("Rack Pull",
-            new ArrayList<>(Arrays.asList(MuscleGroup.ERECTORS, MuscleGroup.TRAPS, MuscleGroup.HAMSTRINGS, MuscleGroup.GLUTES)),
+            new ArrayList<>(
+                    Arrays.asList(MuscleGroup.ERECTORS, MuscleGroup.TRAPS, MuscleGroup.HAMSTRINGS, MuscleGroup.GLUTES)),
             Equipment.BARBELL,
             155, 2, 6, 10, 1, 2);
 
@@ -122,7 +129,8 @@ public class ExerciseDatabase {
             95, 2, 6, 10, 1, 2);
 
     public static Exercise PENDLAY_ROW = new Exercise("Pendlay Row",
-            new ArrayList<>(Arrays.asList(MuscleGroup.LATS, MuscleGroup.RHOMBOIDS, MuscleGroup.TRAPS, MuscleGroup.BICEPS)),
+            new ArrayList<>(
+                    Arrays.asList(MuscleGroup.LATS, MuscleGroup.RHOMBOIDS, MuscleGroup.TRAPS, MuscleGroup.BICEPS)),
             Equipment.BARBELL,
             85, 2, 6, 10, 1, 2);
 
@@ -154,7 +162,8 @@ public class ExerciseDatabase {
             55, 2, 6, 10, 1, 1);
 
     public static Exercise SEATED_CABLE_ROW = new Exercise("Seated Cable Row",
-            new ArrayList<>(Arrays.asList(MuscleGroup.LATS, MuscleGroup.RHOMBOIDS, MuscleGroup.TRAPS, MuscleGroup.BICEPS)),
+            new ArrayList<>(
+                    Arrays.asList(MuscleGroup.LATS, MuscleGroup.RHOMBOIDS, MuscleGroup.TRAPS, MuscleGroup.BICEPS)),
             Equipment.SEATED_ROW_MACHINE,
             60, 2, 6, 10, 1, 1);
 
@@ -175,13 +184,15 @@ public class ExerciseDatabase {
             50, 2, 6, 10, 1, 1);
 
     public static Exercise CHEST_SUPPORTED_ROW = new Exercise("Chest Supported Row Machine",
-            new ArrayList<>(Arrays.asList(MuscleGroup.LATS, MuscleGroup.RHOMBOIDS, MuscleGroup.TRAPS, MuscleGroup.BICEPS)),
+            new ArrayList<>(
+                    Arrays.asList(MuscleGroup.LATS, MuscleGroup.RHOMBOIDS, MuscleGroup.TRAPS, MuscleGroup.BICEPS)),
             Equipment.CHEST_SUPPORTED_ROW_MACHINE,
             45, 2, 6, 10, 1, 1);
 
     // T-Bar
     public static Exercise T_BAR_ROW = new Exercise("T-Bar Row",
-            new ArrayList<>(Arrays.asList(MuscleGroup.LATS, MuscleGroup.RHOMBOIDS, MuscleGroup.TRAPS, MuscleGroup.BICEPS)),
+            new ArrayList<>(
+                    Arrays.asList(MuscleGroup.LATS, MuscleGroup.RHOMBOIDS, MuscleGroup.TRAPS, MuscleGroup.BICEPS)),
             Equipment.T_BAR_ROW,
             45, 2, 6, 10, 1, 2);
 
@@ -206,14 +217,12 @@ public class ExerciseDatabase {
             Equipment.HYPEREXTENSION_BENCH,
             25, 2, 6, 10, 1, 2);
 
-
-    
     // LEGS
-    
 
     // Barbell
     public static Exercise BARBELL_BACK_SQUAT = new Exercise("Barbell Back Squat",
-            new ArrayList<>(Arrays.asList(MuscleGroup.QUADS, MuscleGroup.GLUTES, MuscleGroup.HAMSTRINGS, MuscleGroup.ERECTORS)),
+            new ArrayList<>(
+                    Arrays.asList(MuscleGroup.QUADS, MuscleGroup.GLUTES, MuscleGroup.HAMSTRINGS, MuscleGroup.ERECTORS)),
             Equipment.SQUAT_RACK,
             115, 2, 6, 10, 1, 2);
 
@@ -346,17 +355,13 @@ public class ExerciseDatabase {
             Equipment.BODYWEIGHT,
             0, 2, 6, 10, 1, 3);
 
-
-    
     // SHOULDERS
-    
 
     // Barbell
     public static Exercise BARBELL_OVERHEAD_PRESS = new Exercise("Barbell Overhead Press",
             new ArrayList<>(Arrays.asList(MuscleGroup.FRONT_DELTS, MuscleGroup.SIDE_DELTS)),
             Equipment.BARBELL,
             65, 2, 6, 10, 1, 2);
-
 
     public static Exercise BARBELL_SHRUG = new Exercise("Barbell Shrug",
             new ArrayList<>(Arrays.asList(MuscleGroup.UPPER_TRAPS, MuscleGroup.TRAPS)),
@@ -432,10 +437,7 @@ public class ExerciseDatabase {
             Equipment.SMITH_MACHINE,
             55, 2, 6, 10, 1, 2);
 
-
-    
     // BICEPS
-    
 
     // Barbell
     public static Exercise BARBELL_CURL = new Exercise("Barbell Curl",
@@ -501,10 +503,7 @@ public class ExerciseDatabase {
             Equipment.MACHINE_BICEP_CURL,
             30, 2, 6, 10, 1, 1);
 
-
-    
     // TRICEPS
-    
 
     // Barbell
     public static Exercise SKULL_CRUSHER = new Exercise("Skull Crusher",
@@ -561,10 +560,7 @@ public class ExerciseDatabase {
             Equipment.BODYWEIGHT,
             0, 2, 6, 10, 1, 3);
 
-
-    
     // FOREARMS
-    
 
     public static Exercise BARBELL_WRIST_CURL = new Exercise("Barbell Wrist Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.FOREARMS)),
@@ -586,12 +582,7 @@ public class ExerciseDatabase {
             Equipment.DUMBBELL,
             10, 2, 6, 10, 1, 2);
 
-
-
-
-    
     // CORE
-    
 
     public static Exercise CABLE_CRUNCH = new Exercise("Cable Crunch",
             new ArrayList<>(Arrays.asList(MuscleGroup.ABS)),
@@ -618,10 +609,7 @@ public class ExerciseDatabase {
             Equipment.BODYWEIGHT,
             0, 2, 6, 10, 1, 2);
 
-
-    
     // ALL EXERCISES
-    
 
     public static ArrayList<Exercise> ALL = new ArrayList<>(List.of(
             // CHEST
@@ -738,13 +726,12 @@ public class ExerciseDatabase {
             BARBELL_WRIST_CURL,
             BARBELL_REVERSE_WRIST_CURL,
             DUMBBELL_WRIST_CURL,
-	        REVERSE_CABLE_CURL,
+            REVERSE_CABLE_CURL,
 
             // CORE
             CABLE_CRUNCH,
             AB_CRUNCH_MACHINE,
             ROTARY_TORSO_MACHINE,
             PLANK,
-            HANGING_LEG_RAISE
-    ));
+            HANGING_LEG_RAISE));
 }

@@ -3,11 +3,21 @@ package model.enums;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * Contains the types of gyms available, each with the set of equipment
+ * available in that
+ * setting. EVERYTHING includes all defined equipment, COMMERCIAL
+ * covers a fully-equipped commercial gym with all major machines, LOCAL
+ * represents a smaller gym with a reduced machine selection, and HOME
+ * covers a home gym with free weights and a cable setup but no
+ * dedicated machines. The available equipment list for each variant is used by
+ * ExerciseFilter to determine which exercises can be included in a generated
+ * plan.
+ */
 public enum GymType {
     EVERYTHING(Equipment.values()),
 
-    COMMERCIAL(
-            // Free weights
+    COMMERCIAL(// Free weights
             Equipment.BARBELL,
             Equipment.EZ_BAR,
             Equipment.DUMBBELL,
@@ -69,11 +79,9 @@ public enum GymType {
             Equipment.GLUTE_KICKBACK_MACHINE,
 
             // Core machines
-            Equipment.AB_CRUNCH_MACHINE
-    ),
+            Equipment.AB_CRUNCH_MACHINE),
 
-    LOCAL(
-            // Free weights
+    LOCAL(// Free weights
             Equipment.BARBELL,
             Equipment.EZ_BAR,
             Equipment.DUMBBELL,
@@ -123,11 +131,9 @@ public enum GymType {
             Equipment.HIP_ADDUCTION_MACHINE,
 
             // Core machines
-            Equipment.AB_CRUNCH_MACHINE
-    ),
+            Equipment.AB_CRUNCH_MACHINE),
 
-    HOME(
-            // Free weights
+    HOME(// Free weights
             Equipment.BARBELL,
             Equipment.EZ_BAR,
             Equipment.DUMBBELL,
@@ -147,8 +153,7 @@ public enum GymType {
 
             // Cable
             Equipment.CABLE,
-            Equipment.CABLE_MACHINE
-    );
+            Equipment.CABLE_MACHINE);
 
     private final ArrayList<Equipment> availableEquipment;
 

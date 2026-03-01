@@ -12,6 +12,15 @@ import model.enums.GymType;
 import model.generator.ExerciseFilter;
 import model.generator.SplitGenerator;
 
+/**
+ * Console-based user interface for the Workout Split Generator application.
+ * WorkoutGeneratorApp runs the main interaction loop, presenting a menu that
+ * lets the user generate a personalised workout split, view the current plan,
+ * browse available exercises, add or remove exercises from specific training
+ * days and create fully custom exercises.
+ * All user input is read from standard input via a Scanner,
+ * and output is written to output.
+ */
 public class WorkoutGeneratorApp {
     private ExerciseFilter filter;
     private SplitGenerator generator;

@@ -6,8 +6,14 @@ import java.util.List;
 import model.enums.Equipment;
 import model.enums.MuscleGroup;
 
+/**
+ * Represents a single exercise with all parameters needed
+ * in a workout. Each exercise tracks the target muscle groups
+ * it stimulates, the equipment it requires, the load (weight), volume
+ * (sets and rep range), proximity to failure (reps in reserve), and a priority
+ * rating used by the split generator when selecting exercises for a plan.
+ */
 public class Exercise {
-
     private String name;
     private ArrayList<MuscleGroup> targetMuscles;
     private Equipment equipmentType;
@@ -21,7 +27,8 @@ public class Exercise {
     // REQUIRES: sets > 0; 0 < minReps <= maxReps; rir >= 0
     // MODIFIES: this
     // EFFECTS: constructs an Exercise with the provided parameters
-    public Exercise(String name, ArrayList<MuscleGroup> targetMuscles, Equipment equipmentType, int weight, int sets, int minReps, int maxReps, int rir, int priority) {
+    public Exercise(String name, ArrayList<MuscleGroup> targetMuscles, Equipment equipmentType, int weight, int sets,
+            int minReps, int maxReps, int rir, int priority) {
         this.name = name;
         this.targetMuscles = targetMuscles;
         this.equipmentType = equipmentType;

@@ -8,6 +8,14 @@ import model.Exercise;
 import model.ExerciseDatabase;
 import model.enums.Equipment;
 
+/**
+ * Manages the pool of exercises that are eligible in a generated
+ * workout plan. ExerciseFilter parses through the ExerciseDatabase and filters
+ * the
+ * full exercise list down to only those that can be performed with the
+ * equipment available at the user's gym. The filtered list is passed to the
+ * SplitGenerator.
+ */
 public class ExerciseFilter {
     private ArrayList<Exercise> exercises;
 

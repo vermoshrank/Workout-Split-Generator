@@ -14,6 +14,17 @@ import model.WorkoutPlan;
 import model.enums.MuscleGroup;
 import model.enums.SplitType;
 
+/**
+ * Generates a complete WorkoutPlan from a filtered exercise pool and a set of
+ * generator arguments. Based on the user's requested training frequency,
+ * SplitGenerator selects an appropriate split structure (Full Body,
+ * Upper/Lower,
+ * Push/Pull/Legs, or PPL+UL) and populates each training day by randomly
+ * selecting exercises from the filtered pool, using priority ratings to bias
+ * selection toward higher-quality movements while still introducing variety.
+ * Muscle group coverage is tracked per day to avoid redundant exercise
+ * selection.
+ */
 public class SplitGenerator {
     private ExerciseFilter filteredExercises;
 

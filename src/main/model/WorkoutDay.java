@@ -3,8 +3,14 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Represents a single training day within a workout plan. A WorkoutDay has a
+ * descriptive name (ex. "Push", "Upper") and an ordered list of exercises to
+ * be performed that day. It also provides methods for estimating the
+ * total session duration in minutes and the approximate calorie expenditure,
+ * based on the volume of the exercises it contains.
+ */
 public class WorkoutDay {
-
     private String name;
     private List<Exercise> exercises;
 

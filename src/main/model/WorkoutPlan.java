@@ -3,8 +3,15 @@ package model;
 import java.util.List;
 import java.util.ArrayList;
 
+/**
+ * Represents a full workout plan composed of one or more WorkoutDays.
+ * A WorkoutPlan acts as the highest level object of a workout returned by the
+ * split generator
+ * and edited by the user. It provides methods to add and remove days and
+ * exercises, and to return the total exercise count across all days in the
+ * plan.
+ */
 public class WorkoutPlan {
-
     private String name;
     private ArrayList<WorkoutDay> workoutDays;
 
