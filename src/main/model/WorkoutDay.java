@@ -3,6 +3,11 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import persistence.Writable;
+
 /**
  * Represents a single training day within a workout plan. A WorkoutDay has a
  * descriptive name (ex. "Push", "Upper") and an ordered list of exercises to
@@ -10,7 +15,7 @@ import java.util.List;
  * total session duration in minutes and the approximate calorie expenditure,
  * based on the volume of the exercises it contains.
  */
-public class WorkoutDay {
+public class WorkoutDay implements Writable {
     private String name;
     private List<Exercise> exercises;
 
@@ -70,5 +75,11 @@ public class WorkoutDay {
     // EFFECTS: returns estimated WorkoutDay calorie expenditure
     public double calculateCaloriesBurnt() {
         return 300 * (this.calculateSessionLength() / 60.0);
+    }
+
+    // EFFECTS: returns this day as a JSON object
+    @Override
+    public JSONObject toJson() {
+        return null;
     }
 }

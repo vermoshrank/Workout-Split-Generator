@@ -3,8 +3,11 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.json.JSONObject;
+
 import model.enums.Equipment;
 import model.enums.MuscleGroup;
+import persistence.Writable;
 
 /**
  * Represents a single exercise with all parameters needed
@@ -13,7 +16,7 @@ import model.enums.MuscleGroup;
  * (sets and rep range), proximity to failure (reps in reserve), and a priority
  * rating used by the split generator when selecting exercises for a plan.
  */
-public class Exercise {
+public class Exercise implements Writable {
     private String name;
     private ArrayList<MuscleGroup> targetMuscles;
     private Equipment equipmentType;
@@ -110,5 +113,11 @@ public class Exercise {
 
     public void setPriority(int priority) {
         this.priority = priority;
+    }
+
+    // EFFECTS: returns this exercise as a JSON object
+    @Override
+    public JSONObject toJson() {
+        return null;
     }
 }

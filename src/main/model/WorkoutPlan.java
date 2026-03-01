@@ -1,6 +1,12 @@
 package model;
 
 import java.util.List;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import persistence.Writable;
+
 import java.util.ArrayList;
 
 /**
@@ -11,7 +17,7 @@ import java.util.ArrayList;
  * exercises, and to return the total exercise count across all days in the
  * plan.
  */
-public class WorkoutPlan {
+public class WorkoutPlan implements Writable {
     private String name;
     private ArrayList<WorkoutDay> workoutDays;
 
@@ -71,4 +77,11 @@ public class WorkoutPlan {
         }
         return count;
     }
+
+    // EFFECTS: returns this plan as a JSON object
+    @Override
+    public JSONObject toJson() {
+        return null;
+    }
 }
+
