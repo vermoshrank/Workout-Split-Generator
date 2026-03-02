@@ -12,7 +12,9 @@ import model.enums.MuscleGroup;
 import model.enums.SplitType;
 import model.generator.ExerciseFilter;
 import model.generator.SplitGenerator;
+import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
 
+@ExcludeFromJacocoGeneratedReport
 public class TestSplitGenerator {
     private SplitGenerator generator;
     private ExerciseFilter filter;

@@ -12,7 +12,9 @@ import org.junit.jupiter.api.Test;
 import model.enums.Equipment;
 import model.enums.MuscleGroup;
 import model.enums.SplitType;
+import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
 
+@ExcludeFromJacocoGeneratedReport
 public class TestWorkoutPlan {
     private WorkoutPlan workoutPlan;
     private WorkoutDay pushDay;

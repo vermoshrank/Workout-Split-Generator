@@ -8,7 +8,9 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
 
+@ExcludeFromJacocoGeneratedReport
 public class JsonTest {
 
     // EFFECTS: asserts all fields of exercise match the expected values

@@ -15,7 +15,7 @@ import model.generator.ExerciseFilter;
 import model.generator.SplitGenerator;
 import persistence.JsonReader;
 import persistence.JsonWriter;
-
+import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
 /**
  * Console-based user interface for the Workout Split Generator application.
  * WorkoutGeneratorApp runs the main interaction loop, presenting a menu that
@@ -25,6 +25,7 @@ import persistence.JsonWriter;
  * All user input is read from standard input via a Scanner,
  * and output is written to output.
  */
+@ExcludeFromJacocoGeneratedReport
 public class WorkoutGeneratorApp {
     private static final String JSON_STORE = "./data/workoutplan.json";
     private ExerciseFilter filter;
