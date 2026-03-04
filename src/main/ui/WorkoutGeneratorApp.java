@@ -16,6 +16,7 @@ import model.generator.SplitGenerator;
 import persistence.JsonReader;
 import persistence.JsonWriter;
 import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
+
 /**
  * Console-based user interface for the Workout Split Generator application.
  * WorkoutGeneratorApp runs the main interaction loop, presenting a menu that
@@ -79,6 +80,8 @@ public class WorkoutGeneratorApp {
             doRemoveExerciseFromDay();
         } else if (command.equals("c")) {
             doCreateCustomExercise();
+        } else if (command.equals("x")) {
+            doEditExerciseInPlan();
         } else if (command.equals("s")) {
             doSavePlan();
         } else if (command.equals("l")) {
@@ -108,6 +111,7 @@ public class WorkoutGeneratorApp {
         System.out.println("a -> add exercise to day");
         System.out.println("r -> remove exercise from day");
         System.out.println("c -> create custom exercise");
+        System.out.println("x -> edit exercise in plan");
         System.out.println("s -> save plan to file");
         System.out.println("l -> load plan from file");
         System.out.println("q -> quit");
@@ -348,4 +352,136 @@ public class WorkoutGeneratorApp {
             System.out.println("Unable to read from file: " + JSON_STORE);
         }
     }
+
+    // MODIFIES: this
+    // EFFECTS: prompts user to select and edit an exercise already in the plan
+    @SuppressWarnings("methodlength")
+    private void doEditExerciseInPlan() {
+        System.out.println("\n--- Edit Exercise in Plan ---");
+
+        if (currentPlan == null) {
+            System.out.println("No plan generated yet. Generate a split first.");
+            return;
+        }
+
+        // Select day
+        System.out.println("Select day:");
+        for (int i = 0; i < currentPlan.getWorkoutDays().size(); i++) {
+            System.out.println("  " + (i + 1) + " -> " + currentPlan.getWorkoutDays().get(i).getName());
+        }
+        System.out.print("Enter choice: ");
+        int dayChoice = input.nextInt();
+
+        if (dayChoice < 1 || dayChoice > currentPlan.getWorkoutDays().size()) {
+            System.out.println("Invalid day selection.");
+            return;
+        }
+
+        WorkoutDay selectedDay = currentPlan.getWorkoutDays().get(dayChoice - 1);
+
+        if (selectedDay.getTotalExercises() == 0) {
+            System.out.println("No exercises in " + selectedDay.getName() + ".");
+            return;
+        }
+
+        // Select exercise
+        System.out.println("\nExercises in " + selectedDay.getName() + ":");
+        for (int i = 0; i < selectedDay.getExercises().size(); i++) {
+            System.out.println("  " + (i + 1) + " -> " + selectedDay.getExercises().get(i).getName());
+        }
+        System.out.print("Enter exercise number to edit: ");
+        int exerciseChoice = input.nextInt();
+
+        if (exerciseChoice < 1 || exerciseChoice > selectedDay.getExercises().size()) {
+            System.out.println("Invalid exercise selection.");
+            return;
+        }
+
+        Exercise exercise = selectedDay.getExercises().get(exerciseChoice - 1);
+        System.out.println("\nEditing: " + exercise.getName());
+        System.out.println("Press Enter to keep its current value.");
+
+        // Edit name
+        input.nextLine();
+        System.out.print("Name (" + exercise.getName() + "): ");
+        String newName = input.nextLine().trim();
+        if (!newName.isEmpty()) {
+            exercise.setName(newName);
+        }
+
+        // Edit target muscles
+        System.out.println("\nCurrent target muscles: " + exercise.getTargetMuscles());
+        System.out.print("Replace target muscles? (y/n): ");
+        String changeMuscles = input.nextLine().trim().toLowerCase();
+        if (changeMuscles.equals("y")) {
+            ArrayList<model.enums.MuscleGroup> newMuscles = new ArrayList<>();
+            boolean addingMuscles = true;
+            while (addingMuscles) {
+                System.out.println("Select muscle group to add:");
+                for (int i = 0; i < model.enums.MuscleGroup.values().length; i++) {
+                    System.out.println("  " + (i + 1) + ". " + model.enums.MuscleGroup.values()[i]);
+                }
+                System.out.print("Enter choice: ");
+                int muscleChoice = input.nextInt();
+                input.nextLine();
+                newMuscles.add(model.enums.MuscleGroup.values()[muscleChoice - 1]);
+                System.out.print("Add another muscle? (y/n): ");
+                addingMuscles = input.nextLine().trim().equalsIgnoreCase("y");
+            }
+            if (!newMuscles.isEmpty()) {
+                exercise.setTargetMuscles(newMuscles);
+            }
+        }
+
+        // Edit equipment
+        System.out.println("\nCurrent equipment: " + exercise.getEquipmentType());
+        System.out.print("Change equipment? (y/n): ");
+        String changeEquip = input.nextLine().trim().toLowerCase();
+        if (changeEquip.equals("y")) {
+            for (int i = 0; i < model.enums.Equipment.values().length; i++) {
+                System.out.println("  " + (i + 1) + ". " + model.enums.Equipment.values()[i]);
+            }
+            System.out.print("Enter choice: ");
+            int equipChoice = input.nextInt();
+            input.nextLine();
+            exercise.setEquipmentType(model.enums.Equipment.values()[equipChoice - 1]);
+        }
+
+        // Edit weight
+        System.out.print("\nWeight [" + exercise.getWeight() + "] (enter 0 to keep): ");
+        int newWeight = input.nextInt();
+        if (newWeight != 0) {
+            exercise.setWeight(newWeight);
+        }
+
+        // Edit sets
+        System.out.print("Sets [" + exercise.getSets() + "] (enter 0 to keep): ");
+        int newSets = input.nextInt();
+        if (newSets != 0) {
+            exercise.setSets(newSets);
+        }
+
+        // Edit minReps
+        System.out.print("Min reps [" + exercise.getMinReps() + "] (enter 0 to keep): ");
+        int newMinReps = input.nextInt();
+        if (newMinReps != 0) {
+            exercise.setMinReps(newMinReps);
+        }
+
+        // Edit maxReps
+        System.out.print("Max reps [" + exercise.getMaxReps() + "] (enter 0 to keep): ");
+        int newMaxReps = input.nextInt();
+        if (newMaxReps != 0) {
+            exercise.setMaxReps(newMaxReps);
+        }
+
+        // Edit RIR
+        System.out.print("RIR [" + exercise.getRir() + "] (enter -1 to keep): ");
+        int newRir = input.nextInt();
+        if (newRir != -1) {
+            exercise.setRir(newRir);
+        }
+        System.out.println("\nEdit Sucessful.");
+    }
+
 }
