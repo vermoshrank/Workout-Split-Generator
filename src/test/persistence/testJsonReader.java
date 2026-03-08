@@ -18,7 +18,7 @@ import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
 
 @ExcludeFromJacocoGeneratedReport
 // based off WorkRoom app
-public class testJsonReader {
+public class TestJsonReader {
     @Test
     void testReaderNonExistentFile() {
         try {

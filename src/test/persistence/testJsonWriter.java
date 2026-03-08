@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
 
 @ExcludeFromJacocoGeneratedReport
-public class testJsonWriter {
+public class TestJsonWriter {
 
     // From WorkRoom app
     @Test

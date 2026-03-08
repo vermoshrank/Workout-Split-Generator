@@ -86,6 +86,8 @@ public class WorkoutGeneratorApp {
             doSavePlan();
         } else if (command.equals("l")) {
             doLoadPlan();
+        } else if (command.equals("n")) {
+            doEditName();
         } else {
             System.out.println("Selection Does Not Exist.");
         }
@@ -114,8 +116,28 @@ public class WorkoutGeneratorApp {
         System.out.println("x -> edit exercise in plan");
         System.out.println("s -> save plan to file");
         System.out.println("l -> load plan from file");
+        System.out.println("n -> edit current plan name");
         System.out.println("q -> quit");
         System.out.print("Enter choice: ");
+    }
+
+    // MODIFIES: this
+    // EFFECTS: edits name of current workout split. returns if no split exists yet
+    private void doEditName() {
+        if (currentPlan == null) {
+            System.out.println("No plan generated yet. Generate a plan first.");
+            return;
+        }
+        
+        input.nextLine();
+
+        System.out.println("--- Edit Workout Split Name ---");
+        System.out.print("Enter new name: ");
+
+        String newName = input.nextLine();
+
+        currentPlan.setName(newName);
+        System.out.println("Name change successful!");
     }
 
     // MODIFIES: this
@@ -171,7 +193,7 @@ public class WorkoutGeneratorApp {
     // EFFECTS: displays the current workout plan
     private void doViewPlan() {
 
-        System.out.println("\n---" + currentPlan.getName() + " ---");
+        System.out.println("\n--- " + currentPlan.getName() + " ---");
 
         // Display day
         for (WorkoutDay day : currentPlan.getWorkoutDays()) {

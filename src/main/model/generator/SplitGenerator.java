@@ -104,7 +104,8 @@ public class SplitGenerator {
         }
     }
 
-    // EFFECTS: returns arraylist of target muscles for given day
+    // EFFECTS: returns arraylist of target muscles for given day4
+    @SuppressWarnings("methodlength")
     public ArrayList<MuscleGroup> getTargetMusclesForDay(String dayName) {
         ArrayList<MuscleGroup> targets = new ArrayList<MuscleGroup>();
 
