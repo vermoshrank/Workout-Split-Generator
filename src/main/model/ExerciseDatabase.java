@@ -9,11 +9,10 @@ import model.enums.MuscleGroup;
 
 /**
  * A static database of every predefined Exercise available in the application.
- * Each exercise is declared as a public static field with its name, target
+ * Each exercise is declared as a private static final field with its name,
+ * target
  * muscle groups, required equipment, default weight, set and rep range, reps
- * in reserve, and priority pre-configured. The ALL list holds
- * every entry and is the primary data source used by ExerciseFilter when
- * building the pool of exercises eligible for a generated plan.
+ * in reserve, and priority pre-configured. Public static getters expose them.
  */
 public class ExerciseDatabase {
     private ExerciseDatabase() {
@@ -22,82 +21,82 @@ public class ExerciseDatabase {
     // CHEST
 
     // Barbell
-    public static Exercise BARBELL_BENCH_PRESS = new Exercise("Barbell Bench Press",
+    private static final Exercise BARBELL_BENCH_PRESS = new Exercise("Barbell Bench Press",
             new ArrayList<>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.FRONT_DELTS, MuscleGroup.TRICEPS)),
             Equipment.BARBELL,
             95, 2, 6, 10, 1, 2);
 
-    public static Exercise INCLINE_BARBELL_BENCH_PRESS = new Exercise("Incline Barbell Bench Press",
+    private static final Exercise INCLINE_BARBELL_BENCH_PRESS = new Exercise("Incline Barbell Bench Press",
             new ArrayList<>(Arrays.asList(MuscleGroup.UPPER_CHEST, MuscleGroup.FRONT_DELTS, MuscleGroup.TRICEPS)),
             Equipment.BARBELL,
             75, 2, 6, 10, 1, 2);
 
-    public static Exercise DECLINE_BARBELL_BENCH_PRESS = new Exercise("Decline Barbell Bench Press",
+    private static final Exercise DECLINE_BARBELL_BENCH_PRESS = new Exercise("Decline Barbell Bench Press",
             new ArrayList<>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.FRONT_DELTS, MuscleGroup.TRICEPS)),
             Equipment.BARBELL,
             85, 2, 6, 10, 1, 2);
 
     // Dumbbell
-    public static Exercise DUMBBELL_BENCH_PRESS = new Exercise("Dumbbell Bench Press",
+    private static final Exercise DUMBBELL_BENCH_PRESS = new Exercise("Dumbbell Bench Press",
             new ArrayList<>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.FRONT_DELTS, MuscleGroup.TRICEPS)),
             Equipment.DUMBBELL,
             30, 2, 6, 10, 1, 2);
 
-    public static Exercise INCLINE_DUMBBELL_PRESS = new Exercise("Incline Dumbbell Press",
+    private static final Exercise INCLINE_DUMBBELL_PRESS = new Exercise("Incline Dumbbell Press",
             new ArrayList<>(Arrays.asList(MuscleGroup.UPPER_CHEST, MuscleGroup.FRONT_DELTS)),
             Equipment.DUMBBELL,
             25, 2, 6, 10, 1, 2);
 
-    public static Exercise DUMBBELL_FLYE = new Exercise("Dumbbell Flye",
+    private static final Exercise DUMBBELL_FLYE = new Exercise("Dumbbell Flye",
             new ArrayList<>(Arrays.asList(MuscleGroup.CHEST)),
             Equipment.DUMBBELL,
             15, 2, 6, 10, 1, 2);
 
-    public static Exercise INCLINE_DUMBBELL_FLYE = new Exercise("Incline Dumbbell Flye",
+    private static final Exercise INCLINE_DUMBBELL_FLYE = new Exercise("Incline Dumbbell Flye",
             new ArrayList<>(Arrays.asList(MuscleGroup.UPPER_CHEST)),
             Equipment.DUMBBELL,
             12, 2, 6, 10, 1, 2);
 
     // Cable
-    public static Exercise CABLE_CROSSOVER = new Exercise("Cable Crossover",
+    private static final Exercise CABLE_CROSSOVER = new Exercise("Cable Crossover",
             new ArrayList<>(Arrays.asList(MuscleGroup.CHEST)),
             Equipment.CABLE,
             20, 2, 6, 10, 1, 2);
 
     // Machine
-    public static Exercise PEC_DECK = new Exercise("Pec Deck",
+    private static final Exercise PEC_DECK = new Exercise("Pec Deck",
             new ArrayList<>(Arrays.asList(MuscleGroup.CHEST)),
             Equipment.PEC_DECK_MACHINE,
             50, 2, 6, 10, 1, 1);
 
-    public static Exercise CHEST_PRESS_MACHINE = new Exercise("Chest Press Machine",
+    private static final Exercise CHEST_PRESS_MACHINE = new Exercise("Chest Press Machine",
             new ArrayList<>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.FRONT_DELTS, MuscleGroup.TRICEPS)),
             Equipment.CHEST_PRESS_MACHINE,
             50, 2, 6, 10, 1, 1);
 
-    public static Exercise INCLINE_CHEST_PRESS_MACHINE = new Exercise("Incline Chest Press Machine",
+    private static final Exercise INCLINE_CHEST_PRESS_MACHINE = new Exercise("Incline Chest Press Machine",
             new ArrayList<>(Arrays.asList(MuscleGroup.UPPER_CHEST, MuscleGroup.FRONT_DELTS, MuscleGroup.TRICEPS)),
             Equipment.INCLINE_CHEST_PRESS_MACHINE,
             40, 2, 6, 10, 1, 1);
 
     // Bodyweight
-    public static Exercise PUSH_UP = new Exercise("Push-Up",
+    private static final Exercise PUSH_UP = new Exercise("Push-Up",
             new ArrayList<>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.FRONT_DELTS, MuscleGroup.TRICEPS)),
             Equipment.BODYWEIGHT,
             0, 2, 6, 10, 1, 3);
 
-    public static Exercise CHEST_DIP = new Exercise("Chest Dip",
+    private static final Exercise CHEST_DIP = new Exercise("Chest Dip",
             new ArrayList<>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.TRICEPS, MuscleGroup.FRONT_DELTS)),
             Equipment.DIP_STATION,
             0, 2, 6, 10, 1, 2);
 
     // Smith Machine
-    public static Exercise SMITH_MACHINE_BENCH_PRESS = new Exercise("Smith Machine Bench Press",
+    private static final Exercise SMITH_MACHINE_BENCH_PRESS = new Exercise("Smith Machine Bench Press",
             new ArrayList<>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.FRONT_DELTS, MuscleGroup.TRICEPS)),
             Equipment.SMITH_MACHINE,
             75, 2, 6, 10, 1, 2);
 
-    public static Exercise SMITH_MACHINE_INCLINE_PRESS = new Exercise("Smith Machine Incline Press",
+    private static final Exercise SMITH_MACHINE_INCLINE_PRESS = new Exercise("Smith Machine Incline Press",
             new ArrayList<>(Arrays.asList(MuscleGroup.UPPER_CHEST, MuscleGroup.FRONT_DELTS, MuscleGroup.TRICEPS)),
             Equipment.SMITH_MACHINE,
             65, 2, 6, 10, 1, 2);
@@ -105,114 +104,114 @@ public class ExerciseDatabase {
     // BACK
 
     // Barbell
-    public static Exercise BARBELL_ROW = new Exercise("Barbell Row",
+    private static final Exercise BARBELL_ROW = new Exercise("Barbell Row",
             new ArrayList<>(
                     Arrays.asList(MuscleGroup.LATS, MuscleGroup.RHOMBOIDS, MuscleGroup.TRAPS, MuscleGroup.BICEPS)),
             Equipment.BARBELL,
             95, 2, 6, 10, 1, 2);
 
-    public static Exercise DEADLIFT = new Exercise("Deadlift",
+    private static final Exercise DEADLIFT = new Exercise("Deadlift",
             new ArrayList<>(
                     Arrays.asList(MuscleGroup.HAMSTRINGS, MuscleGroup.GLUTES, MuscleGroup.ERECTORS, MuscleGroup.TRAPS)),
             Equipment.BARBELL,
             135, 2, 6, 10, 1, 2);
 
-    public static Exercise RACK_PULL = new Exercise("Rack Pull",
+    private static final Exercise RACK_PULL = new Exercise("Rack Pull",
             new ArrayList<>(
                     Arrays.asList(MuscleGroup.ERECTORS, MuscleGroup.TRAPS, MuscleGroup.HAMSTRINGS, MuscleGroup.GLUTES)),
             Equipment.BARBELL,
             155, 2, 6, 10, 1, 2);
 
-    public static Exercise ROMANIAN_DEADLIFT = new Exercise("Romanian Deadlift",
+    private static final Exercise ROMANIAN_DEADLIFT = new Exercise("Romanian Deadlift",
             new ArrayList<>(Arrays.asList(MuscleGroup.HAMSTRINGS, MuscleGroup.GLUTES, MuscleGroup.ERECTORS)),
             Equipment.BARBELL,
             95, 2, 6, 10, 1, 2);
 
-    public static Exercise PENDLAY_ROW = new Exercise("Pendlay Row",
+    private static final Exercise PENDLAY_ROW = new Exercise("Pendlay Row",
             new ArrayList<>(
                     Arrays.asList(MuscleGroup.LATS, MuscleGroup.RHOMBOIDS, MuscleGroup.TRAPS, MuscleGroup.BICEPS)),
             Equipment.BARBELL,
             85, 2, 6, 10, 1, 2);
 
     // Dumbbell
-    public static Exercise SINGLE_ARM_DUMBBELL_ROW = new Exercise("Single-Arm Dumbbell Row",
+    private static final Exercise SINGLE_ARM_DUMBBELL_ROW = new Exercise("Single-Arm Dumbbell Row",
             new ArrayList<>(Arrays.asList(MuscleGroup.LATS, MuscleGroup.RHOMBOIDS, MuscleGroup.BICEPS)),
             Equipment.DUMBBELL,
             30, 2, 6, 10, 1, 2);
 
-    public static Exercise DUMBBELL_ROMANIAN_DEADLIFT = new Exercise("Dumbbell Romanian Deadlift",
+    private static final Exercise DUMBBELL_ROMANIAN_DEADLIFT = new Exercise("Dumbbell Romanian Deadlift",
             new ArrayList<>(Arrays.asList(MuscleGroup.HAMSTRINGS, MuscleGroup.GLUTES, MuscleGroup.ERECTORS)),
             Equipment.DUMBBELL,
             30, 2, 6, 10, 1, 2);
 
-    public static Exercise DUMBBELL_PULLOVER = new Exercise("Dumbbell Pullover",
+    private static final Exercise DUMBBELL_PULLOVER = new Exercise("Dumbbell Pullover",
             new ArrayList<>(Arrays.asList(MuscleGroup.LATS, MuscleGroup.CHEST)),
             Equipment.DUMBBELL,
             20, 2, 6, 10, 1, 2);
 
     // Cable
-    public static Exercise LAT_PULLDOWN = new Exercise("Lat Pulldown",
+    private static final Exercise LAT_PULLDOWN = new Exercise("Lat Pulldown",
             new ArrayList<>(Arrays.asList(MuscleGroup.LATS, MuscleGroup.BICEPS)),
             Equipment.LAT_PULLDOWN_MACHINE,
             60, 2, 6, 10, 1, 1);
 
-    public static Exercise CLOSE_GRIP_LAT_PULLDOWN = new Exercise("Close Grip Lat Pulldown",
+    private static final Exercise CLOSE_GRIP_LAT_PULLDOWN = new Exercise("Close Grip Lat Pulldown",
             new ArrayList<>(Arrays.asList(MuscleGroup.LATS, MuscleGroup.BICEPS)),
             Equipment.LAT_PULLDOWN_MACHINE,
             55, 2, 6, 10, 1, 1);
 
-    public static Exercise SEATED_CABLE_ROW = new Exercise("Seated Cable Row",
+    private static final Exercise SEATED_CABLE_ROW = new Exercise("Seated Cable Row",
             new ArrayList<>(
                     Arrays.asList(MuscleGroup.LATS, MuscleGroup.RHOMBOIDS, MuscleGroup.TRAPS, MuscleGroup.BICEPS)),
             Equipment.SEATED_ROW_MACHINE,
             60, 2, 6, 10, 1, 1);
 
-    public static Exercise WIDE_GRIP_SEATED_CABLE_ROW = new Exercise("Wide Grip Seated Cable Row",
+    private static final Exercise WIDE_GRIP_SEATED_CABLE_ROW = new Exercise("Wide Grip Seated Cable Row",
             new ArrayList<>(Arrays.asList(MuscleGroup.RHOMBOIDS, MuscleGroup.TRAPS, MuscleGroup.REAR_DELTS)),
             Equipment.SEATED_ROW_MACHINE,
             50, 2, 6, 10, 1, 1);
 
-    public static Exercise CABLE_PULLOVER = new Exercise("Cable Pullover",
+    private static final Exercise CABLE_PULLOVER = new Exercise("Cable Pullover",
             new ArrayList<>(Arrays.asList(MuscleGroup.LATS)),
             Equipment.CABLE,
             25, 2, 6, 10, 1, 2);
 
     // Machine
-    public static Exercise UPPER_BACK_ROW = new Exercise("Upper Back Row Machine",
+    private static final Exercise UPPER_BACK_ROW = new Exercise("Upper Back Row Machine",
             new ArrayList<>(Arrays.asList(MuscleGroup.TRAPS, MuscleGroup.RHOMBOIDS, MuscleGroup.REAR_DELTS)),
             Equipment.ROW_MACHINE,
             50, 2, 6, 10, 1, 1);
 
-    public static Exercise CHEST_SUPPORTED_ROW = new Exercise("Chest Supported Row Machine",
+    private static final Exercise CHEST_SUPPORTED_ROW = new Exercise("Chest Supported Row Machine",
             new ArrayList<>(
                     Arrays.asList(MuscleGroup.LATS, MuscleGroup.RHOMBOIDS, MuscleGroup.TRAPS, MuscleGroup.BICEPS)),
             Equipment.CHEST_SUPPORTED_ROW_MACHINE,
             45, 2, 6, 10, 1, 1);
 
     // T-Bar
-    public static Exercise T_BAR_ROW = new Exercise("T-Bar Row",
+    private static final Exercise T_BAR_ROW = new Exercise("T-Bar Row",
             new ArrayList<>(
                     Arrays.asList(MuscleGroup.LATS, MuscleGroup.RHOMBOIDS, MuscleGroup.TRAPS, MuscleGroup.BICEPS)),
             Equipment.T_BAR_ROW,
             45, 2, 6, 10, 1, 2);
 
     // Bodyweight
-    public static Exercise PULL_UP = new Exercise("Pull-Up",
+    private static final Exercise PULL_UP = new Exercise("Pull-Up",
             new ArrayList<>(Arrays.asList(MuscleGroup.LATS, MuscleGroup.BICEPS)),
             Equipment.PULL_UP_BAR,
             0, 2, 6, 10, 1, 3);
 
-    public static Exercise CHIN_UP = new Exercise("Chin-Up",
+    private static final Exercise CHIN_UP = new Exercise("Chin-Up",
             new ArrayList<>(Arrays.asList(MuscleGroup.LATS, MuscleGroup.BICEPS)),
             Equipment.PULL_UP_BAR,
             0, 2, 6, 10, 1, 3);
 
-    public static Exercise BACK_EXTENSION = new Exercise("Back Extension",
+    private static final Exercise BACK_EXTENSION = new Exercise("Back Extension",
             new ArrayList<>(Arrays.asList(MuscleGroup.ERECTORS, MuscleGroup.GLUTES, MuscleGroup.HAMSTRINGS)),
             Equipment.HYPEREXTENSION_BENCH,
             0, 2, 6, 10, 1, 2);
 
-    public static Exercise WEIGHTED_BACK_EXTENSION = new Exercise("Weighted Back Extension",
+    private static final Exercise WEIGHTED_BACK_EXTENSION = new Exercise("Weighted Back Extension",
             new ArrayList<>(Arrays.asList(MuscleGroup.ERECTORS, MuscleGroup.GLUTES)),
             Equipment.HYPEREXTENSION_BENCH,
             25, 2, 6, 10, 1, 2);
@@ -220,137 +219,138 @@ public class ExerciseDatabase {
     // LEGS
 
     // Barbell
-    public static Exercise BARBELL_BACK_SQUAT = new Exercise("Barbell Back Squat",
+    private static final Exercise BARBELL_BACK_SQUAT = new Exercise("Barbell Back Squat",
             new ArrayList<>(
                     Arrays.asList(MuscleGroup.QUADS, MuscleGroup.GLUTES, MuscleGroup.HAMSTRINGS, MuscleGroup.ERECTORS)),
             Equipment.SQUAT_RACK,
             115, 2, 6, 10, 1, 2);
 
-    public static Exercise BARBELL_FRONT_SQUAT = new Exercise("Barbell Front Squat",
+    private static final Exercise BARBELL_FRONT_SQUAT = new Exercise("Barbell Front Squat",
             new ArrayList<>(Arrays.asList(MuscleGroup.QUADS, MuscleGroup.GLUTES, MuscleGroup.ERECTORS)),
             Equipment.SQUAT_RACK,
             85, 2, 6, 10, 1, 2);
 
-    public static Exercise BARBELL_HIP_THRUST = new Exercise("Barbell Hip Thrust",
+    private static final Exercise BARBELL_HIP_THRUST = new Exercise("Barbell Hip Thrust",
             new ArrayList<>(Arrays.asList(MuscleGroup.GLUTES, MuscleGroup.HAMSTRINGS)),
             Equipment.BARBELL,
             95, 2, 6, 10, 1, 2);
 
-    public static Exercise BARBELL_LUNGE = new Exercise("Barbell Lunge",
+    private static final Exercise BARBELL_LUNGE = new Exercise("Barbell Lunge",
             new ArrayList<>(Arrays.asList(MuscleGroup.QUADS, MuscleGroup.GLUTES, MuscleGroup.HAMSTRINGS)),
             Equipment.BARBELL,
             65, 2, 6, 10, 1, 2);
 
     // Dumbbell
-    public static Exercise DUMBBELL_LUNGE = new Exercise("Dumbbell Lunge",
+    private static final Exercise DUMBBELL_LUNGE = new Exercise("Dumbbell Lunge",
             new ArrayList<>(Arrays.asList(MuscleGroup.QUADS, MuscleGroup.GLUTES, MuscleGroup.HAMSTRINGS)),
             Equipment.DUMBBELL,
             20, 2, 6, 10, 1, 2);
 
-    public static Exercise DUMBBELL_HIP_THRUST = new Exercise("Dumbbell Hip Thrust",
+    private static final Exercise DUMBBELL_HIP_THRUST = new Exercise("Dumbbell Hip Thrust",
             new ArrayList<>(Arrays.asList(MuscleGroup.GLUTES, MuscleGroup.HAMSTRINGS)),
             Equipment.DUMBBELL,
             30, 2, 6, 10, 1, 2);
 
-    public static Exercise DUMBBELL_STEP_UP = new Exercise("Dumbbell Step Up",
+    private static final Exercise DUMBBELL_STEP_UP = new Exercise("Dumbbell Step Up",
             new ArrayList<>(Arrays.asList(MuscleGroup.QUADS, MuscleGroup.GLUTES)),
             Equipment.DUMBBELL,
             20, 2, 6, 10, 1, 2);
 
-    public static Exercise DUMBBELL_STANDING_CALF_RAISE = new Exercise("Dumbbell Standing Calf Raise",
+    private static final Exercise DUMBBELL_STANDING_CALF_RAISE = new Exercise("Dumbbell Standing Calf Raise",
             new ArrayList<>(Arrays.asList(MuscleGroup.CALVES)),
             Equipment.DUMBBELL,
             25, 2, 6, 10, 1, 2);
 
     // Machine
-    public static Exercise LEG_PRESS = new Exercise("Leg Press",
+    private static final Exercise LEG_PRESS = new Exercise("Leg Press",
             new ArrayList<>(Arrays.asList(MuscleGroup.QUADS, MuscleGroup.GLUTES, MuscleGroup.HAMSTRINGS)),
             Equipment.LEG_PRESS_MACHINE,
             90, 2, 6, 10, 1, 1);
 
-    public static Exercise LEG_EXTENSION = new Exercise("Leg Extension",
+    private static final Exercise LEG_EXTENSION = new Exercise("Leg Extension",
             new ArrayList<>(Arrays.asList(MuscleGroup.QUADS)),
             Equipment.LEG_EXTENSION_MACHINE,
             50, 2, 6, 10, 1, 1);
 
-    public static Exercise SEATED_LEG_CURL = new Exercise("Seated Leg Curl",
+    private static final Exercise SEATED_LEG_CURL = new Exercise("Seated Leg Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.HAMSTRINGS)),
             Equipment.SEATED_LEG_CURL_MACHINE,
             50, 2, 6, 10, 1, 1);
 
-    public static Exercise LYING_LEG_CURL = new Exercise("Lying Leg Curl",
+    private static final Exercise LYING_LEG_CURL = new Exercise("Lying Leg Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.HAMSTRINGS)),
             Equipment.LYING_LEG_CURL_MACHINE,
             45, 2, 6, 10, 1, 1);
 
-    public static Exercise STANDING_CALF_RAISE = new Exercise("Standing Calf Raise",
+    private static final Exercise STANDING_CALF_RAISE = new Exercise("Standing Calf Raise",
             new ArrayList<>(Arrays.asList(MuscleGroup.CALVES)),
             Equipment.CALF_RAISE_MACHINE,
             60, 2, 6, 10, 1, 1);
 
-    public static Exercise SEATED_CALF_RAISE = new Exercise("Seated Calf Raise",
+    private static final Exercise SEATED_CALF_RAISE = new Exercise("Seated Calf Raise",
             new ArrayList<>(Arrays.asList(MuscleGroup.CALVES)),
             Equipment.SEATED_CALF_RAISE_MACHINE,
             45, 2, 6, 10, 1, 1);
 
-    public static Exercise HACK_SQUAT = new Exercise("Hack Squat",
+    private static final Exercise HACK_SQUAT = new Exercise("Hack Squat",
             new ArrayList<>(Arrays.asList(MuscleGroup.QUADS, MuscleGroup.GLUTES)),
             Equipment.HACK_SQUAT_MACHINE,
             70, 2, 6, 10, 1, 1);
 
-    public static Exercise MACHINE_HIP_THRUST = new Exercise("Machine Hip Thrust",
+    private static final Exercise MACHINE_HIP_THRUST = new Exercise("Machine Hip Thrust",
             new ArrayList<>(Arrays.asList(MuscleGroup.GLUTES, MuscleGroup.HAMSTRINGS)),
             Equipment.HIP_THRUST_MACHINE,
             70, 2, 6, 10, 1, 1);
 
-    public static Exercise HIP_ABDUCTION_MACHINE = new Exercise("Hip Abduction Machine",
+    private static final Exercise HIP_ABDUCTION_MACHINE = new Exercise("Hip Abduction Machine",
             new ArrayList<>(Arrays.asList(MuscleGroup.HIP_ABDUCTORS, MuscleGroup.GLUTES)),
             Equipment.HIP_ABDUCTION_MACHINE,
             50, 2, 6, 10, 1, 1);
 
-    public static Exercise HIP_ADDUCTION_MACHINE = new Exercise("Hip Adduction Machine",
+    private static final Exercise HIP_ADDUCTION_MACHINE = new Exercise("Hip Adduction Machine",
             new ArrayList<>(Arrays.asList(MuscleGroup.HIP_ADDUCTORS)),
             Equipment.HIP_ADDUCTION_MACHINE,
             50, 2, 6, 10, 1, 1);
 
-    public static Exercise GLUTE_KICKBACK_MACHINE = new Exercise("Glute Kickback Machine",
+    private static final Exercise GLUTE_KICKBACK_MACHINE = new Exercise("Glute Kickback Machine",
             new ArrayList<>(Arrays.asList(MuscleGroup.GLUTES)),
             Equipment.GLUTE_KICKBACK_MACHINE,
             30, 2, 6, 10, 1, 1);
 
     // Smith Machine
-    public static Exercise SMITH_MACHINE_SQUAT = new Exercise("Smith Machine Squat",
+    private static final Exercise SMITH_MACHINE_SQUAT = new Exercise("Smith Machine Squat",
             new ArrayList<>(Arrays.asList(MuscleGroup.QUADS, MuscleGroup.GLUTES, MuscleGroup.HAMSTRINGS)),
             Equipment.SMITH_MACHINE,
             85, 2, 6, 10, 1, 2);
 
-    public static Exercise SMITH_MACHINE_BULGARIAN_SPLIT_SQUAT = new Exercise("Smith Machine Bulgarian Split Squat",
+    private static final Exercise SMITH_MACHINE_BULGARIAN_SPLIT_SQUAT = new Exercise(
+            "Smith Machine Bulgarian Split Squat",
             new ArrayList<>(Arrays.asList(MuscleGroup.QUADS, MuscleGroup.GLUTES)),
             Equipment.SMITH_MACHINE,
             65, 2, 6, 10, 1, 2);
 
-    public static Exercise SMITH_MACHINE_HIP_THRUST = new Exercise("Smith Machine Hip Thrust",
+    private static final Exercise SMITH_MACHINE_HIP_THRUST = new Exercise("Smith Machine Hip Thrust",
             new ArrayList<>(Arrays.asList(MuscleGroup.GLUTES, MuscleGroup.HAMSTRINGS)),
             Equipment.SMITH_MACHINE,
             75, 2, 6, 10, 1, 2);
 
     // Cable
-    public static Exercise CABLE_PULL_THROUGH = new Exercise("Cable Pull Through",
+    private static final Exercise CABLE_PULL_THROUGH = new Exercise("Cable Pull Through",
             new ArrayList<>(Arrays.asList(MuscleGroup.GLUTES, MuscleGroup.HAMSTRINGS, MuscleGroup.ERECTORS)),
             Equipment.CABLE,
             40, 2, 6, 10, 1, 2);
 
-    public static Exercise CABLE_KICKBACK = new Exercise("Cable Kickback",
+    private static final Exercise CABLE_KICKBACK = new Exercise("Cable Kickback",
             new ArrayList<>(Arrays.asList(MuscleGroup.GLUTES)),
             Equipment.CABLE,
             15, 2, 6, 10, 1, 2);
 
-    public static Exercise CABLE_LEG_CURL = new Exercise("Cable Leg Curl",
+    private static final Exercise CABLE_LEG_CURL = new Exercise("Cable Leg Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.HAMSTRINGS)),
             Equipment.CABLE,
             20, 2, 6, 10, 1, 2);
 
-    public static Exercise NORDIC_CURL = new Exercise("Nordic Curl",
+    private static final Exercise NORDIC_CURL = new Exercise("Nordic Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.HAMSTRINGS)),
             Equipment.BODYWEIGHT,
             0, 2, 6, 10, 1, 3);
@@ -358,81 +358,81 @@ public class ExerciseDatabase {
     // SHOULDERS
 
     // Barbell
-    public static Exercise BARBELL_OVERHEAD_PRESS = new Exercise("Barbell Overhead Press",
+    private static final Exercise BARBELL_OVERHEAD_PRESS = new Exercise("Barbell Overhead Press",
             new ArrayList<>(Arrays.asList(MuscleGroup.FRONT_DELTS, MuscleGroup.SIDE_DELTS)),
             Equipment.BARBELL,
             65, 2, 6, 10, 1, 2);
 
-    public static Exercise BARBELL_SHRUG = new Exercise("Barbell Shrug",
+    private static final Exercise BARBELL_SHRUG = new Exercise("Barbell Shrug",
             new ArrayList<>(Arrays.asList(MuscleGroup.UPPER_TRAPS, MuscleGroup.TRAPS)),
             Equipment.BARBELL,
             95, 2, 6, 10, 1, 2);
 
     // Dumbbell
-    public static Exercise DUMBBELL_SHOULDER_PRESS = new Exercise("Dumbbell Shoulder Press",
+    private static final Exercise DUMBBELL_SHOULDER_PRESS = new Exercise("Dumbbell Shoulder Press",
             new ArrayList<>(Arrays.asList(MuscleGroup.FRONT_DELTS, MuscleGroup.SIDE_DELTS, MuscleGroup.TRICEPS)),
             Equipment.DUMBBELL,
             20, 2, 6, 10, 1, 2);
 
-    public static Exercise LATERAL_RAISE = new Exercise("Dumbbell Lateral Raise",
+    private static final Exercise LATERAL_RAISE = new Exercise("Dumbbell Lateral Raise",
             new ArrayList<>(Arrays.asList(MuscleGroup.SIDE_DELTS)),
             Equipment.DUMBBELL,
             10, 2, 6, 10, 1, 2);
 
-    public static Exercise DUMBBELL_FRONT_RAISE = new Exercise("Dumbbell Front Raise",
+    private static final Exercise DUMBBELL_FRONT_RAISE = new Exercise("Dumbbell Front Raise",
             new ArrayList<>(Arrays.asList(MuscleGroup.FRONT_DELTS)),
             Equipment.DUMBBELL,
             10, 2, 6, 10, 1, 2);
 
-    public static Exercise DUMBBELL_REAR_DELT_FLY = new Exercise("Dumbbell Rear Delt Fly",
+    private static final Exercise DUMBBELL_REAR_DELT_FLY = new Exercise("Dumbbell Rear Delt Fly",
             new ArrayList<>(Arrays.asList(MuscleGroup.REAR_DELTS, MuscleGroup.RHOMBOIDS)),
             Equipment.DUMBBELL,
             10, 2, 6, 10, 1, 2);
 
-    public static Exercise DUMBBELL_SHRUG = new Exercise("Dumbbell Shrug",
+    private static final Exercise DUMBBELL_SHRUG = new Exercise("Dumbbell Shrug",
             new ArrayList<>(Arrays.asList(MuscleGroup.UPPER_TRAPS, MuscleGroup.TRAPS)),
             Equipment.DUMBBELL,
             30, 2, 6, 10, 1, 2);
 
     // Cable
-    public static Exercise REAR_DELT_FLY = new Exercise("Cable Rear Delt Fly",
+    private static final Exercise REAR_DELT_FLY = new Exercise("Cable Rear Delt Fly",
             new ArrayList<>(Arrays.asList(MuscleGroup.REAR_DELTS, MuscleGroup.RHOMBOIDS)),
             Equipment.CABLE,
             10, 2, 6, 10, 1, 2);
 
-    public static Exercise CABLE_LATERAL_RAISE = new Exercise("Cable Lateral Raise",
+    private static final Exercise CABLE_LATERAL_RAISE = new Exercise("Cable Lateral Raise",
             new ArrayList<>(Arrays.asList(MuscleGroup.SIDE_DELTS)),
             Equipment.CABLE,
             10, 2, 6, 10, 1, 2);
 
-    public static Exercise CABLE_FRONT_RAISE = new Exercise("Cable Front Raise",
+    private static final Exercise CABLE_FRONT_RAISE = new Exercise("Cable Front Raise",
             new ArrayList<>(Arrays.asList(MuscleGroup.FRONT_DELTS)),
             Equipment.CABLE,
             10, 2, 6, 10, 1, 2);
 
-    public static Exercise FACE_PULL = new Exercise("Face Pull",
+    private static final Exercise FACE_PULL = new Exercise("Face Pull",
             new ArrayList<>(Arrays.asList(MuscleGroup.REAR_DELTS, MuscleGroup.RHOMBOIDS)),
             Equipment.CABLE,
             30, 2, 6, 10, 1, 2);
 
     // Machine
-    public static Exercise MACHINE_SHOULDER_PRESS = new Exercise("Machine Shoulder Press",
+    private static final Exercise MACHINE_SHOULDER_PRESS = new Exercise("Machine Shoulder Press",
             new ArrayList<>(Arrays.asList(MuscleGroup.FRONT_DELTS, MuscleGroup.SIDE_DELTS, MuscleGroup.TRICEPS)),
             Equipment.SHOULDER_PRESS_MACHINE,
             40, 2, 6, 10, 1, 1);
 
-    public static Exercise MACHINE_LATERAL_RAISE = new Exercise("Machine Lateral Raise",
+    private static final Exercise MACHINE_LATERAL_RAISE = new Exercise("Machine Lateral Raise",
             new ArrayList<>(Arrays.asList(MuscleGroup.SIDE_DELTS)),
             Equipment.LATERAL_RAISE_MACHINE,
             20, 2, 6, 10, 1, 1);
 
-    public static Exercise MACHINE_REAR_DELT_FLY = new Exercise("Machine Rear Delt Fly",
+    private static final Exercise MACHINE_REAR_DELT_FLY = new Exercise("Machine Rear Delt Fly",
             new ArrayList<>(Arrays.asList(MuscleGroup.REAR_DELTS, MuscleGroup.RHOMBOIDS)),
             Equipment.REAR_DELT_FLY_MACHINE,
             20, 2, 6, 10, 1, 1);
 
     // Smith Machine
-    public static Exercise SMITH_MACHINE_OVERHEAD_PRESS = new Exercise("Smith Machine Overhead Press",
+    private static final Exercise SMITH_MACHINE_OVERHEAD_PRESS = new Exercise("Smith Machine Overhead Press",
             new ArrayList<>(Arrays.asList(MuscleGroup.FRONT_DELTS, MuscleGroup.SIDE_DELTS, MuscleGroup.TRICEPS)),
             Equipment.SMITH_MACHINE,
             55, 2, 6, 10, 1, 2);
@@ -440,65 +440,65 @@ public class ExerciseDatabase {
     // BICEPS
 
     // Barbell
-    public static Exercise BARBELL_CURL = new Exercise("Barbell Curl",
+    private static final Exercise BARBELL_CURL = new Exercise("Barbell Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.BICEPS, MuscleGroup.BRACHIALIS)),
             Equipment.BARBELL,
             55, 2, 6, 10, 1, 2);
 
-    public static Exercise EZ_BAR_CURL = new Exercise("EZ Bar Curl",
+    private static final Exercise EZ_BAR_CURL = new Exercise("EZ Bar Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.BICEPS, MuscleGroup.BRACHIALIS)),
             Equipment.EZ_BAR,
             50, 2, 6, 10, 1, 2);
 
-    public static Exercise EZ_BAR_PREACHER_CURL = new Exercise("EZ Bar Preacher Curl",
+    private static final Exercise EZ_BAR_PREACHER_CURL = new Exercise("EZ Bar Preacher Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.BICEPS)),
             Equipment.PREACHER_BENCH,
             40, 2, 6, 10, 1, 2);
 
-    public static Exercise REVERSE_BARBELL_CURL = new Exercise("Reverse Barbell Curl",
+    private static final Exercise REVERSE_BARBELL_CURL = new Exercise("Reverse Barbell Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.BRACHIORADIALIS, MuscleGroup.FOREARMS, MuscleGroup.BICEPS)),
             Equipment.BARBELL,
             35, 2, 6, 10, 1, 2);
 
     // Dumbbell
-    public static Exercise DUMBBELL_CURL = new Exercise("Dumbbell Curl",
+    private static final Exercise DUMBBELL_CURL = new Exercise("Dumbbell Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.BICEPS, MuscleGroup.BRACHIALIS)),
             Equipment.DUMBBELL,
             20, 2, 6, 10, 1, 2);
 
-    public static Exercise HAMMER_CURL = new Exercise("Hammer Curl",
+    private static final Exercise HAMMER_CURL = new Exercise("Hammer Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.BRACHIALIS, MuscleGroup.BRACHIORADIALIS, MuscleGroup.BICEPS)),
             Equipment.DUMBBELL,
             20, 2, 6, 10, 1, 2);
 
-    public static Exercise DUMBBELL_PREACHER_CURL = new Exercise("Dumbbell Preacher Curl",
+    private static final Exercise DUMBBELL_PREACHER_CURL = new Exercise("Dumbbell Preacher Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.BICEPS)),
             Equipment.PREACHER_BENCH,
             15, 2, 6, 10, 1, 2);
 
-    public static Exercise REVERSE_DUMBBELL_CURL = new Exercise("Reverse Dumbbell Curl",
+    private static final Exercise REVERSE_DUMBBELL_CURL = new Exercise("Reverse Dumbbell Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.BRACHIORADIALIS, MuscleGroup.FOREARMS)),
             Equipment.DUMBBELL,
             12, 2, 6, 10, 1, 2);
 
     // Cable
-    public static Exercise CABLE_CURL = new Exercise("Cable Curl",
+    private static final Exercise CABLE_CURL = new Exercise("Cable Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.BICEPS, MuscleGroup.BRACHIALIS)),
             Equipment.CABLE,
             30, 2, 6, 10, 1, 2);
 
-    public static Exercise CABLE_HAMMER_CURL = new Exercise("Cable Hammer Curl",
+    private static final Exercise CABLE_HAMMER_CURL = new Exercise("Cable Hammer Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.BRACHIALIS, MuscleGroup.BRACHIORADIALIS)),
             Equipment.CABLE,
             25, 2, 6, 10, 1, 2);
 
     // Machine
-    public static Exercise MACHINE_PREACHER_CURL = new Exercise("Machine Preacher Curl",
+    private static final Exercise MACHINE_PREACHER_CURL = new Exercise("Machine Preacher Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.BICEPS)),
             Equipment.MACHINE_PREACHER_CURL,
             30, 2, 6, 10, 1, 1);
 
-    public static Exercise MACHINE_BICEP_CURL = new Exercise("Machine Bicep Curl",
+    private static final Exercise MACHINE_BICEP_CURL = new Exercise("Machine Bicep Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.BICEPS, MuscleGroup.BRACHIALIS)),
             Equipment.MACHINE_BICEP_CURL,
             30, 2, 6, 10, 1, 1);
@@ -506,112 +506,113 @@ public class ExerciseDatabase {
     // TRICEPS
 
     // Barbell
-    public static Exercise SKULL_CRUSHER = new Exercise("Skull Crusher",
+    private static final Exercise SKULL_CRUSHER = new Exercise("Skull Crusher",
             new ArrayList<>(Arrays.asList(MuscleGroup.TRICEPS)),
             Equipment.EZ_BAR,
             45, 2, 6, 10, 1, 2);
 
-    public static Exercise BARBELL_OVERHEAD_TRICEP_EXTENSION = new Exercise("Barbell Overhead Tricep Extension",
+    private static final Exercise BARBELL_OVERHEAD_TRICEP_EXTENSION = new Exercise("Barbell Overhead Tricep Extension",
             new ArrayList<>(Arrays.asList(MuscleGroup.TRICEPS)),
             Equipment.BARBELL,
             45, 2, 6, 10, 1, 2);
 
     // Dumbbell
-    public static Exercise DUMBBELL_OVERHEAD_TRICEP_EXTENSION = new Exercise("Dumbbell Overhead Tricep Extension",
+    private static final Exercise DUMBBELL_OVERHEAD_TRICEP_EXTENSION = new Exercise(
+            "Dumbbell Overhead Tricep Extension",
             new ArrayList<>(Arrays.asList(MuscleGroup.TRICEPS)),
             Equipment.DUMBBELL,
             20, 2, 6, 10, 1, 2);
 
-    public static Exercise DUMBBELL_KICKBACK = new Exercise("Dumbbell Kickback",
+    private static final Exercise DUMBBELL_KICKBACK = new Exercise("Dumbbell Kickback",
             new ArrayList<>(Arrays.asList(MuscleGroup.TRICEPS)),
             Equipment.DUMBBELL,
             12, 2, 6, 10, 1, 2);
 
-    public static Exercise DUMBBELL_SKULL_CRUSHER = new Exercise("Dumbbell Skull Crusher",
+    private static final Exercise DUMBBELL_SKULL_CRUSHER = new Exercise("Dumbbell Skull Crusher",
             new ArrayList<>(Arrays.asList(MuscleGroup.TRICEPS)),
             Equipment.DUMBBELL,
             15, 2, 6, 10, 1, 2);
 
     // Cable
-    public static Exercise TRICEP_PUSHDOWN = new Exercise("Cable Tricep Pushdown",
+    private static final Exercise TRICEP_PUSHDOWN = new Exercise("Cable Tricep Pushdown",
             new ArrayList<>(Arrays.asList(MuscleGroup.TRICEPS)),
             Equipment.CABLE,
             35, 2, 6, 10, 1, 2);
 
-    public static Exercise CABLE_OVERHEAD_TRICEP_EXTENSION = new Exercise("Cable Overhead Tricep Extension",
+    private static final Exercise CABLE_OVERHEAD_TRICEP_EXTENSION = new Exercise("Cable Overhead Tricep Extension",
             new ArrayList<>(Arrays.asList(MuscleGroup.TRICEPS)),
             Equipment.CABLE,
             30, 2, 6, 10, 1, 2);
 
     // Machine
-    public static Exercise MACHINE_TRICEP_EXTENSION = new Exercise("Machine Tricep Extension",
+    private static final Exercise MACHINE_TRICEP_EXTENSION = new Exercise("Machine Tricep Extension",
             new ArrayList<>(Arrays.asList(MuscleGroup.TRICEPS)),
             Equipment.MACHINE_TRICEP_EXTENSION,
             40, 2, 6, 10, 1, 1);
 
     // Bodyweight
-    public static Exercise TRICEP_DIP = new Exercise("Tricep Dip",
+    private static final Exercise TRICEP_DIP = new Exercise("Tricep Dip",
             new ArrayList<>(Arrays.asList(MuscleGroup.TRICEPS, MuscleGroup.FRONT_DELTS, MuscleGroup.CHEST)),
             Equipment.DIP_STATION,
             0, 2, 6, 10, 1, 2);
 
-    public static Exercise DIAMOND_PUSH_UP = new Exercise("Diamond Push-Up",
+    private static final Exercise DIAMOND_PUSH_UP = new Exercise("Diamond Push-Up",
             new ArrayList<>(Arrays.asList(MuscleGroup.TRICEPS, MuscleGroup.CHEST)),
             Equipment.BODYWEIGHT,
             0, 2, 6, 10, 1, 3);
 
     // FOREARMS
 
-    public static Exercise BARBELL_WRIST_CURL = new Exercise("Barbell Wrist Curl",
+    private static final Exercise BARBELL_WRIST_CURL = new Exercise("Barbell Wrist Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.FOREARMS)),
             Equipment.BARBELL,
             25, 2, 6, 10, 1, 2);
 
-    public static Exercise BARBELL_REVERSE_WRIST_CURL = new Exercise("Barbell Reverse Wrist Curl",
+    private static final Exercise BARBELL_REVERSE_WRIST_CURL = new Exercise("Barbell Reverse Wrist Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.FOREARMS, MuscleGroup.BRACHIORADIALIS)),
             Equipment.BARBELL,
             20, 2, 6, 10, 1, 2);
 
-    public static Exercise DUMBBELL_WRIST_CURL = new Exercise("Dumbbell Wrist Curl",
+    private static final Exercise DUMBBELL_WRIST_CURL = new Exercise("Dumbbell Wrist Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.FOREARMS)),
             Equipment.DUMBBELL,
             10, 2, 6, 10, 1, 2);
 
-    public static Exercise REVERSE_CABLE_CURL = new Exercise("Reverse Cable Curl",
+    private static final Exercise REVERSE_CABLE_CURL = new Exercise("Reverse Cable Curl",
             new ArrayList<>(Arrays.asList(MuscleGroup.BRACHIORADIALIS)),
             Equipment.DUMBBELL,
             10, 2, 6, 10, 1, 2);
 
     // CORE
 
-    public static Exercise CABLE_CRUNCH = new Exercise("Cable Crunch",
+    private static final Exercise CABLE_CRUNCH = new Exercise("Cable Crunch",
             new ArrayList<>(Arrays.asList(MuscleGroup.ABS)),
             Equipment.CABLE,
             40, 2, 6, 10, 1, 2);
 
-    public static Exercise AB_CRUNCH_MACHINE = new Exercise("Ab Crunch Machine",
+    private static final Exercise AB_CRUNCH_MACHINE = new Exercise("Ab Crunch Machine",
             new ArrayList<>(Arrays.asList(MuscleGroup.ABS)),
             Equipment.AB_CRUNCH_MACHINE,
             40, 2, 6, 10, 1, 1);
 
-    public static Exercise ROTARY_TORSO_MACHINE = new Exercise("Rotary Torso Machine",
+    private static final Exercise ROTARY_TORSO_MACHINE = new Exercise("Rotary Torso Machine",
             new ArrayList<>(Arrays.asList(MuscleGroup.OBLIQUES)),
             Equipment.ROTARY_TORSO_MACHINE,
             30, 2, 6, 10, 1, 1);
 
-    public static Exercise PLANK = new Exercise("Plank",
+    private static final Exercise PLANK = new Exercise("Plank",
             new ArrayList<>(Arrays.asList(MuscleGroup.CORE, MuscleGroup.ABS)),
             Equipment.BODYWEIGHT,
             0, 2, 6, 10, 1, 3);
 
-    public static Exercise HANGING_LEG_RAISE = new Exercise("Hanging Leg Raise",
+    private static final Exercise HANGING_LEG_RAISE = new Exercise("Hanging Leg Raise",
             new ArrayList<>(Arrays.asList(MuscleGroup.ABS, MuscleGroup.HIP_FLEXORS)),
             Equipment.BODYWEIGHT,
             0, 2, 6, 10, 1, 2);
 
     // ALL EXERCISES
 
-    public static ArrayList<Exercise> ALL = new ArrayList<>(List.of(
+    private static final ArrayList<Exercise> ALL = new ArrayList<>(List.of(
             // CHEST
             BARBELL_BENCH_PRESS,
             INCLINE_BARBELL_BENCH_PRESS,
@@ -734,4 +735,454 @@ public class ExerciseDatabase {
             ROTARY_TORSO_MACHINE,
             PLANK,
             HANGING_LEG_RAISE));
+
+    // Getters
+
+    // CHEST - Barbell
+    public static Exercise getBarbellBenchPress() {
+        return BARBELL_BENCH_PRESS;
+    }
+
+    public static Exercise getInclineBarbellBenchPress() {
+        return INCLINE_BARBELL_BENCH_PRESS;
+    }
+
+    public static Exercise getDeclineBarbellBenchPress() {
+        return DECLINE_BARBELL_BENCH_PRESS;
+    }
+
+    // CHEST - Dumbbell
+    public static Exercise getDumbbellBenchPress() {
+        return DUMBBELL_BENCH_PRESS;
+    }
+
+    public static Exercise getInclineDumbbellPress() {
+        return INCLINE_DUMBBELL_PRESS;
+    }
+
+    public static Exercise getDumbbellFlye() {
+        return DUMBBELL_FLYE;
+    }
+
+    public static Exercise getInclineDumbbellFlye() {
+        return INCLINE_DUMBBELL_FLYE;
+    }
+
+    // CHEST - Cable/Machine/Bodyweight/Smith
+    public static Exercise getCableCrossover() {
+        return CABLE_CROSSOVER;
+    }
+
+    public static Exercise getPecDeck() {
+        return PEC_DECK;
+    }
+
+    public static Exercise getChestPressMachine() {
+        return CHEST_PRESS_MACHINE;
+    }
+
+    public static Exercise getInclineChestPressMachine() {
+        return INCLINE_CHEST_PRESS_MACHINE;
+    }
+
+    public static Exercise getPushUp() {
+        return PUSH_UP;
+    }
+
+    public static Exercise getChestDip() {
+        return CHEST_DIP;
+    }
+
+    public static Exercise getSmithMachineBenchPress() {
+        return SMITH_MACHINE_BENCH_PRESS;
+    }
+
+    public static Exercise getSmithMachineInclinePress() {
+        return SMITH_MACHINE_INCLINE_PRESS;
+    }
+
+    // BACK - Barbell
+    public static Exercise getBarbellRow() {
+        return BARBELL_ROW;
+    }
+
+    public static Exercise getDeadlift() {
+        return DEADLIFT;
+    }
+
+    public static Exercise getRackPull() {
+        return RACK_PULL;
+    }
+
+    public static Exercise getRomanianDeadlift() {
+        return ROMANIAN_DEADLIFT;
+    }
+
+    public static Exercise getPendlayRow() {
+        return PENDLAY_ROW;
+    }
+
+    // BACK - Dumbbell
+    public static Exercise getSingleArmDumbbellRow() {
+        return SINGLE_ARM_DUMBBELL_ROW;
+    }
+
+    public static Exercise getDumbbellRomanianDeadlift() {
+        return DUMBBELL_ROMANIAN_DEADLIFT;
+    }
+
+    public static Exercise getDumbbellPullover() {
+        return DUMBBELL_PULLOVER;
+    }
+
+    // BACK - Cable
+    public static Exercise getLatPulldown() {
+        return LAT_PULLDOWN;
+    }
+
+    public static Exercise getCloseGripLatPulldown() {
+        return CLOSE_GRIP_LAT_PULLDOWN;
+    }
+
+    public static Exercise getSeatedCableRow() {
+        return SEATED_CABLE_ROW;
+    }
+
+    public static Exercise getWideGripSeatedCableRow() {
+        return WIDE_GRIP_SEATED_CABLE_ROW;
+    }
+
+    public static Exercise getCablePullover() {
+        return CABLE_PULLOVER;
+    }
+
+    // BACK - Machine/T-Bar/Bodyweight
+    public static Exercise getUpperBackRow() {
+        return UPPER_BACK_ROW;
+    }
+
+    public static Exercise getChestSupportedRow() {
+        return CHEST_SUPPORTED_ROW;
+    }
+
+    public static Exercise getTBarRow() {
+        return T_BAR_ROW;
+    }
+
+    public static Exercise getPullUp() {
+        return PULL_UP;
+    }
+
+    public static Exercise getChinUp() {
+        return CHIN_UP;
+    }
+
+    public static Exercise getBackExtension() {
+        return BACK_EXTENSION;
+    }
+
+    public static Exercise getWeightedBackExtension() {
+        return WEIGHTED_BACK_EXTENSION;
+    }
+
+    // LEGS - Barbell
+    public static Exercise getBarbellBackSquat() {
+        return BARBELL_BACK_SQUAT;
+    }
+
+    public static Exercise getBarbellFrontSquat() {
+        return BARBELL_FRONT_SQUAT;
+    }
+
+    public static Exercise getBarbellHipThrust() {
+        return BARBELL_HIP_THRUST;
+    }
+
+    public static Exercise getBarbellLunge() {
+        return BARBELL_LUNGE;
+    }
+
+    // LEGS - Dumbbell
+    public static Exercise getDumbbellLunge() {
+        return DUMBBELL_LUNGE;
+    }
+
+    public static Exercise getDumbbellHipThrust() {
+        return DUMBBELL_HIP_THRUST;
+    }
+
+    public static Exercise getDumbbellStepUp() {
+        return DUMBBELL_STEP_UP;
+    }
+
+    public static Exercise getDumbbellStandingCalfRaise() {
+        return DUMBBELL_STANDING_CALF_RAISE;
+    }
+
+    // LEGS - Machine/Smith/Cable/Other
+    public static Exercise getLegPress() {
+        return LEG_PRESS;
+    }
+
+    public static Exercise getLegExtension() {
+        return LEG_EXTENSION;
+    }
+
+    public static Exercise getSeatedLegCurl() {
+        return SEATED_LEG_CURL;
+    }
+
+    public static Exercise getLyingLegCurl() {
+        return LYING_LEG_CURL;
+    }
+
+    public static Exercise getStandingCalfRaise() {
+        return STANDING_CALF_RAISE;
+    }
+
+    public static Exercise getSeatedCalfRaise() {
+        return SEATED_CALF_RAISE;
+    }
+
+    public static Exercise getHackSquat() {
+        return HACK_SQUAT;
+    }
+
+    public static Exercise getMachineHipThrust() {
+        return MACHINE_HIP_THRUST;
+    }
+
+    public static Exercise getHipAbductionMachine() {
+        return HIP_ABDUCTION_MACHINE;
+    }
+
+    public static Exercise getHipAdductionMachine() {
+        return HIP_ADDUCTION_MACHINE;
+    }
+
+    public static Exercise getGluteKickbackMachine() {
+        return GLUTE_KICKBACK_MACHINE;
+    }
+
+    public static Exercise getSmithMachineSquat() {
+        return SMITH_MACHINE_SQUAT;
+    }
+
+    public static Exercise getSmithMachineBulgarianSplitSquat() {
+        return SMITH_MACHINE_BULGARIAN_SPLIT_SQUAT;
+    }
+
+    public static Exercise getSmithMachineHipThrust() {
+        return SMITH_MACHINE_HIP_THRUST;
+    }
+
+    public static Exercise getCablePullThrough() {
+        return CABLE_PULL_THROUGH;
+    }
+
+    public static Exercise getCableKickback() {
+        return CABLE_KICKBACK;
+    }
+
+    public static Exercise getCableLegCurl() {
+        return CABLE_LEG_CURL;
+    }
+
+    public static Exercise getNordicCurl() {
+        return NORDIC_CURL;
+    }
+
+    // SHOULDERS - Barbell/Dumbbell/Cable/Machine/Smith
+    public static Exercise getBarbellOverheadPress() {
+        return BARBELL_OVERHEAD_PRESS;
+    }
+
+    public static Exercise getBarbellShrug() {
+        return BARBELL_SHRUG;
+    }
+
+    public static Exercise getDumbbellShoulderPress() {
+        return DUMBBELL_SHOULDER_PRESS;
+    }
+
+    public static Exercise getLateralRaise() {
+        return LATERAL_RAISE;
+    }
+
+    public static Exercise getDumbbellFrontRaise() {
+        return DUMBBELL_FRONT_RAISE;
+    }
+
+    public static Exercise getDumbbellRearDeltFly() {
+        return DUMBBELL_REAR_DELT_FLY;
+    }
+
+    public static Exercise getDumbbellShrug() {
+        return DUMBBELL_SHRUG;
+    }
+
+    public static Exercise getRearDeltFly() {
+        return REAR_DELT_FLY;
+    }
+
+    public static Exercise getCableLateralRaise() {
+        return CABLE_LATERAL_RAISE;
+    }
+
+    public static Exercise getCableFrontRaise() {
+        return CABLE_FRONT_RAISE;
+    }
+
+    public static Exercise getFacePull() {
+        return FACE_PULL;
+    }
+
+    public static Exercise getMachineShoulderPress() {
+        return MACHINE_SHOULDER_PRESS;
+    }
+
+    public static Exercise getMachineLateralRaise() {
+        return MACHINE_LATERAL_RAISE;
+    }
+
+    public static Exercise getMachineRearDeltFly() {
+        return MACHINE_REAR_DELT_FLY;
+    }
+
+    public static Exercise getSmithMachineOverheadPress() {
+        return SMITH_MACHINE_OVERHEAD_PRESS;
+    }
+
+    // BICEPS
+    public static Exercise getBarbellCurl() {
+        return BARBELL_CURL;
+    }
+
+    public static Exercise getEzBarCurl() {
+        return EZ_BAR_CURL;
+    }
+
+    public static Exercise getEzBarPreacherCurl() {
+        return EZ_BAR_PREACHER_CURL;
+    }
+
+    public static Exercise getReverseBarbellCurl() {
+        return REVERSE_BARBELL_CURL;
+    }
+
+    public static Exercise getDumbbellCurl() {
+        return DUMBBELL_CURL;
+    }
+
+    public static Exercise getHammerCurl() {
+        return HAMMER_CURL;
+    }
+
+    public static Exercise getDumbbellPreacherCurl() {
+        return DUMBBELL_PREACHER_CURL;
+    }
+
+    public static Exercise getReverseDumbbellCurl() {
+        return REVERSE_DUMBBELL_CURL;
+    }
+
+    public static Exercise getCableCurl() {
+        return CABLE_CURL;
+    }
+
+    public static Exercise getCableHammerCurl() {
+        return CABLE_HAMMER_CURL;
+    }
+
+    public static Exercise getMachinePreacherCurl() {
+        return MACHINE_PREACHER_CURL;
+    }
+
+    public static Exercise getMachineBicepCurl() {
+        return MACHINE_BICEP_CURL;
+    }
+
+    // TRICEPS
+    public static Exercise getSkullCrusher() {
+        return SKULL_CRUSHER;
+    }
+
+    public static Exercise getBarbellOverheadTricepExtension() {
+        return BARBELL_OVERHEAD_TRICEP_EXTENSION;
+    }
+
+    public static Exercise getDumbbellOverheadTricepExtension() {
+        return DUMBBELL_OVERHEAD_TRICEP_EXTENSION;
+    }
+
+    public static Exercise getDumbbellKickback() {
+        return DUMBBELL_KICKBACK;
+    }
+
+    public static Exercise getDumbbellSkullCrusher() {
+        return DUMBBELL_SKULL_CRUSHER;
+    }
+
+    public static Exercise getTricepPushdown() {
+        return TRICEP_PUSHDOWN;
+    }
+
+    public static Exercise getCableOverheadTricepExtension() {
+        return CABLE_OVERHEAD_TRICEP_EXTENSION;
+    }
+
+    public static Exercise getMachineTricepExtension() {
+        return MACHINE_TRICEP_EXTENSION;
+    }
+
+    public static Exercise getTricepDip() {
+        return TRICEP_DIP;
+    }
+
+    public static Exercise getDiamondPushUp() {
+        return DIAMOND_PUSH_UP;
+    }
+
+    // FOREARMS
+    public static Exercise getBarbellWristCurl() {
+        return BARBELL_WRIST_CURL;
+    }
+
+    public static Exercise getBarbellReverseWristCurl() {
+        return BARBELL_REVERSE_WRIST_CURL;
+    }
+
+    public static Exercise getDumbbellWristCurl() {
+        return DUMBBELL_WRIST_CURL;
+    }
+
+    public static Exercise getReverseCableCurl() {
+        return REVERSE_CABLE_CURL;
+    }
+
+    // CORE
+    public static Exercise getCableCrunch() {
+        return CABLE_CRUNCH;
+    }
+
+    public static Exercise getAbCrunchMachine() {
+        return AB_CRUNCH_MACHINE;
+    }
+
+    public static Exercise getRotaryTorsoMachine() {
+        return ROTARY_TORSO_MACHINE;
+    }
+
+    public static Exercise getPlank() {
+        return PLANK;
+    }
+
+    public static Exercise getHangingLegRaise() {
+        return HANGING_LEG_RAISE;
+    }
+
+    // ALL
+    public static ArrayList<Exercise> getAll() {
+        return ALL;
+    }
 }

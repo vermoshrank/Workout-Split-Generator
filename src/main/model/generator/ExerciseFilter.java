@@ -50,7 +50,7 @@ public class ExerciseFilter {
     // EFFECTS: returns exercises that require exactly the one, given equipment
     public ArrayList<Exercise> findByEquipment(Equipment equipment) {
         ArrayList<Exercise> availableExercises = new ArrayList<Exercise>();
-        for (Exercise i : ExerciseDatabase.ALL) {
+        for (Exercise i : ExerciseDatabase.getAll()) {
             if (i.getEquipmentType().equals(equipment)) {
                 availableExercises.add(i);
             }
@@ -62,7 +62,7 @@ public class ExerciseFilter {
     public ArrayList<Exercise> getAllAvailableExercises(ArrayList<Equipment> available) {
         ArrayList<Exercise> availableExercises = new ArrayList<Exercise>();
         for (Equipment i : available) {
-            for (Exercise j : ExerciseDatabase.ALL) {
+            for (Exercise j : ExerciseDatabase.getAll()) {
                 if (j.getEquipmentType().equals(i)) {
                     availableExercises.add(j);
                 }

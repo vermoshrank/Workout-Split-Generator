@@ -22,7 +22,7 @@ public class TestSplitGenerator {
     @BeforeEach
     void setUp() {
         filter = new ExerciseFilter();
-        for (Exercise i : ExerciseDatabase.ALL) {
+        for (Exercise i : ExerciseDatabase.getAll()) {
             filter.addExercise(i);
         }
 
@@ -134,7 +134,7 @@ public class TestSplitGenerator {
         WorkoutDay day = new WorkoutDay("Push");
         Exercise result = generator.pickRandomExerciseForMuscle(
                 MuscleGroup.CHEST,
-                ExerciseDatabase.ALL,
+                ExerciseDatabase.getAll(),
                 day);
 
         assertTrue(result.getTargetMuscles().contains(MuscleGroup.CHEST));
@@ -143,7 +143,7 @@ public class TestSplitGenerator {
     @Test
     void testPopulate() {
         WorkoutDay day = new WorkoutDay("Push");
-        generator.populateDay(day, "push", ExerciseDatabase.ALL);
+        generator.populateDay(day, "push", ExerciseDatabase.getAll());
 
         assertTrue(day.getTotalExercises() > 0);
     }
