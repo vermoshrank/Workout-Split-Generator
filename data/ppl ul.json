@@ -1,0 +1,344 @@
+{
+    "name": "Push Pull Legs x Upper Lower",
+    "days": [
+        {
+            "exercises": [
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": [
+                        "CHEST",
+                        "FRONT_DELTS",
+                        "TRICEPS"
+                    ],
+                    "name": "Barbell Bench Press",
+                    "weight": 95,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "BARBELL"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": ["UPPER_CHEST"],
+                    "name": "Incline Dumbbell Flye",
+                    "weight": 12,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "DUMBBELL"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": [
+                        "FRONT_DELTS",
+                        "SIDE_DELTS",
+                        "TRICEPS"
+                    ],
+                    "name": "Smith Machine Overhead Press",
+                    "weight": 55,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "SMITH_MACHINE"
+                }
+            ],
+            "name": "Push"
+        },
+        {
+            "exercises": [
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": [
+                        "LATS",
+                        "RHOMBOIDS",
+                        "TRAPS",
+                        "BICEPS"
+                    ],
+                    "name": "Seated Cable Row",
+                    "weight": 60,
+                    "rir": 1,
+                    "priority": 1,
+                    "equipmentType": "SEATED_ROW_MACHINE"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": [
+                        "TRAPS",
+                        "RHOMBOIDS",
+                        "REAR_DELTS"
+                    ],
+                    "name": "Upper Back Row Machine",
+                    "weight": 50,
+                    "rir": 1,
+                    "priority": 1,
+                    "equipmentType": "ROW_MACHINE"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": ["FOREARMS"],
+                    "name": "Barbell Wrist Curl",
+                    "weight": 25,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "BARBELL"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": [
+                        "FOREARMS",
+                        "BRACHIORADIALIS"
+                    ],
+                    "name": "Barbell Reverse Wrist Curl",
+                    "weight": 20,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "BARBELL"
+                }
+            ],
+            "name": "Pull"
+        },
+        {
+            "exercises": [
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": [
+                        "QUADS",
+                        "GLUTES",
+                        "HAMSTRINGS"
+                    ],
+                    "name": "Barbell Lunge",
+                    "weight": 65,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "BARBELL"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": ["CALVES"],
+                    "name": "Seated Calf Raise",
+                    "weight": 45,
+                    "rir": 1,
+                    "priority": 1,
+                    "equipmentType": "SEATED_CALF_RAISE_MACHINE"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": ["ABS"],
+                    "name": "Ab Crunch Machine",
+                    "weight": 40,
+                    "rir": 1,
+                    "priority": 1,
+                    "equipmentType": "AB_CRUNCH_MACHINE"
+                }
+            ],
+            "name": "Legs"
+        },
+        {
+            "exercises": [
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": ["CHEST"],
+                    "name": "Dumbbell Flye",
+                    "weight": 15,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "DUMBBELL"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": ["UPPER_CHEST"],
+                    "name": "Incline Dumbbell Flye",
+                    "weight": 12,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "DUMBBELL"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": [
+                        "FRONT_DELTS",
+                        "SIDE_DELTS"
+                    ],
+                    "name": "Barbell Overhead Press",
+                    "weight": 65,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "BARBELL"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": [
+                        "UPPER_CHEST",
+                        "FRONT_DELTS",
+                        "TRICEPS"
+                    ],
+                    "name": "Incline Barbell Bench Press",
+                    "weight": 75,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "BARBELL"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": [
+                        "LATS",
+                        "BICEPS"
+                    ],
+                    "name": "Lat Pulldown",
+                    "weight": 60,
+                    "rir": 1,
+                    "priority": 1,
+                    "equipmentType": "LAT_PULLDOWN_MACHINE"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": [
+                        "LATS",
+                        "RHOMBOIDS",
+                        "TRAPS",
+                        "BICEPS"
+                    ],
+                    "name": "Barbell Row",
+                    "weight": 95,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "BARBELL"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": [
+                        "REAR_DELTS",
+                        "RHOMBOIDS"
+                    ],
+                    "name": "Dumbbell Rear Delt Fly",
+                    "weight": 10,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "DUMBBELL"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": ["FOREARMS"],
+                    "name": "Dumbbell Wrist Curl",
+                    "weight": 10,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "DUMBBELL"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": [
+                        "BRACHIORADIALIS",
+                        "FOREARMS",
+                        "BICEPS"
+                    ],
+                    "name": "Reverse Barbell Curl",
+                    "weight": 35,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "BARBELL"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": ["ABS"],
+                    "name": "Ab Crunch Machine",
+                    "weight": 40,
+                    "rir": 1,
+                    "priority": 1,
+                    "equipmentType": "AB_CRUNCH_MACHINE"
+                }
+            ],
+            "name": "Upper"
+        },
+        {
+            "exercises": [
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": ["QUADS"],
+                    "name": "Leg Extension",
+                    "weight": 50,
+                    "rir": 1,
+                    "priority": 1,
+                    "equipmentType": "LEG_EXTENSION_MACHINE"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": [
+                        "HAMSTRINGS",
+                        "GLUTES",
+                        "ERECTORS"
+                    ],
+                    "name": "Romanian Deadlift",
+                    "weight": 95,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "BARBELL"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": ["CALVES"],
+                    "name": "Seated Calf Raise",
+                    "weight": 45,
+                    "rir": 1,
+                    "priority": 1,
+                    "equipmentType": "SEATED_CALF_RAISE_MACHINE"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": ["ABS"],
+                    "name": "Ab Crunch Machine",
+                    "weight": 40,
+                    "rir": 1,
+                    "priority": 1,
+                    "equipmentType": "AB_CRUNCH_MACHINE"
+                }
+            ],
+            "name": "Lower"
+        }
+    ]
+}

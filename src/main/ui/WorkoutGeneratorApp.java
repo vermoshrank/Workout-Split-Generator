@@ -24,11 +24,11 @@ import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
  * browse available exercises, add or remove exercises from specific training
  * days and create fully custom exercises.
  * All user input is read from standard input via a Scanner,
- * and output is written to output.
+ * and results are written to output.
  */
 @ExcludeFromJacocoGeneratedReport
 public class WorkoutGeneratorApp {
-    private static final String JSON_STORE = "./data/workoutplan.json";
+    private static final String JSON_STORE = "./data/";
     private ExerciseFilter filter;
     private SplitGenerator generator;
     private WorkoutPlan currentPlan;
@@ -99,8 +99,7 @@ public class WorkoutGeneratorApp {
         filter = new ExerciseFilter();
         currentPlan = null;
         input = new Scanner(System.in);
-        jsonWriter = new JsonWriter(JSON_STORE);
-        jsonReader = new JsonReader(JSON_STORE);
+        new java.io.File(JSON_STORE).mkdirs();
     }
 
     // based off of tellerapp
@@ -351,27 +350,53 @@ public class WorkoutGeneratorApp {
     }
 
     // based off WorkRoom app
-    // EFFECTS: saves the current workout plan to file
+    // EFFECTS: saves the current workout plan to file with user-inputted name
     private void doSavePlan() {
+        if (currentPlan == null) {
+            System.out.println("No plan to save. Generate a plan first.");
+            return;
+        }
+        input.nextLine();
+        System.out.print("Enter save name: ");
+        String saveName = input.nextLine().trim();
+        if (saveName.isEmpty()) {
+            System.out.println("Save name cannot be empty.");
+            return;
+        }
+
+        String path = JSON_STORE + saveName + ".json";
+        JsonWriter writer = new JsonWriter(path);
+        
         try {
-            jsonWriter.open();
-            jsonWriter.write(currentPlan);
-            jsonWriter.close();
-            System.out.println("Saved " + currentPlan.getName() + " to " + JSON_STORE);
+            writer.open();
+            writer.write(currentPlan);
+            writer.close();
+            System.out.println("Saved " + currentPlan.getName() + " to " + path);
         } catch (FileNotFoundException e) {
-            System.out.println("Unable to write to file: " + JSON_STORE);
+            System.out.println("Unable to write to file: " + path);
         }
     }
 
+
+
     // based off WorkRoom app
     // MODIFIES: this
-    // EFFECTS: loads a workout plan from file and sets it as the current plan
+    // EFFECTS: lists available saves and loads the user-selected plan from file
     private void doLoadPlan() {
+        input.nextLine();
+        System.out.print("Enter save name to load: ");
+        String saveName = input.nextLine().trim();
+        if (saveName.isEmpty()) {
+            System.out.println("Save name cannot be empty.");
+            return;
+        }
+        String path = JSON_STORE + saveName + ".json";
+        JsonReader reader = new JsonReader(path);
         try {
-            currentPlan = jsonReader.read();
-            System.out.println("Loaded " + currentPlan.getName() + " from " + JSON_STORE);
+            currentPlan = reader.read();
+            System.out.println("Loaded " + currentPlan.getName() + " from " + path);
         } catch (IOException e) {
-            System.out.println("Unable to read from file: " + JSON_STORE);
+            System.out.println("Unable to read from file: " + saveName);
         }
     }
 

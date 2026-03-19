@@ -51,19 +51,20 @@ public class TestJsonWriter {
 
     // Based off WorkRoom app
     @Test
+    @SuppressWarnings("methodlength")
     void testWriterGeneralPlan() {
         try {
             WorkoutPlan plan = new WorkoutPlan("Push Pull Legs");
 
             Exercise benchPress = new Exercise("Barbell Bench Press",
-            new ArrayList<>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.FRONT_DELTS, MuscleGroup.TRICEPS)),
-            Equipment.BARBELL,
-            95, 2, 6, 10, 1, 2);
+                    new ArrayList<>(Arrays.asList(MuscleGroup.CHEST, MuscleGroup.FRONT_DELTS, MuscleGroup.TRICEPS)),
+                    Equipment.BARBELL,
+                    95, 2, 6, 10, 1, 2);
 
             Exercise latPulldown = new Exercise("Lat Pulldown",
-            new ArrayList<>(Arrays.asList(MuscleGroup.LATS, MuscleGroup.BICEPS)),
-            Equipment.LAT_PULLDOWN_MACHINE,
-            60, 2, 6, 10, 1, 1);
+                    new ArrayList<>(Arrays.asList(MuscleGroup.LATS, MuscleGroup.BICEPS)),
+                    Equipment.LAT_PULLDOWN_MACHINE,
+                    60, 2, 6, 10, 1, 1);
 
             WorkoutDay pushDay = new WorkoutDay("Push");
             pushDay.addExercise(benchPress);
