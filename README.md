@@ -1,7 +1,7 @@
 # Workout Split Builder
 ## A customizable Java application for planning training splits
 
-This application is a **workout split editor/builder and generator** designed to make it easier for users to plan their weekly training. Users can create, save and load multiple workout plans with each plan organized by days of week and containing a list of exercises. Exercises can either be selected from a pre-exisiting list or created manually by the user, with editable fields such as target muscle groups, number of sets, rep range, and reps in reserve. The application will also calculate and display estimated workout information such as total session time and calories burned.
+This application is a **workout split editor/builder and generator** designed to make it easier for users to plan their weekly training. Users can create, save and load multiple workout plans with each plan organized by days of week and containing a list of exercises. Exercises can either be selected from a pre-exisiting list or created manually by the user, with editable fields such as target muscle groups, number of sets, rep range, and reps in reserve. The application will also calculate and display estimated workout information such as total session time and calories burned. Multiple Workout Splits can be saved and loaded if the user chooses.
 
 The app is intended for **gym-goers/lifters** who want a more organized way to plan their workout splits without relying on generic note-taking apps. This project is of interest to me because I lift regularly, and I aim to create a simple and dedicated way to plan and edit workout splits.
 
@@ -20,3 +20,11 @@ The app is intended for **gym-goers/lifters** who want a more organized way to p
 - As a user, I want to be able to view calculated information for a workout plan, such as estimated workout duration and calories burned.
 - As a user, I want to be able to save my workout plan to file (if I so choose)
 - As a user, I want to be able to be able to load workout plans from file (if I so choose)
+
+# Instructions for End User
+- You can view the panel that displays the Exercises and WorkoutDays that have been added to the WorkoutPlan by selecting a saved WorkoutPlan
+- You can generate the first WorkoutPlan by clicking the "Generate New Workout Split" button on the main page
+- You can add Exercises to a chosen workout split by selecting a workout split and either adding a pre-existing exercise or creating your own custom exercise
+- You can locate my visual component by viewing a workout split
+- You can save the state of my application by viewing your current workout split and clicking the save button
+- You can reload the state of my application by loading any saved workout split of yoru choosing
