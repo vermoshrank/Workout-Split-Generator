@@ -15,7 +15,18 @@ public class WorkoutSplitGUI extends JFrame {
     private CardLayout cardLayout;
 
     public WorkoutSplitGUI() {
+        cardLayout = new CardLayout();
+        cards = new JPanel(cardLayout);
 
+        cards.add(new MainPage(this), MAIN_PAGE);
+
+        add(cards);
+
+        setTitle("WORKOUT SPLIT EDITOR");
+        setSize(1100, 750);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setVisible(true);
     }
 
     // MODIFIES: this
@@ -24,4 +35,7 @@ public class WorkoutSplitGUI extends JFrame {
         cardLayout.show(cards, pageName);
     }
 
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(WorkoutSplitGUI::new);
+    }
 }
