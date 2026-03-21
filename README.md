@@ -27,4 +27,4 @@ The app is intended for **gym-goers/lifters** who want a more organized way to p
 - You can add Exercises to a chosen workout split by selecting a workout split and either adding a pre-existing exercise or creating your own custom exercise
 - You can locate my visual component by viewing a workout split
 - You can save the state of my application by viewing your current workout split and clicking the save button
-- You can reload the state of my application by loading any saved workout split of yoru choosing
+- You can reload the state of my application by loading any saved workout split of your choosing
