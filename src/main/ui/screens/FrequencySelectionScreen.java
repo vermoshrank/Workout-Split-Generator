@@ -26,7 +26,6 @@ import persistence.JsonWriter;
  */
 @ExcludeFromJacocoGeneratedReport
 public class FrequencySelectionScreen extends BaseScreen {
-    private int selectedDays;
 
     public FrequencySelectionScreen(WorkoutSplitGUI app) {
         super(app);
