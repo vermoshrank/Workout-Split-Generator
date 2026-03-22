@@ -1,5 +1,6 @@
 package model.enums;
 
+// enum representing all equipment types
 public enum Equipment {
     // FREE WEIGHTS
     BARBELL,

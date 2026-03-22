@@ -1,5 +1,6 @@
 package model.enums;
 
+// represents muscle groups as constants for exercises
 public enum MuscleGroup {
     // CHEST
     CHEST,

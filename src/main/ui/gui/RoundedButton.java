@@ -3,7 +3,7 @@ package ui.gui;
 import java.awt.*;
 import javax.swing.*;
 
-// represents a rounded button that will be used
+// represents a rounded button with GUI theme along with same functionality as JButton. 
 public class RoundedButton extends JButton {
     public RoundedButton(String text) {
         super(text);
