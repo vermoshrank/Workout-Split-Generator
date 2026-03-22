@@ -19,10 +19,10 @@ import model.GeneratorArguments;
 import model.WorkoutDay;
 import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
 
-/*
+/**
  * represents the main "hub" of the GUI.
- * It stores all pages in a card layout, 
- * and other necessary field, and houses 
+ * It stores all pages in a card layout,
+ * and other necessary field, and houses
  * the methods for navigation and starting the GUI
  */
 @ExcludeFromJacocoGeneratedReport

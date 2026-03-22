@@ -6,11 +6,13 @@ import java.awt.*;
 import javax.swing.*;
 
 import ui.WorkoutSplitGUI;
+import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
 
-/*
-represents the base screen that will be shared
-across all panels
+/**
+ * represents the base screen that will be shared
+ * across all panels
  */
+@ExcludeFromJacocoGeneratedReport
 public abstract class BaseScreen extends JPanel {
     protected WorkoutSplitGUI app;
 

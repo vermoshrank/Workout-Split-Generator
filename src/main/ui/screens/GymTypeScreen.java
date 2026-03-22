@@ -37,11 +37,11 @@ public class GymTypeScreen extends BaseScreen {
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
         content.setBackground(Theme.PAGE_BG);
         content.setBorder(BorderFactory.createEmptyBorder(40, 40, 40, 40));
- 
+
         content.add(buildStepQuestion());
         content.add(Box.createVerticalStrut(40));
         content.add(buildGymGrid());
- 
+
         return content;
     }
 
@@ -91,21 +91,21 @@ public class GymTypeScreen extends BaseScreen {
         card.setPreferredSize(null);
         card.setMinimumSize(new Dimension(0, 0));
         card.setForeground(Theme.CARD_WHITE);
- 
+
         card.setLayout(new BoxLayout(card, BoxLayout.Y_AXIS));
         card.setBorder(BorderFactory.createEmptyBorder(28, 28, 28, 28));
         card.setHorizontalAlignment(SwingConstants.LEFT);
- 
+
         card.add(buildIcon(iconFile));
         card.add(Box.createVerticalStrut(20));
         card.add(buildCardTitle(title));
- 
+
         card.addActionListener(e -> {
             this.setGymType(gymType);
             app.setSelectedGymType(gymType);
             app.navigate(WorkoutSplitGUI.FREQUENCY);
         });
- 
+
         return card;
     }
 

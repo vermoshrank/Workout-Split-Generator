@@ -17,7 +17,7 @@ import persistence.JsonReader;
 import persistence.JsonWriter;
 import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
 
-/*
+/**
  * Console-based user interface for the Workout Split Generator application.
  * WorkoutGeneratorApp runs the main interaction loop, presenting a menu that
  * lets the user generate a personalised workout split, view the current plan,
@@ -127,7 +127,7 @@ public class WorkoutGeneratorApp {
             System.out.println("No plan generated yet. Generate a plan first.");
             return;
         }
-        
+
         input.nextLine();
 
         System.out.println("--- Edit Workout Split Name ---");
@@ -366,7 +366,7 @@ public class WorkoutGeneratorApp {
 
         String path = JSON_STORE + saveName + ".json";
         JsonWriter writer = new JsonWriter(path);
-        
+
         try {
             writer.open();
             writer.write(currentPlan);
@@ -376,8 +376,6 @@ public class WorkoutGeneratorApp {
             System.out.println("Unable to write to file: " + path);
         }
     }
-
-
 
     // based off WorkRoom app
     // MODIFIES: this

@@ -3,8 +3,11 @@ package ui.gui;
 import java.awt.*;
 import javax.swing.*;
 
+import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
+
 // based off code from this video: https://www.youtube.com/watch?v=4PRqBDDixWE
 // represents a rounded panel due to Java Swing limitations
+@ExcludeFromJacocoGeneratedReport
 public class RoundedPanel extends JPanel {
     private int radius;
 

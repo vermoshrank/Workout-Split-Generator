@@ -3,7 +3,10 @@ package ui.gui;
 import java.awt.*;
 import javax.swing.*;
 
+import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
+
 // represents a rounded button with GUI theme along with same functionality as JButton. 
+@ExcludeFromJacocoGeneratedReport
 public class RoundedButton extends JButton {
     public RoundedButton(String text) {
         super(text);

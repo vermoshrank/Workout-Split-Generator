@@ -21,7 +21,7 @@ import model.generator.SplitGenerator;
 import persistence.JsonWriter;
 
 /**
- * Second step of the split-generation. 
+ * Second step of the split-generation.
  * Lets the user pick their weekly training frequency.
  */
 @ExcludeFromJacocoGeneratedReport
@@ -124,8 +124,8 @@ public class FrequencySelectionScreen extends BaseScreen {
     }
 
     // EFFECTS: generates a workout plan for the selected frequency and gym type,
-    //          writes it to ./data/ folder, adds it to the app's saved plans,
-    //          then navigates to MainPage
+    // writes it to ./data/ folder, adds it to the app's saved plans,
+    // then navigates to MainPage
     private void generateAndSave(int days) {
         GymType gymType = app.getSelectedGymType();
 
