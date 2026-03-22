@@ -10,6 +10,8 @@ import javax.swing.*;
 import model.WorkoutPlan;
 import model.enums.GymType;
 import persistence.JsonReader;
+import ui.screens.FrequencySelectionScreen;
+import ui.screens.GymTypeScreen;
 import ui.screens.MainPage;
 import model.GeneratorArguments;
 
@@ -28,6 +30,10 @@ public class WorkoutSplitGUI extends JFrame {
     private ArrayList<WorkoutPlan> savedPlans = new ArrayList<>();
     private WorkoutPlan activePlan;
 
+    private MainPage mainPage;
+    private GymType gymType;
+    private int selectedDays;
+
     public WorkoutSplitGUI() {
         savedPlans = new ArrayList<>();
         loadSavedPlans();
@@ -35,7 +41,11 @@ public class WorkoutSplitGUI extends JFrame {
         cardLayout = new CardLayout();
         cards = new JPanel(cardLayout);
 
-        cards.add(new MainPage(this), MAIN_PAGE);
+        mainPage = new MainPage(this);
+
+        cards.add(mainPage, MAIN_PAGE);
+        cards.add(new GymTypeScreen(this), GYM_TYPE);
+        cards.add(new FrequencySelectionScreen(this), FREQUENCY);
 
         add(cards);
 
@@ -70,6 +80,9 @@ public class WorkoutSplitGUI extends JFrame {
     // MODIFIES: this
     // EFFECTS: handles navigation to other pages/panels
     public void navigate(String pageName) {
+        if (pageName.equals(MAIN_PAGE)) {
+            mainPage.refresh();
+        }
         cardLayout.show(cards, pageName);
     }
 
@@ -83,6 +96,22 @@ public class WorkoutSplitGUI extends JFrame {
 
     public void setActivePlan(WorkoutPlan plan) {
         this.activePlan = plan;
+    }
+
+    public int getSelectedDays() {
+        return selectedDays;
+    }
+
+    public void setSelectedDays(int days) {
+        selectedDays = days;
+    }
+
+    public GymType getSelectedGymType() {
+        return gymType;
+    }
+
+    public void setSelectedGymType(GymType g) {
+        gymType = g;
     }
 
     public static void main(String[] args) {

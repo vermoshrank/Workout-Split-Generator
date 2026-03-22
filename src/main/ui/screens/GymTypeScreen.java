@@ -102,6 +102,7 @@ public class GymTypeScreen extends BaseScreen {
  
         card.addActionListener(e -> {
             this.setGymType(gymType);
+            app.setSelectedGymType(gymType);
             app.navigate(WorkoutSplitGUI.FREQUENCY);
         });
  

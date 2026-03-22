@@ -15,6 +15,8 @@ import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
 
 @ExcludeFromJacocoGeneratedReport
 public class MainPage extends BaseScreen {
+    private JPanel grid;
+
     public MainPage(WorkoutSplitGUI app) {
         super(app);
     }
@@ -29,7 +31,8 @@ public class MainPage extends BaseScreen {
 
         content.add(buildRow());
         content.add(Box.createVerticalStrut(24));
-        content.add(buildSplitsGrid());
+        grid = buildSplitsGrid();
+        content.add(grid);
 
         return content;
     }
@@ -77,7 +80,7 @@ public class MainPage extends BaseScreen {
 
         JPanel top = new JPanel(new BorderLayout());
         top.setOpaque(false);
-        
+
         JLabel title = new JLabel(plan.getName());
         title.setFont(Theme.HEADLINE);
         title.setForeground(Theme.TEXT_PRIMARY);
@@ -86,13 +89,6 @@ public class MainPage extends BaseScreen {
         JPanel actions = new JPanel(new FlowLayout(FlowLayout.RIGHT, 4, 0));
         actions.setOpaque(false);
 
-        JButton editBtn = new JButton("Edit");
-        editBtn.setFont(Theme.BODY);
-        editBtn.setForeground(Theme.TEXT_THREE);
-        editBtn.setBorderPainted(false);
-        editBtn.setContentAreaFilled(false);
-        editBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-
         JButton deleteBtn = new JButton("Delete");
         deleteBtn.setFont(Theme.BODY);
         deleteBtn.setForeground(Theme.TEXT_TWO);
@@ -100,11 +96,10 @@ public class MainPage extends BaseScreen {
         deleteBtn.setContentAreaFilled(false);
         deleteBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         deleteBtn.addActionListener(e -> {
-            app.getSavedPlans().remove(plan);   
+            app.getSavedPlans().remove(plan);
             app.navigate(WorkoutSplitGUI.MAIN_PAGE);
         });
 
-        actions.add(editBtn);
         actions.add(deleteBtn);
         top.add(title, BorderLayout.WEST);
         top.add(actions, BorderLayout.EAST);
@@ -138,5 +133,15 @@ public class MainPage extends BaseScreen {
         card.add(body, BorderLayout.CENTER);
 
         return card;
+    }
+
+    // MODIFIES: this
+    // EFFECTS: reloads the saved workout plans in the grid
+    public void refresh() {
+        this.grid.removeAll();
+        for (WorkoutPlan i : app.getSavedPlans()) {
+            this.grid.add(buildSplitCard(i));
+        }
+        this.grid.revalidate();
     }
 }
