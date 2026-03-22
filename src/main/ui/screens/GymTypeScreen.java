@@ -130,7 +130,7 @@ public class GymTypeScreen extends BaseScreen {
     private ImageIcon loadIcon(String fileName) {
         try {
             BufferedImage img = ImageIO.read(new File("./data/" + fileName));
-            Image scaled = img.getScaledInstance(26, 26, Image.SCALE_SMOOTH);
+            Image scaled = img.getScaledInstance(26, 26, Image.SCALE_DEFAULT);
             return new ImageIcon(scaled);
         } catch (IOException | IllegalArgumentException e) {
             return null;

@@ -34,6 +34,7 @@ public class WorkoutSplitGUI extends JFrame {
 
     private MainPage mainPage;
     private ViewSplitScreen viewSplitScreen;
+    private ExercisesLibraryScreen exercisesLibraryScreen;
     private GymType gymType;
     private int selectedDays;
     private WorkoutDay selectedDay;
@@ -47,10 +48,12 @@ public class WorkoutSplitGUI extends JFrame {
 
         mainPage = new MainPage(this);
         viewSplitScreen = new ViewSplitScreen(this);
+        exercisesLibraryScreen = new ExercisesLibraryScreen(this);
         cards.add(mainPage, MAIN_PAGE);
         cards.add(new GymTypeScreen(this), GYM_TYPE);
         cards.add(new FrequencySelectionScreen(this), FREQUENCY);
         cards.add(viewSplitScreen, SPLIT_VIEW);
+        cards.add(exercisesLibraryScreen, EXERCISE_LIB);
 
         add(cards);
 
@@ -92,6 +95,11 @@ public class WorkoutSplitGUI extends JFrame {
         if (pageName.equals(SPLIT_VIEW)) {
             viewSplitScreen.refresh();
         }
+
+        if (pageName.equals(EXERCISE_LIB)) {
+            exercisesLibraryScreen.refresh();
+        }
+        
         cardLayout.show(cards, pageName);
     }
 
