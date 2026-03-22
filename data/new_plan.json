@@ -1,5 +1,5 @@
 {
-    "name": "Push Pull Legs x Upper Lower",
+    "name": "Push Pull Legs",
     "days": [
         {
             "exercises": [
@@ -7,12 +7,20 @@
                     "minReps": 6,
                     "sets": 2,
                     "maxReps": 10,
-                    "targetMuscles": [
-                        "LATS",
-                        "CHEST"
-                    ],
-                    "name": "Dumbbell Pullover",
-                    "weight": 20,
+                    "targetMuscles": ["CHEST"],
+                    "name": "Dumbbell Flye",
+                    "weight": 15,
+                    "rir": 1,
+                    "priority": 2,
+                    "equipmentType": "DUMBBELL"
+                },
+                {
+                    "minReps": 6,
+                    "sets": 2,
+                    "maxReps": 10,
+                    "targetMuscles": ["UPPER_CHEST"],
+                    "name": "Incline Dumbbell Flye",
+                    "weight": 12,
                     "rir": 1,
                     "priority": 2,
                     "equipmentType": "DUMBBELL"
@@ -22,27 +30,23 @@
                     "sets": 2,
                     "maxReps": 10,
                     "targetMuscles": [
-                        "UPPER_CHEST",
+                        "CHEST",
                         "FRONT_DELTS",
                         "TRICEPS"
                     ],
-                    "name": "Incline Barbell Bench Press",
-                    "weight": 75,
+                    "name": "Push-Up",
+                    "weight": 0,
                     "rir": 1,
-                    "priority": 2,
-                    "equipmentType": "BARBELL"
+                    "priority": 3,
+                    "equipmentType": "BODYWEIGHT"
                 },
                 {
                     "minReps": 6,
                     "sets": 2,
                     "maxReps": 10,
-                    "targetMuscles": [
-                        "FRONT_DELTS",
-                        "SIDE_DELTS",
-                        "TRICEPS"
-                    ],
-                    "name": "Dumbbell Shoulder Press",
-                    "weight": 20,
+                    "targetMuscles": ["SIDE_DELTS"],
+                    "name": "Dumbbell Lateral Raise",
+                    "weight": 10,
                     "rir": 1,
                     "priority": 2,
                     "equipmentType": "DUMBBELL"
@@ -58,26 +62,12 @@
                     "maxReps": 10,
                     "targetMuscles": [
                         "LATS",
-                        "CHEST"
+                        "RHOMBOIDS",
+                        "TRAPS",
+                        "BICEPS"
                     ],
-                    "name": "Dumbbell Pullover",
-                    "weight": 20,
-                    "rir": 1,
-                    "priority": 2,
-                    "equipmentType": "DUMBBELL"
-                },
-                {
-                    "minReps": 6,
-                    "sets": 2,
-                    "maxReps": 10,
-                    "targetMuscles": [
-                        "HAMSTRINGS",
-                        "GLUTES",
-                        "ERECTORS",
-                        "TRAPS"
-                    ],
-                    "name": "Deadlift",
-                    "weight": 135,
+                    "name": "Pendlay Row",
+                    "weight": 85,
                     "rir": 1,
                     "priority": 2,
                     "equipmentType": "BARBELL"
@@ -90,21 +80,7 @@
                         "REAR_DELTS",
                         "RHOMBOIDS"
                     ],
-                    "name": "Dumbbell Rear Delt Fly",
-                    "weight": 10,
-                    "rir": 1,
-                    "priority": 2,
-                    "equipmentType": "DUMBBELL"
-                },
-                {
-                    "minReps": 6,
-                    "sets": 2,
-                    "maxReps": 10,
-                    "targetMuscles": [
-                        "BICEPS",
-                        "BRACHIALIS"
-                    ],
-                    "name": "Cable Curl",
+                    "name": "Face Pull",
                     "weight": 30,
                     "rir": 1,
                     "priority": 2,
@@ -114,44 +90,21 @@
                     "minReps": 6,
                     "sets": 2,
                     "maxReps": 10,
-                    "targetMuscles": ["FOREARMS"],
-                    "name": "Barbell Wrist Curl",
-                    "weight": 25,
+                    "targetMuscles": [
+                        "FOREARMS",
+                        "BRACHIORADIALIS"
+                    ],
+                    "name": "Barbell Reverse Wrist Curl",
+                    "weight": 20,
                     "rir": 1,
                     "priority": 2,
                     "equipmentType": "BARBELL"
-                },
-                {
-                    "minReps": 6,
-                    "sets": 2,
-                    "maxReps": 10,
-                    "targetMuscles": ["BRACHIORADIALIS"],
-                    "name": "Reverse Cable Curl",
-                    "weight": 10,
-                    "rir": 1,
-                    "priority": 2,
-                    "equipmentType": "DUMBBELL"
                 }
             ],
             "name": "Pull"
         },
         {
             "exercises": [
-                {
-                    "minReps": 6,
-                    "sets": 2,
-                    "maxReps": 10,
-                    "targetMuscles": [
-                        "QUADS",
-                        "GLUTES",
-                        "ERECTORS"
-                    ],
-                    "name": "Barbell Front Squat",
-                    "weight": 85,
-                    "rir": 1,
-                    "priority": 2,
-                    "equipmentType": "SQUAT_RACK"
-                },
                 {
                     "minReps": 6,
                     "sets": 2,
@@ -192,201 +145,6 @@
                 }
             ],
             "name": "Legs"
-        },
-        {
-            "exercises": [
-                {
-                    "minReps": 6,
-                    "sets": 2,
-                    "maxReps": 10,
-                    "targetMuscles": [
-                        "CHEST",
-                        "FRONT_DELTS",
-                        "TRICEPS"
-                    ],
-                    "name": "Dumbbell Bench Press",
-                    "weight": 30,
-                    "rir": 1,
-                    "priority": 2,
-                    "equipmentType": "DUMBBELL"
-                },
-                {
-                    "minReps": 6,
-                    "sets": 2,
-                    "maxReps": 10,
-                    "targetMuscles": ["UPPER_CHEST"],
-                    "name": "Incline Dumbbell Flye",
-                    "weight": 12,
-                    "rir": 1,
-                    "priority": 2,
-                    "equipmentType": "DUMBBELL"
-                },
-                {
-                    "minReps": 6,
-                    "sets": 2,
-                    "maxReps": 10,
-                    "targetMuscles": [
-                        "FRONT_DELTS",
-                        "SIDE_DELTS"
-                    ],
-                    "name": "Barbell Overhead Press",
-                    "weight": 65,
-                    "rir": 1,
-                    "priority": 2,
-                    "equipmentType": "BARBELL"
-                },
-                {
-                    "minReps": 6,
-                    "sets": 2,
-                    "maxReps": 10,
-                    "targetMuscles": ["LATS"],
-                    "name": "Cable Pullover",
-                    "weight": 25,
-                    "rir": 1,
-                    "priority": 2,
-                    "equipmentType": "CABLE"
-                },
-                {
-                    "minReps": 6,
-                    "sets": 2,
-                    "maxReps": 10,
-                    "targetMuscles": [
-                        "ERECTORS",
-                        "TRAPS",
-                        "HAMSTRINGS",
-                        "GLUTES"
-                    ],
-                    "name": "Rack Pull",
-                    "weight": 155,
-                    "rir": 1,
-                    "priority": 2,
-                    "equipmentType": "BARBELL"
-                },
-                {
-                    "minReps": 6,
-                    "sets": 2,
-                    "maxReps": 10,
-                    "targetMuscles": [
-                        "REAR_DELTS",
-                        "RHOMBOIDS"
-                    ],
-                    "name": "Face Pull",
-                    "weight": 30,
-                    "rir": 1,
-                    "priority": 2,
-                    "equipmentType": "CABLE"
-                },
-                {
-                    "minReps": 6,
-                    "sets": 2,
-                    "maxReps": 10,
-                    "targetMuscles": [
-                        "BICEPS",
-                        "BRACHIALIS"
-                    ],
-                    "name": "Barbell Curl",
-                    "weight": 55,
-                    "rir": 1,
-                    "priority": 2,
-                    "equipmentType": "BARBELL"
-                },
-                {
-                    "minReps": 6,
-                    "sets": 2,
-                    "maxReps": 10,
-                    "targetMuscles": ["FOREARMS"],
-                    "name": "Barbell Wrist Curl",
-                    "weight": 25,
-                    "rir": 1,
-                    "priority": 2,
-                    "equipmentType": "BARBELL"
-                },
-                {
-                    "minReps": 6,
-                    "sets": 2,
-                    "maxReps": 10,
-                    "targetMuscles": ["BRACHIORADIALIS"],
-                    "name": "Reverse Cable Curl",
-                    "weight": 10,
-                    "rir": 1,
-                    "priority": 2,
-                    "equipmentType": "DUMBBELL"
-                },
-                {
-                    "minReps": 6,
-                    "sets": 2,
-                    "maxReps": 10,
-                    "targetMuscles": [
-                        "CORE",
-                        "ABS"
-                    ],
-                    "name": "Plank",
-                    "weight": 0,
-                    "rir": 1,
-                    "priority": 3,
-                    "equipmentType": "BODYWEIGHT"
-                }
-            ],
-            "name": "Upper"
-        },
-        {
-            "exercises": [
-                {
-                    "minReps": 6,
-                    "sets": 2,
-                    "maxReps": 10,
-                    "targetMuscles": [
-                        "QUADS",
-                        "GLUTES"
-                    ],
-                    "name": "Dumbbell Step Up",
-                    "weight": 20,
-                    "rir": 1,
-                    "priority": 2,
-                    "equipmentType": "DUMBBELL"
-                },
-                {
-                    "minReps": 6,
-                    "sets": 2,
-                    "maxReps": 10,
-                    "targetMuscles": [
-                        "ERECTORS",
-                        "GLUTES",
-                        "HAMSTRINGS"
-                    ],
-                    "name": "Back Extension",
-                    "weight": 0,
-                    "rir": 1,
-                    "priority": 2,
-                    "equipmentType": "HYPEREXTENSION_BENCH"
-                },
-                {
-                    "minReps": 6,
-                    "sets": 2,
-                    "maxReps": 10,
-                    "targetMuscles": ["CALVES"],
-                    "name": "Dumbbell Standing Calf Raise",
-                    "weight": 25,
-                    "rir": 1,
-                    "priority": 2,
-                    "equipmentType": "DUMBBELL"
-                },
-                {
-                    "minReps": 6,
-                    "sets": 2,
-                    "maxReps": 10,
-                    "targetMuscles": [
-                        "CORE",
-                        "ABS"
-                    ],
-                    "name": "Plank",
-                    "weight": 0,
-                    "rir": 1,
-                    "priority": 3,
-                    "equipmentType": "BODYWEIGHT"
-                }
-            ],
-            "name": "Lower"
         }
     ]
 }

@@ -85,9 +85,6 @@ public class ExercisesLibraryScreen extends BaseScreen {
         back.addActionListener(e -> app.navigate(WorkoutSplitGUI.SPLIT_VIEW));
         row.add(back);
 
-        RoundedButton custom = new RoundedButton("+ Create Custom Exercise");
-        custom.addActionListener(e -> app.navigate(WorkoutSplitGUI.SPLIT_VIEW));
-        row.add(custom);
         return row;
     }
 

@@ -206,14 +206,14 @@ public class ViewSplitScreen extends BaseScreen {
             stats.add(text);
             stats.add(Box.createVerticalStrut(3));
 
-            JLabel time = new JLabel("time" + day.calculateSessionLength() + "min");
+            JLabel time = new JLabel("time: " + day.calculateSessionLength() + " min");
             time.setFont(Theme.BODY_SMALL);
             time.setForeground(Theme.TEXT_TWO);
             time.setAlignmentX(Component.LEFT_ALIGNMENT);
             stats.add(time);
             stats.add(Box.createVerticalStrut(3));
 
-            JLabel cals = new JLabel("Calories" + day.calculateCaloriesBurnt() + " kcal");
+            JLabel cals = new JLabel("Calories: " + day.calculateCaloriesBurnt() + " kcal");
             cals.setFont(Theme.BODY_SMALL);
             cals.setForeground(Theme.TEXT_TWO);
             cals.setAlignmentX(Component.LEFT_ALIGNMENT);
