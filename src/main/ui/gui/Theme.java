@@ -29,8 +29,9 @@ public class Theme {
     // fonts
     public static final Font HEADLINE_LARGE = new Font("Dialog", Font.BOLD, 36);
     public static final Font HEADLINE = new Font("Dialog", Font.BOLD, 24);
-    public static final Font BODY_LARGE = new Font("Dialog", Font.BOLD, 14);
+    public static final Font BODY_LARGE = new Font("Dialog", Font.BOLD, 16);
     public static final Font BODY = new Font("Dialog", Font.BOLD, 14);
+    public static final Font BODY_SMALL = new Font("Dialog", Font.PLAIN, 12);
     public static final Font LABEL = new Font("Dialog", Font.BOLD, 10);
 
     // EFFECTS: hex converter

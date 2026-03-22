@@ -10,11 +10,13 @@ import javax.swing.*;
 import model.WorkoutPlan;
 import model.enums.GymType;
 import persistence.JsonReader;
+import ui.screens.ExercisesLibraryScreen;
 import ui.screens.FrequencySelectionScreen;
 import ui.screens.GymTypeScreen;
 import ui.screens.MainPage;
+import ui.screens.ViewSplitScreen;
 import model.GeneratorArguments;
-
+import model.WorkoutDay;
 import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
 
 @ExcludeFromJacocoGeneratedReport
@@ -31,8 +33,10 @@ public class WorkoutSplitGUI extends JFrame {
     private WorkoutPlan activePlan;
 
     private MainPage mainPage;
+    private ViewSplitScreen viewSplitScreen;
     private GymType gymType;
     private int selectedDays;
+    private WorkoutDay selectedDay;
 
     public WorkoutSplitGUI() {
         savedPlans = new ArrayList<>();
@@ -42,10 +46,11 @@ public class WorkoutSplitGUI extends JFrame {
         cards = new JPanel(cardLayout);
 
         mainPage = new MainPage(this);
-
+        viewSplitScreen = new ViewSplitScreen(this);
         cards.add(mainPage, MAIN_PAGE);
         cards.add(new GymTypeScreen(this), GYM_TYPE);
         cards.add(new FrequencySelectionScreen(this), FREQUENCY);
+        cards.add(viewSplitScreen, SPLIT_VIEW);
 
         add(cards);
 
@@ -83,6 +88,10 @@ public class WorkoutSplitGUI extends JFrame {
         if (pageName.equals(MAIN_PAGE)) {
             mainPage.refresh();
         }
+
+        if (pageName.equals(SPLIT_VIEW)) {
+            viewSplitScreen.refresh();
+        }
         cardLayout.show(cards, pageName);
     }
 
@@ -112,6 +121,14 @@ public class WorkoutSplitGUI extends JFrame {
 
     public void setSelectedGymType(GymType g) {
         gymType = g;
+    }
+
+    public WorkoutDay getSelectedDay() {
+        return selectedDay;
+    }
+
+    public void setSelectedDay(WorkoutDay day) {
+        this.selectedDay = day;
     }
 
     public static void main(String[] args) {
