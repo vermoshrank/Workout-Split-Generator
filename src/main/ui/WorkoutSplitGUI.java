@@ -19,6 +19,12 @@ import model.GeneratorArguments;
 import model.WorkoutDay;
 import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
 
+/*
+ * represents the main "hub" of the GUI.
+ * It stores all pages in a card layout, 
+ * and other necessary field, and houses 
+ * the methods for navigation and starting the GUI
+ */
 @ExcludeFromJacocoGeneratedReport
 public class WorkoutSplitGUI extends JFrame {
     public static final String MAIN_PAGE = "MAIN";
@@ -99,7 +105,7 @@ public class WorkoutSplitGUI extends JFrame {
         if (pageName.equals(EXERCISE_LIB)) {
             exercisesLibraryScreen.refresh();
         }
-        
+
         cardLayout.show(cards, pageName);
     }
 

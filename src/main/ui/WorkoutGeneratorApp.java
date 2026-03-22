@@ -17,7 +17,7 @@ import persistence.JsonReader;
 import persistence.JsonWriter;
 import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
 
-/**
+/*
  * Console-based user interface for the Workout Split Generator application.
  * WorkoutGeneratorApp runs the main interaction loop, presenting a menu that
  * lets the user generate a personalised workout split, view the current plan,

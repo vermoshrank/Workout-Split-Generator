@@ -13,6 +13,7 @@ import model.WorkoutPlan;
 
 import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
 
+// represents the starting page of the Gui. Displays all saved workout plans, which can be loaded
 @ExcludeFromJacocoGeneratedReport
 public class MainPage extends BaseScreen {
     private JPanel grid;

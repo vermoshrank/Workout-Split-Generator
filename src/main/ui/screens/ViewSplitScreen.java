@@ -16,6 +16,7 @@ import model.WorkoutPlan;
 import model.enums.MuscleGroup;
 import persistence.JsonWriter;
 
+// represents the page that displays a workout plan and provides editting options
 @ExcludeFromJacocoGeneratedReport
 public class ViewSplitScreen extends BaseScreen {
     private JPanel exerciseList;
