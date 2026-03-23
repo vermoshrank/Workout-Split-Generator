@@ -1,7 +1,5 @@
 package ui.gui;
 
-import static org.junit.jupiter.api.Assertions.fail;
-
 import java.awt.*;
 import javax.swing.*;
 

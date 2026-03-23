@@ -4,16 +4,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import model.enums.Equipment;
 import model.enums.MuscleGroup;
-import model.enums.SplitType;
 import model.generator.ExerciseFilter;
 import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
 
@@ -22,9 +18,7 @@ public class TestExerciseFilter {
     private ExerciseFilter filter;
     private Exercise benchPress;
     private Exercise dumbbellCurl;
-    private Exercise latPulldown;
-    private Exercise legPress;
-
+    
     @BeforeEach
     void setUp() {
         filter = new ExerciseFilter();
@@ -37,16 +31,6 @@ public class TestExerciseFilter {
         dumbbellCurl = new Exercise("Dumbell Curl",
                 new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.BICEPS)),
                 Equipment.DUMBBELL,
-                0, 2, 6, 10, 1, 1);
-
-        latPulldown = new Exercise("Lat Pulldown",
-                new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.BACK, MuscleGroup.ARMS)),
-                Equipment.MACHINE,
-                0, 2, 6, 10, 1, 1);
-
-        legPress = new Exercise("Leg Press",
-                new ArrayList<MuscleGroup>(Arrays.asList(MuscleGroup.LEGS)),
-                Equipment.MACHINE,
                 0, 2, 6, 10, 1, 1);
     }
 

@@ -5,12 +5,10 @@ import org.junit.jupiter.api.Test;
 import model.Exercise;
 import model.WorkoutDay;
 import model.WorkoutPlan;
-import model.enums.Equipment;
 import model.enums.MuscleGroup;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;

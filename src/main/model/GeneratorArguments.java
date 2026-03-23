@@ -1,8 +1,5 @@
 package model;
 
-import java.util.Set;
-
-import model.enums.Equipment;
 import model.enums.GymType;
 
 /**

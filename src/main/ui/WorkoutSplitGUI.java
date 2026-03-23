@@ -15,7 +15,6 @@ import ui.screens.FrequencySelectionScreen;
 import ui.screens.GymTypeScreen;
 import ui.screens.MainPage;
 import ui.screens.ViewSplitScreen;
-import model.GeneratorArguments;
 import model.WorkoutDay;
 import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
 

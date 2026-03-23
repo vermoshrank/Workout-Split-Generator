@@ -8,10 +8,8 @@ import ui.gui.Theme;
 import model.Exercise;
 import model.ExerciseDatabase;
 import model.WorkoutDay;
-import model.enums.MuscleGroup;
 
 import java.awt.*;
-import java.util.List;
 import javax.swing.*;
 
 import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;

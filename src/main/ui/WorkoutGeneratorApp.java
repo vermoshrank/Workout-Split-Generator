@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import model.Exercise;
-import model.ExerciseDatabase;
 import model.GeneratorArguments;
 import model.WorkoutDay;
 import model.WorkoutPlan;
@@ -33,8 +32,6 @@ public class WorkoutGeneratorApp {
     private SplitGenerator generator;
     private WorkoutPlan currentPlan;
     private Scanner input;
-    private JsonWriter jsonWriter;
-    private JsonReader jsonReader;
 
     // based off of tellerapp
     public WorkoutGeneratorApp() {
