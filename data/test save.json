@@ -37,15 +37,15 @@
                     "sets": 2,
                     "maxReps": 10,
                     "targetMuscles": [
-                        "ERECTORS",
-                        "GLUTES",
-                        "HAMSTRINGS"
+                        "CHEST",
+                        "FRONT_DELTS",
+                        "TRICEPS"
                     ],
-                    "name": "Back Extension",
-                    "weight": 0,
+                    "name": "Decline Barbell Bench Press",
+                    "weight": 85,
                     "rir": 1,
                     "priority": 2,
-                    "equipmentType": "HYPEREXTENSION_BENCH"
+                    "equipmentType": "BARBELL"
                 }
             ],
             "name": "Push"

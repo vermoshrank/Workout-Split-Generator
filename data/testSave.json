@@ -1,5 +1,5 @@
 {
-    "name": "diuhawhdwdh",
+    "name": "testSave",
     "days": [
         {
             "exercises": [
@@ -28,21 +28,6 @@
                     ],
                     "name": "Incline Barbell Bench Press",
                     "weight": 75,
-                    "rir": 1,
-                    "priority": 2,
-                    "equipmentType": "BARBELL"
-                },
-                {
-                    "minReps": 6,
-                    "sets": 2,
-                    "maxReps": 10,
-                    "targetMuscles": [
-                        "CHEST",
-                        "FRONT_DELTS",
-                        "TRICEPS"
-                    ],
-                    "name": "Decline Barbell Bench Press",
-                    "weight": 85,
                     "rir": 1,
                     "priority": 2,
                     "equipmentType": "BARBELL"

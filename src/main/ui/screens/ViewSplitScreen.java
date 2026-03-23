@@ -36,6 +36,14 @@ public class ViewSplitScreen extends BaseScreen {
         exerciseList.setLayout(new BoxLayout(exerciseList, BoxLayout.Y_AXIS));
         exerciseList.setOpaque(false);
 
+        exerciseList.setFocusable(true);
+        exerciseList.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent e) {
+                exerciseList.requestFocusInWindow();
+            }
+        });
+
         addPlanTitle();
         populateExerciseList();
 
