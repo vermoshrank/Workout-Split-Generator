@@ -131,7 +131,7 @@ public class ExercisesLibraryScreen extends BaseScreen {
         btn.addActionListener(ev -> {
             WorkoutDay day = app.getSelectedDay();
             if (day != null) {
-                day.addExercise(e);
+                day.userAddExercise(e);
             }
             app.navigate(WorkoutSplitGUI.SPLIT_VIEW);
         });

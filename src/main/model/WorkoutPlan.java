@@ -3,6 +3,8 @@ package model;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import model.logging.Event;
+import model.logging.EventLog;
 import persistence.Writable;
 
 import java.util.ArrayList;
@@ -18,7 +20,7 @@ import java.util.ArrayList;
 public class WorkoutPlan implements Writable {
     private String name;
     private ArrayList<WorkoutDay> workoutDays;
-    
+
     // MODIFIES: this
     // EFFECTS: constructs new plan with empty days
     public WorkoutPlan(String name) {
@@ -76,6 +78,11 @@ public class WorkoutPlan implements Writable {
         return count;
     }
 
+    public ArrayList<WorkoutDay> view() {
+        EventLog.getInstance().logEvent(new Event("Displayed all exercises in plan: " + this.name));
+        return this.workoutDays;
+    }
+
     // EFFECTS: returns this plan as a JSON object
     @Override
     public JSONObject toJson() {
@@ -91,4 +98,3 @@ public class WorkoutPlan implements Writable {
         return json;
     }
 }
-

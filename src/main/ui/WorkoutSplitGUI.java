@@ -9,6 +9,7 @@ import javax.swing.*;
 
 import model.WorkoutPlan;
 import model.enums.GymType;
+import model.logging.EventLog;
 import persistence.JsonReader;
 import ui.screens.ExercisesLibraryScreen;
 import ui.screens.FrequencySelectionScreen;
@@ -32,6 +33,8 @@ public class WorkoutSplitGUI extends JFrame {
     public static final String SPLIT_VIEW = "SPLIT_VIEW";
     public static final String EXERCISE_LIB = "EXERCISE_LIB";
 
+    private String currentPage = MAIN_PAGE;
+
     private JPanel cards;
     private CardLayout cardLayout;
     private ArrayList<WorkoutPlan> savedPlans = new ArrayList<>();
@@ -44,6 +47,7 @@ public class WorkoutSplitGUI extends JFrame {
     private int selectedDays;
     private WorkoutDay selectedDay;
 
+    @SuppressWarnings("methodlength")
     public WorkoutSplitGUI() {
         savedPlans = new ArrayList<>();
 
@@ -70,7 +74,18 @@ public class WorkoutSplitGUI extends JFrame {
 
         setTitle("WORKOUT SPLIT EDITOR");
         setSize(1100, 750);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            @Override
+            public void windowClosing(java.awt.event.WindowEvent e) {
+                for (model.logging.Event event : EventLog.getInstance()) {
+                    System.out.println(event);
+                }
+                System.exit(0);
+            }
+        });
+
         setLocationRelativeTo(null);
         setVisible(true);
     }
@@ -99,6 +114,10 @@ public class WorkoutSplitGUI extends JFrame {
     // MODIFIES: this
     // EFFECTS: handles navigation to other pages/panels
     public void navigate(String pageName) {
+        if (pageName.equals(SPLIT_VIEW) && currentPage.equals(MAIN_PAGE)) {
+            activePlan.view();
+        }
+
         if (pageName.equals(MAIN_PAGE)) {
             mainPage.refresh();
         }
@@ -111,6 +130,7 @@ public class WorkoutSplitGUI extends JFrame {
             exercisesLibraryScreen.refresh();
         }
 
+        currentPage = pageName;
         cardLayout.show(cards, pageName);
     }
 

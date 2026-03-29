@@ -28,7 +28,6 @@ public abstract class BaseScreen extends JPanel {
         add(scrollPane, BorderLayout.CENTER);
     }
 
-    // methods for building respective elements in a panel
     // EFFECTS: builds and returns universal header for panels
     private JPanel buildHeader() {
         JPanel header = new JPanel(new FlowLayout(FlowLayout.LEFT, 24, 15));
@@ -43,5 +42,6 @@ public abstract class BaseScreen extends JPanel {
         return header;
     }
 
+    // EFFECTS: builds respective elements in a panel
     protected abstract JPanel buildContent();
 }

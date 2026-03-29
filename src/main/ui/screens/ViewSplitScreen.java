@@ -158,7 +158,7 @@ public class ViewSplitScreen extends BaseScreen {
         deleteLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent e) {
-                day.removeExercise(ex.getName());
+                day.userRemoveExercise(ex.getName());
                 refresh();
             }
         });

@@ -1,22 +1,26 @@
 {
-    "name": "Full Body",
-    "days": [{
-        "exercises": [
-            {
+    "name": "Upper Lower 4x a week",
+    "days": [
+        {
+            "exercises": [{
                 "minReps": 6,
                 "sets": 2,
                 "maxReps": 10,
                 "targetMuscles": [
-                    "FOREARMS",
-                    "BRACHIORADIALIS"
+                    "CHEST",
+                    "FRONT_DELTS",
+                    "TRICEPS"
                 ],
-                "name": "Barbell Reverse Wrist Curl",
-                "weight": 20,
+                "name": "Barbell Bench Press",
+                "weight": 95,
                 "rir": 1,
                 "priority": 2,
                 "equipmentType": "BARBELL"
-            },
-            {
+            }],
+            "name": "Upper"
+        },
+        {
+            "exercises": [{
                 "minReps": 6,
                 "sets": 2,
                 "maxReps": 10,
@@ -26,8 +30,8 @@
                 "rir": 1,
                 "priority": 2,
                 "equipmentType": "CABLE"
-            }
-        ],
-        "name": "Full Body"
-    }]
+            }],
+            "name": "Lower"
+        }
+    ]
 }

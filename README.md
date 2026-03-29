@@ -28,3 +28,13 @@ The app is intended for **gym-goers/lifters** who want a more organized way to p
 - You can locate my visual component by viewing a workout split
 - You can save the state of my application by viewing your current workout split and clicking the save button
 - You can reload the state of my application by loading any saved workout split of your choosing
+
+# Phase 4: Task 2
+Sample Event Logs:
+Sat Mar 28 23:43:03 PDT 2026
+Displayed all exercises in plan: Push Pull Legs
+Sat Mar 28 23:43:06 PDT 2026
+User removed exercise: Barbell Bench Press from Push
+Sat Mar 28 23:43:09 PDT 2026
+User added exercise: Barbell Bench Press to Push
+

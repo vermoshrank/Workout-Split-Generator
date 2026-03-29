@@ -6,6 +6,8 @@ import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import model.logging.Event;
+import model.logging.EventLog;
 import persistence.Writable;
 
 /**
@@ -77,12 +79,31 @@ public class WorkoutDay implements Writable {
         return 300 * (this.calculateSessionLength() / 60.0);
     }
 
+    // MODIFIES: this
+    // EFFECTS: adds exercise and logs the user action
+    public void userAddExercise(Exercise e) {
+        addExercise(e);
+        EventLog.getInstance().logEvent(
+                new Event("User added exercise: " + e.getName() + " to " + this.name));
+    }
+
+    // MODIFIES: this
+    // EFFECTS: removes exercise and logs the user action
+    public boolean userRemoveExercise(String name) {
+        boolean removed = removeExercise(name);
+        if (removed) {
+            EventLog.getInstance().logEvent(
+                    new Event("User removed exercise: " + name + " from " + this.name));
+        }
+        return removed;
+    }
+
     // EFFECTS: returns this day as a JSON object
     @Override
     public JSONObject toJson() {
         JSONObject json = new JSONObject();
         json.put("name", name);
-        
+
         JSONArray exerciseArray = new JSONArray();
         for (Exercise i : exercises) {
             exerciseArray.put(i.toJson());
