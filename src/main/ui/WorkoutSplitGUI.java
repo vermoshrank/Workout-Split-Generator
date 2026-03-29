@@ -46,7 +46,13 @@ public class WorkoutSplitGUI extends JFrame {
 
     public WorkoutSplitGUI() {
         savedPlans = new ArrayList<>();
-        loadSavedPlans();
+
+        int choice = JOptionPane.showConfirmDialog(null, "Would you like to load your saved workout splits?",
+                "Load Saved Splits", JOptionPane.YES_NO_OPTION);
+
+        if (choice == JOptionPane.YES_NO_OPTION) {
+            loadSavedPlans();
+        }
 
         cardLayout = new CardLayout();
         cards = new JPanel(cardLayout);
