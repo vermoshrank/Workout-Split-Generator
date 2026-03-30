@@ -38,3 +38,8 @@ User removed exercise: Barbell Bench Press from Push
 Sat Mar 28 23:43:09 PDT 2026
 User added exercise: Barbell Bench Press to Push
 
+# Phase 4: Task 3
+If I had to refactor elements of this project, I would refactor many parts of the generator. 
+For example, I would likely either split up the responsibilities of the implementations in SplitGenerator
+into different classes or different methods for better organization. Many of my methods in this class were very long and likely could have been refactored into several smaller methods for readability. The name of the ExerciseFilter class also isn't very intuitive, and I would likely reallocate more filtering logic from SplitGenerator into ExerciseFilter for better readability and modularity. Lastly, I would have liked to have stored my database of exercises in an external file such as a JSON file, instead of having all of them as static final variables. This could allow for better flexibility in the future, such as adding functionality to add exercises to the JSON file repository while running the app. 
+
