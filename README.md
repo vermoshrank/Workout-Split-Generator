@@ -1,4 +1,4 @@
-# Workout Split Builder
+# Workout Split Generator
 ## A customizable Java application for planning training splits
 
 This application is a **workout split editor/builder and generator** designed to make it easier for users to plan their weekly training. Users can create, save and load multiple workout plans with each plan organized by days of week and containing a list of exercises. Exercises can either be selected from a pre-exisiting list or created manually by the user, with editable fields such as target muscle groups, number of sets, rep range, and reps in reserve. The application will also calculate and display estimated workout information such as total session time and calories burned. Multiple Workout Splits can be saved and loaded if the user chooses.
